@@ -10,7 +10,7 @@
           </div>
     </section>
     <section class="auto-page">
-      <h1> <b> Auto</b> <b style="color: #fa693c;">Products </b></h1>
+      <h1 style="padding-top: 10px;"> <b> Auto</b> <b style="color: #fa693c;">Products </b></h1>
     
       <p>
           Specific fluids known as automotive lubricants are used in engines and other mechanical systems of cars to lessen wear and friction between moving parts. They are necessary to keep vehicle parts operating effectively, performing well, and lasting a long time.

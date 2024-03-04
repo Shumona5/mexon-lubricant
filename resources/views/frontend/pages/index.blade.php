@@ -41,7 +41,7 @@
             » Afters sales services </p>
         </div>
         <div class="right-side">
-          <img src="{{('/frontend/image/why_mexon.jpg')}}" style="width: 350px; height: 250px;">
+          <img src="{{url('frontend/image/why_mexon.jpg')}}" style="width: 350px; height: 250px;">
         </div>
 
       </div>
@@ -137,8 +137,8 @@
 
     </section>
 
-    <section class="products">
-      <img src="{{url('/frontend/image/products.jpg')}}" alt="" style="width: 80%; padding-right: 100px;">
+    <section class="products-index">
+      <img class="product_section_image" src="{{url('/frontend/image/products.jpg')}}" alt="products">
 
     </section>
 

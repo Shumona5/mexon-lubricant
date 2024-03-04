@@ -6,7 +6,7 @@
     <img src="{{url('/frontend/image/products.png')}}" alt="" style="width: 100%; height: 520px;">
 
   </div>
-  <div class="product-left"> Products & Services </div>
+  <span class="top-left"> Products & Services </span>
 </section>
 
 <section>

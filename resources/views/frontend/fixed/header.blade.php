@@ -1,7 +1,7 @@
 <section class="header">
     <nav style=" height: 100px;">
       <a href="{{route('web.home')}}">
-        <img src="{{url('/frontend/image/mexon_logo.png')}}" alt="" style="background: none;">
+        <img src="{{url('/frontend/image/mexon_logo.png')}}" alt="" style="background: none; width:110px">
       </a>
       <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()"></i>

@@ -5,7 +5,7 @@
     <section>
         <div class="industrial">
             <img src="{{url('/frontend/image/industry.jpg')}}" alt="Snow" style="width:100%;">
-            <div class="top-left1">INDUSTRIAL</div>
+            <div class="top-left">INDUSTRIAL</div>
            
           </div>
     </section>
