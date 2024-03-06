@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('location')->nullable();
-            $table->text('subject')->nullable();
+            $table->text('engine-type')->nullable();
+            $table->text('engine-model')->nullable();
+            $table->text('official-warranty')->nullable();
             $table->longText('body')->nullable();
             $table->timestamps();
         });

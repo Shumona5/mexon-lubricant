@@ -102,26 +102,29 @@
                                 <span style="color: #fa693c;"> Feel Free To </span> Write Us
                             </h2>
                             <div class="main-contact-area">
-                                <form action="#">
+                                <form action="{{route('contactUs.store')}}">
                                     <div style="margin-bottom: 7px;" class="row">
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Your name" style=" font-size: 18px;">
+                                            <input type="text" class="form-control" placeholder="Your name" style=" font-size: 18px;" name="name">
                                         </div>
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Email Address" style="font-size: 18px; color:#00315a;">
+                                            <input type="text" class="form-control" placeholder="Email Address" style="font-size: 18px; color:#00315a;" name="email">
                                         </div>
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Your Location/ City" style="color:#00315a; font-size: 18px;">
+                                            <input type="text" class="form-control" placeholder="Your Location/ City" style="color:#00315a; font-size: 18px;" name="location">
                                         </div>
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Engine type" style=" font-size: 18px;">
+                                            <input type="text" class="form-control" placeholder="Engine type" style=" font-size: 18px;" name="type">
                                         </div>
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Engine Model" style=" font-size: 18px;">
+                                            <input type="text" class="form-control" placeholder="Engine Model" style=" font-size: 18px;" name="model">
                                         </div>
 
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
-                                            <input type="text" class="form-control" placeholder="Is there any official warranty?" style=" font-size: 18px;">
+                                            <input type="text" class="form-control" placeholder="Is there any official warranty?" style=" font-size: 18px;" name="warranty">
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 input-area mb-10">
+                                            <input type="text" class="form-control" placeholder="Subject" style=" font-size: 18px;" name="subject">
                                         </div>
                                         <div class="input-area mb-10 col-sm-12">
                                             <textarea name="message" id="messsage" cols="30" rows="10" placeholder="Since you bought or leased your automobile, about how many miles has it been driven?" style="color: rgb(1, 1, 34); font-size: 18px;background-color:#eeebeb"></textarea>
