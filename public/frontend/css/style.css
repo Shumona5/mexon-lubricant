@@ -238,6 +238,20 @@ width: 50%;
   font-family: 'Times New Roman', Times, serif;
 }
 
+@media (min-width:320px) and (max-width:430px) {
+  .engine-oil h1 {
+    font-size: 36px;
+    text-align: justify;
+  font-weight: 600;
+  color: rgb(0, 0, 80);
+  text-align: initial;
+  padding-top: 15px;
+  font-family: 'Times New Roman', Times, serif;
+
+  }
+
+}
+
 
 .business_promotion h1 {
   font-size: 36px;

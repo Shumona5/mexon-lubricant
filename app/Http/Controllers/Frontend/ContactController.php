@@ -7,6 +7,7 @@ use App\Mail\ContactMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
@@ -21,10 +22,14 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        //  dd($request->all());
+         // Need validation
 
+         $validator=Validator::make($request->all(),[
+            'name' =>'required|max:255',
+            'email'=>'required'
 
-        // Need validation
+         ]);
+
 
         // Send Email
        
