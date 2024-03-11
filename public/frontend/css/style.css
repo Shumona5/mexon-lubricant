@@ -239,7 +239,7 @@ width: 50%;
 }
 
 @media (min-width:320px) and (max-width:430px) {
-  .engine-oil h1 {
+  /* .engine-oil h1 {
     font-size: 36px;
     text-align: justify;
   font-weight: 600;
@@ -248,6 +248,17 @@ width: 50%;
   padding-top: 15px;
   font-family: 'Times New Roman', Times, serif;
 
+  } */
+  .engine-oil p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0px 120px;
+    text-align: initial;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+  
+  
   }
 
 }
@@ -415,13 +426,32 @@ footer .container .sec-contact .info li a:hover {
   color: #fff;
  
 }
-footer .container .sec-contact h4{
-  font-weight: 600;
-  position: relative;
-  color:darkblue;
-  margin-bottom: 15px;
-  font-family: 'Times New Roman', Times, serif;
- 
+
+@media (min-width:320px) and (max-width:425px) {
+  footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    padding: 50px 90px;
+    background-color: rgb(245,245,245);
+  }
+  footer .container{
+   
+    justify-content: space-between;
+   
+  }
+  footer .container .sci h4{
+    font-weight: 600;
+    position: relative;
+    color:#2E3192;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+   
+  }
+  
 }
 
 
@@ -493,6 +523,18 @@ font-weight: 500;
  color:#2E3192;
  padding-top: 30px;
 }
+
+.top-left1 {
+  position: absolute;
+  top: 300px;
+  left: 16px;
+  color:rgb(202, 44, 12);
+  font-weight: 600;
+  font-size: 36px;
+  padding-left: 50px;
+}
+
+
 
 .lead_sec1 {
 padding:60px 0;
@@ -614,7 +656,7 @@ text-decoration:none;
 /* Auto Page */
 .auto {
   
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100%;
  
   background-position: center;
@@ -653,11 +695,21 @@ text-decoration:none;
       font-weight: 600;
       font-size: 36px;
   }
+}
+
+@media (min-width:320px) and (max-width:430px){
+  .auto-page p {
+    padding: 0px 40px;
   
-  
-  
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .auto-page{
+    padding-top: 20px;
+  }
 
 }
+
+
 .bg4 { background-color:#e2e2e4; }
 
 .lead_sec1 .heading2 {
@@ -712,6 +764,13 @@ height:108px;
 .subProList.v0 .col-content .col_icon i {
 font-size:4.66rem
 }
+
+
+
+.subProList.v0 .col-content .col_icon i:hover {
+  /* background:rgb(214, 35, 4); */
+  color:rgb(248, 136, 117);
+  }
 
 .subProList.v0 .col-content h3 {
 height:115px;
@@ -794,7 +853,7 @@ color:#fff;
 
   .industrial {
   
-      min-height: 100vh;
+      /* min-height: 100vh; */
       width: 100%;
      
       background-position: center;
@@ -823,14 +882,16 @@ color:#fff;
   
       font-family: Arial, Helvetica, sans-serif;
   }
-  /* @media(max-width:700px){
-     .top-left1 {
-      top: 50px;
-
-     }
-
-  } */
+ 
 /* Motorbike Page  */
+
+/* .cta {
+  width: 100%;
+     
+  background-position: center;
+  background-size: cover;
+  position: relative;
+} */
 .motor-header h1 {
   letter-spacing: 1px;
   font-weight: 800;
@@ -851,6 +912,20 @@ color:#fff;
 }
 .text-color{
   color: rgb(2, 2, 88);
+}
+
+@media (min-width:320px) and (max-width:425px){
+
+  .motor-header h1 {
+    padding-top: 20px;
+   
+  }
+  .motor-header p {
+    padding: 0px 45px;
+
+  }
+  
+  
 }
 
 

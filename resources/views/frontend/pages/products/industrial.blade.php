@@ -10,7 +10,7 @@
           </div>
     </section>
     <section class="industrial-page">
-        <h1> <b> Industrial</b> <b style="color: #fa693c;">Products </b></h1>
+        <h1 style="padding-top: 20px;"> <b> Industrial</b> <b style="color: #fa693c;">Products </b></h1>
     
         <p>
             In the realm of industrial machinery, where efficiency and reliability are paramount, the choice of engine oils plays a pivotal role in maintaining optimal performance and longevity. Industrial engine oils are specially formulated to withstand the rigors of heavy-duty applications, offering superior lubrication, thermal stability, and protection against wear and corrosion.
