@@ -44,7 +44,7 @@
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <img src="{{url('/frontend/image/Diesel2.png')}}" alt="" height="350px" width="350px">
+                        <img src="{{url('/frontend/image/DriveX 15W-20 D_1-17-12.png')}}" alt="" height="350px" width="350px">
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                         <b>Pack size: 1, 5, 20, 205 Liter</b></p>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{url('/frontend/image/Diesel4.png')}}" alt="" height="350px" width="350px">
+                    <img src="{{url('/frontend/image/DriveX 20W-50 D_1-12.png')}}" alt="" height="350px" width="350px">
                 </div>
 
             </div>

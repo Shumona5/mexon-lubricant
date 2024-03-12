@@ -5,7 +5,7 @@
     <section>
         <div class="auto">
             <img src="{{url('/frontend/image/auto.jpg')}}" alt="Snow" style="width:100%;">
-            <div class="top-left">AUTO</div>
+            <div class="top-left">AUTOMOTIVE</div>
            
           </div>
     </section>

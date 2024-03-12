@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-7">
 
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10">
                         Effective fuel efficiency
@@ -100,7 +100,7 @@
             </div>
             <div class="col-md-7">
 
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10">Effective fuel efficiency
                     </li>
@@ -156,7 +156,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-7">
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10">
                         Latest oil Specification technology exceeding API SN.
@@ -200,7 +200,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-7">
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10"> Latest oil Specification technology
                         exceeding API SN.</li>
@@ -241,7 +241,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-7">
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10"> Superior oxidation and nitration resistance
                         improves oil life. </li>
@@ -281,7 +281,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-7">
-                <h6> <b> Benefits:</b></h6>
+                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
                 <ul class="text-color" style="margin-bottom: 40px !important">
                     <li style="list-style-type: disc" class="mb-10"> Excellent engine cleanliness and wear
                         protection. </li>

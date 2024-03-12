@@ -24,7 +24,7 @@
                             <p style=" font-weight: 500; color: rgb(2, 109, 112);font-size: 16px;"><i> Why Eco-tech? The
                                     amazing Mexon SpeedX Eco-tech can reduce CO2 footprint with improved fuel efficiency
                                     that protect and restore natural ecosystem around the world.</i></p>
-                            <h6> <b> Benefits:</b></h6>
+                            <h6 > <b> Benefits:</b></h6>
                             <ul class="text-color" style="margin-bottom: 40px !important">
                                 <li style="list-style-type: disc" class="mb-10">Improve protection against wear and
                                     prevent
