@@ -13,7 +13,7 @@
                     <div class="col-md-8">
                         <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 15W-40,API CI-4/SL
                         </p>
-                        <p
+                        <p class="benefits"
                             style="font-size: 16px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                             <b style="font-size: 18px;">Application:</b> <br>
                             Mexon DriveX 15W-40 has been formulated using new generation high performance base oils and
@@ -25,7 +25,7 @@
                             piston deposits, oxidation, sludge build up and high temperature
                             stability.
                         </p>
-                        <h6> <b> Benefits:</b></h6>
+                        <h6 > <b> Benefits:</b></h6>
                         <ul class="text-color" style="margin-bottom: 40px !important">
                             <li style="list-style-type: disc" class="mb-10">High performance diesel engine oil designed
                                 for
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 20W-50, API CI-4/SL</p>
-                    <p
+                    <p class="benefits"
                         style="font-size: 16px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                         <b style="font-size: 18px;">Application:</b> <br>
                         Premium performance heavy-duty diesel engine oil. Recommended for superior protection of modern
@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 40 | 50</p>
-                    <p
+                    <p class="benefits"
                         style="font-size: 16px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                         <b style="font-size: 18px;">Application:</b> <br>
                         Mexon DiXol is a high-performance diesel engine oil. Manufactured from high-quality base stock by blending with selected multiple additives of superior performance. It meets the specification of API CC/SC. The product provides outstanding lubrication for high-speed diesel engines under severe operating conditions.</p>
