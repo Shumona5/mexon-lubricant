@@ -1348,7 +1348,7 @@ transform: rotateZ(180deg);
 
 
        /*...............................Media Query.................... */
-
+/* 
 @media (min-width:431px) and (max-width:600px){
 
   .mexon{
@@ -1494,9 +1494,10 @@ transform: rotateZ(180deg);
   }
   
  
-}
+} */
 
-@media (min-width:701px) and (max-width:1000px){
+/* @media (min-width:701px) and (max-width:1000px){
+
   .header {
  
     width: 100%;
@@ -1717,5 +1718,215 @@ transform: rotateZ(180deg);
   font-family: Arial, Helvetica, sans-serif;
 }
  
+
+} */
+
+@media only screen and (min-width: 640px) {
+ 
+  .mexon{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .mexon h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .mexon p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 5px;
+    
+    text-align: justify;
+  }
+  .distribution{
+    
+    width: 100%;
+    padding-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .engine-oil p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0px 50px;
+    text-align: justify;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  .engine-oil h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(0, 0, 80);
+    text-align: center;
+    padding: 0px 40px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
+    
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  
+  .nav-links {
+    flex: 1;
+    text-align: left;
+    
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 4px;
+    position: relative;
+  
+  
+  }
+  
+  .nav-links ul li a {
+    color:#2E3192;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  
+  }
+  
+  .nav-links ul li::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #f44336;
+    display: block;
+    margin: auto;
+  
+  }
+  
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  
+  .buy-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #EE2129;
+    border: 1px solid #2E3192;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+  
+  }
+  .buy-btn:hover{
+    border: 1px solid #fff;
+    background: #f44336;
+    transition: 1s;
+    color: #fff;
+  
+  }
+  .distribution{
+    
+    width: 100%;
+    padding-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .top-left {
+    position: absolute;
+    top: 200px;
+    left: 14px;
+    color:rgb(202, 44, 12);
+    font-weight: 600;
+    font-size: 36px;
+    padding-left: 50px;
+  }
+  .donation-form {
+    padding: 30px;
+  }
+  
+  
+ 
+}
+@media only screen and (min-width: 475px) {
+  .mexon{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .mexon h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .mexon p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 5px;
+    
+    text-align: justify;
+  }
+  .service p {
+  
+    text-align: justify;
+    padding: 0px 40px;
+    font-size: 18px;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+  
+  }
+  .distribution{
+    width: 100%;
+    padding-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .engine-oil p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0px 50px;
+    text-align: justify;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  .engine-oil h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(0, 0, 80);
+    text-align: center;
+    padding: 0px 40px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .benefits{
+    padding: 0px 20px;
+  }
+  
 
 }

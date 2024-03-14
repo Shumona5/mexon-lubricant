@@ -105,8 +105,8 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 40 | 50</p>
+                <div class="col-md-8 ">
+                    <p  style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 40 | 50</p>
                     <p class="benefits"
                         style="font-size: 16px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                         <b style="font-size: 18px;">Application:</b> <br>
