@@ -1775,7 +1775,7 @@ transform: rotateZ(180deg);
     
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   nav {
     display: flex;
     padding: 2% 6%;
@@ -1787,14 +1787,14 @@ transform: rotateZ(180deg);
   
   .nav-links {
     flex: 1;
-    text-align: left;
+    text-align: right;
     
   }
   
   .nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 4px;
+    padding: 8px 6px;
     position: relative;
   
   
@@ -1803,7 +1803,7 @@ transform: rotateZ(180deg);
   .nav-links ul li a {
     color:#2E3192;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
   
   }
@@ -1864,7 +1864,7 @@ transform: rotateZ(180deg);
   
   
  
-}
+} */
 @media only screen and (min-width: 475px) {
   .mexon{
     width: 80%;
