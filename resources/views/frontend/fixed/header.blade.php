@@ -70,7 +70,7 @@
             </ul>
           </li>
 
-          <li> <a href="{{route('web.home')}}"> Business Promotion</a></li>
+          <li> <a href="{{url('/#business_promotion')}}"> Business Promotion</a></li>
           <li> <a href="{{route('contact')}}"> Contacts</a></li>
           <a href="https://bosssend.com/" target="_blank" class="buy-btn"> Buy Online</a>
         </ul>
