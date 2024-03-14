@@ -1775,7 +1775,7 @@ transform: rotateZ(180deg);
     
 }
 
-/* @media only screen and (min-width: 768px) {
+ /* @media only screen and (min-width: 768px) {
   nav {
     display: flex;
     padding: 2% 6%;
@@ -1864,7 +1864,7 @@ transform: rotateZ(180deg);
   
   
  
-} */
+}  */
 @media only screen and (min-width: 475px) {
   .mexon{
     width: 80%;
@@ -1930,3 +1930,4 @@ transform: rotateZ(180deg);
   
 
 }
+

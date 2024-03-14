@@ -6,7 +6,7 @@
       <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-          <li> <a href="{{route('web.home')}}"> Services</a></li>
+          <li> <a href="{{url('/#service')}}"> Services</a></li>
 
 
           <li class="nav-item dropdown">
