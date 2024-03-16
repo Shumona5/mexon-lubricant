@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'mail.bdwash.com'),
-            'port' => env('MAIL_PORT', 587),
+            'host' => env('MAIL_HOST', 'mexon.org'),
+            'port' => env('MAIL_PORT', 465),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME','info@bdwash.com'),
-            'password' => env('MAIL_PASSWORD','lAD]z+TAAHRQ'),
+            'username' => env('MAIL_USERNAME','info@mexon.org'),
+            'password' => env('MAIL_PASSWORD','v7PJQekOrdDI'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@bdwash.com'),
-        'name' => env('MAIL_FROM_NAME', 'BDWash'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@mexon.org'),
+        'name' => env('MAIL_FROM_NAME', 'Mexon'),
     ],
 
     /*

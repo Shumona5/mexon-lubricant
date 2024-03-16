@@ -33,7 +33,7 @@ class ContactController extends Controller
 
         // Send Email
        
-        Mail::to('shumonashikha@gmail.com')->send(new ContactMail($request->all()));
+        Mail::to('info@mexon.org')->send(new ContactMail($request->all()));
 
         // query run using object....
         // $xyz=new Contact();
