@@ -33,20 +33,6 @@
         </div>
 
         <div class="col-md-3 col-sm-12 wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.7s" data-wow-offset="100">
-<<<<<<< HEAD
-          <div class="sec-contact">
-            <h4 style="color: #2E3192;"> Contact Us </h4>
-            <ul class="info">
-              <li>
-                <span><i class="fa fa-envelope" style="color: #2E3192;"></i></span>
-                <p style="color: #2E3192;">Email</p>
-              </li>
-              <li>
-                <span><i class="fa fa-phone" style="font-size:22px;color: #2E3192;"></i></span>
-                <p style="color: #2E3192;">+371 2 8810000</p>
-              </li>
-            </ul>
-=======
           <div class="sec-contact sci">
             <h4 style="color: #2E3192;"> Contact Us </h4>
             <div class="info">
@@ -58,7 +44,6 @@
                 <p style="color: #2E3192;">+371 2 8810000</p>
               
 </div>
->>>>>>> ae419ec (reinit)
           </div>
         </div>
 
