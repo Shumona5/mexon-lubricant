@@ -161,6 +161,9 @@ nav .fa{
   .row {
       flex-direction: column;
   }
+  .right-side img {
+    width: 100% !important;
+    }
 }
 
 .service {
@@ -457,6 +460,7 @@ footer .container .sec-contact .info li a:hover {
   footer .container{
    
     justify-content: space-between;
+    text-align: center;
    
   }
  
