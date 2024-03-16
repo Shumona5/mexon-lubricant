@@ -94,7 +94,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" height="280px">
+                            <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" height="300px">
                         </div>
                     </div>
                 </div>
