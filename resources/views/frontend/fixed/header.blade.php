@@ -15,8 +15,7 @@
               Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <!-- <li><a class="dropdown-item" href="#">Automotive</a></li>
-              <li><a class="dropdown-item" href="#">Industrial</a></li> -->
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="{{route('products.auto')}}" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,12 +59,12 @@
                   Others
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Transmission</a>
+                  <li><a class="dropdown-item" href="{{route('products.transmission')}}">Transmission</a>
                   
                 </li>
                   <li><a class="dropdown-item" href="#">Brake</a></li>
                   <li><a class="dropdown-item" href="#">Coolant</a></li>
-                  <!-- <li><a class="dropdown-item" href="#">Grease</a></li> -->
+                  
                 </ul>
               </li>
 

@@ -23,6 +23,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TransmissionController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +50,10 @@ Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.dies
 Route::get('/industrial',[IndustrialController::class,'industrial'])->name('products.industrial');
 Route::get('/industrial/diesel',[IndustrialController::class,'diesel'])->name('product.diesel');
 Route::get('/industrial/grease',[IndustrialController::class,'grease'])->name('products.grease');
+
+Route::get('/transmission',[TransmissionController::class,'transmission'])->name('products.transmission');
+Route::get('/transmission/memox',[TransmissionController::class,'memox'])->name('transmission.memox');
+
 
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/contact-us',[ContactController::class,'list'])->name('contact.list');

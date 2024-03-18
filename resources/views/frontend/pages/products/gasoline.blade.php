@@ -62,8 +62,7 @@
                     <li style="list-style-type: disc" class="mb-10">Excellent reduction in oil consumption</li>
                     <li style="list-style-type: disc" class="mb-10">Low emissions</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
                     <b>Pack size:4 Liters</b>
                 </p>
             </div>
@@ -120,8 +119,7 @@
                     <li style="list-style-type: disc" class="mb-10">Excellent reduction in oil consumption</li>
                     <li style="list-style-type: disc" class="mb-10">Low emissions</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
                     <b>Pack size:4 Liters </b>
                 </p>
             </div>
@@ -168,8 +166,7 @@
                     <li style="list-style-type: disc" class="mb-10"> Minimises sludge formation.</li>
                     <li style="list-style-type: disc" class="mb-10">Maximises wear protection.</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
                     <b>Pack size: 4 Liters </b>
                 </p>
             </div>
@@ -210,8 +207,7 @@
                         pressure.</li>
                     <li style="list-style-type: disc" class="mb-10">Minimize sludge formation.</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
                     <b>Pack size:4 Liters</b>
                 </p>
             </div>
@@ -251,8 +247,7 @@
                     <li style="list-style-type: disc" class="mb-10">Reduced oil consumption.</li>
                     <li style="list-style-type: disc" class="mb-10">Suitable for all climatic condition.</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
                     <b>Pack size: 4 Liters</b>
                 </p>
             </div>
@@ -294,9 +289,9 @@
                     <li style="list-style-type: disc" class="mb-10">Reduces fuel consumption 3-8 percent
                         compared to conventional lubricants.</li>
                 </ul>
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
-                    <b>Pack size: 2 Liters</b></p>
+                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                    <b>Pack size: 2 Liters</b>
+                </p>
             </div>
             <div class="col-md-4">
                 <img src="{{url('/forntend/image/Gasoline8.jpg')}}" alt="">
@@ -305,9 +300,10 @@
     </div>
 </div>
 <br>
+
 <br>
 <div>
-  <img src="{{url('/frontend/image/Gasoline9.jpg')}}" alt="" style="width: 100%; height: auto;" >
+    <img src="{{url('/frontend/image/Gasoline9.jpg')}}" alt="" style="width: 100%; height: auto;">
 </div>
 
 

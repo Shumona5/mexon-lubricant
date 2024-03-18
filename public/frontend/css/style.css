@@ -1353,152 +1353,7 @@ transform: rotateZ(180deg);
 
        /*...............................Media Query.................... */
 /* 
-@media (min-width:431px) and (max-width:600px){
 
-  .mexon{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .mexon h1 {
-    font-size: 30px;
-    font-weight: 600;
-    color: darkblue;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  .mexon p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    padding: 5px;
-    
-    text-align: justify;
-  }
-  
-  .left-side {
-    flex: 1;
-    padding: 20px;
-    text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
-    
-  }
-  
-  .right-side {
-    flex: 1;
- 
-  }
-  
-   .row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-  
-  } 
-  
-  .mexon-col {
-    flex-basis: 31%;
-    background: #ebd0d0;
-    border-radius: 15px;
-    margin-bottom: 5%;
-    padding: 0px 10px;
-    box-sizing: border-box;
-    transition: 0.5s;
-  } 
-  
-  .mexon h6 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-  }
-  
-  .mexon-col p {
-    color: #777;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-  }
-  
-  .mexon-col:hover {
-    box-shadow: 0 0 20px 0px rgba(140, 157, 216, 0.918);
-  
-  }
-  .service p {
-  
-    text-align: justify;
-    padding: 0px 20px;
-    font-size: 18px;
-    color: darkblue;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 300;
-  
-  }
-  .distribution{
-    
-    width: 100%;
-    padding-bottom: 20px;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-  }
-  .engine-oil p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 0px 50px;
-    text-align: justify;
-    color: darkblue;
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
-  
-  .engine-oil h1 {
-    font-size: 30px;
-    font-weight: 600;
-    color: rgb(0, 0, 80);
-    text-align: center;
-    padding: 0px 40px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .auto-slide h1 {
-   font-size: 30px;
-   padding-top: 10px;
-
-  }
-  .application{
-    text-align: justify;
-    padding: 0px 20px;
-
-  }
-  .motor-header h1 {
-    letter-spacing: 1px;
-    font-weight: 800;
-    color: blue;
-  
-  
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
-  .motor-header p {
-
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: initial;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .benefits{
-    text-align: justify;
-    padding: 0px 30px;
-
-  }
-  
- 
-} */
 
 /* @media (min-width:701px) and (max-width:1000px){
 
@@ -1935,3 +1790,11 @@ transform: rotateZ(180deg);
 
 }
 
+/* ................Pdf................. */
+
+
+
+.pdf img{
+ height: 10%;
+  width:10%;
+}
