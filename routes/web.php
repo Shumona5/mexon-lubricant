@@ -38,6 +38,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+    //...............Frontend................ 
 
 Route::get('/', [HomeController::class, 'home'])->name('web.home');
 Route::get('/products',[FrontendProductController::class,'list'])->name('products.list');
@@ -59,12 +60,7 @@ Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/contact-us',[ContactController::class,'list'])->name('contact.list');
 Route::get('/contact-us/store',[ContactController::class,'store'])->name('contactUs.store');
 
-
-
-
-
-
-
+//........................Backend...................
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login/post', [LoginController::class, 'loginPost'])->name('login.post');
@@ -144,7 +140,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/export', [ControllersCustomerController::class, 'excelExport'])->name('customer.export');
     });
 
-    
+    Route::get('/category',[CategoryController::class,'list'])->name('category.list');
 
    
     

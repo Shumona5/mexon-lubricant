@@ -1798,3 +1798,22 @@ transform: rotateZ(180deg);
  height: 10%;
   width:10%;
 }
+
+.memox {
+ padding: 0px 50px;
+}
+
+.memox h1{
+ color: #021b4b;
+}
+.memox p{
+  text-align: justify;
+  line-height: 30px;
+  color: #0e254e;
+ }
+ .memox-key {
+  padding: 0px 50px;
+  text-align: justify;
+  line-height: 30px;
+  color: #021b4b;
+ }

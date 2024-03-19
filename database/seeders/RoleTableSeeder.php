@@ -24,10 +24,7 @@ class RoleTableSeeder extends Seeder
                 'name'=>'Admin',
                 'slug'=>'admin'
             ],
-            [
-                'name'=>'Delivery Man',
-                'slug'=>'delivery-man'
-            ],
+           
         ];
 
         foreach($data as $info){
