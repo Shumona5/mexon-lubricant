@@ -82,22 +82,24 @@
 
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
+        @foreach($sliders as $slider)
         <div class="carousel-item active">
-          <img src="{{url('/frontend/image/Mexon-Home-Slide-1.jpg')}}" alt="Los Angeles" class="d-block"
+          <img src="{{$slider->image}}" alt="Los Angeles" class="d-block"
             style="width:100%;height: 90%;">
         </div>
-        <div class="carousel-item">
+        @endforeach
+        <!-- <div class="carousel-item">
           <img src="{{url('/frontend/image/Mexon-Home-Slide-2.jpg')}}" alt="Chicago" class="d-block"
             style="width:100%;height: 90%;">
-        </div>
-        <div class="carousel-item">
+        </div> -->
+        <!-- <div class="carousel-item">
           <img src="{{url('/frontend/image/Mexon-Home-Slide-3.jpg')}}" alt="New York" class="d-block"
             style="width:100%;height: 90%;">
-        </div>
-        <div class="carousel-item">
+        </div> -->
+        <!-- <div class="carousel-item">
           <img src="{{url('/frontend/image/Mexon-Home-Slide-4.jpg')}}" alt="New York" class="d-block"
             style="width:100%;height: 0%;">
-        </div>
+        </div> -->
       </div>
 
       <!-- Left and right controls/icons -->

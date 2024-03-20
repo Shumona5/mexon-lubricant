@@ -141,6 +141,11 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::get('/category',[CategoryController::class,'list'])->name('category.list');
+    Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
+    Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+    Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
+    Route::post('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
+    Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
    
     
