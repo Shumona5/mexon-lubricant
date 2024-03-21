@@ -13,6 +13,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController as ControllersCustomerController;
 use App\Http\Controllers\DeliveryManController;
+use App\Http\Controllers\EngineController;
+use App\Http\Controllers\EngineOilController;
 use App\Http\Controllers\Frontend\AutoController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -59,6 +61,13 @@ Route::get('/transmission/memox',[TransmissionController::class,'memox'])->name(
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/contact-us',[ContactController::class,'list'])->name('contact.list');
 Route::get('/contact-us/store',[ContactController::class,'store'])->name('contactUs.store');
+
+Route::get('/engine',[EngineOilController::class,'list'])->name('engine.list');
+Route::get('/engine/create',[EngineOilController::class,'create'])->name('engine.create');
+Route::post('/engine/store',[EngineOilController::class,'store'])->name('engine.store');
+Route::get('/engine/edit/{id}',[EngineOilController::class,'edit'])->name('engine.edit');
+Route::post('/engine/update',[EngineOilController::class,'update'])->name('engine.update');
+Route::get('/engine/delete',[EngineOilController::class,'delete'])->name('engine.delete');
 
 //........................Backend...................
 

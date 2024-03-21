@@ -178,7 +178,7 @@ Settings
         </div>
 
         <div class="px-10">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">about us</label>
+            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700"> Our Service </label>
             <div class="mt-1 relative rounded-md shadow-sm">
                 <textarea id="about_us" name="about_us" class="
                 form-control

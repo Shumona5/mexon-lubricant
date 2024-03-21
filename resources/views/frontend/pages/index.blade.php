@@ -116,10 +116,7 @@
     <!-- Our Service -->
     <section class="service" id="service">
       <h1>Our Service</h1>
-      <p>Why chose Mexon lubricants instead of others? Because it’s difficult to chose the right product with better
-        quality and also give the guarantee of quality products and value for money. Mexon lubricants ensures heavy
-        durable intact product packaging, competitive price, maximize oil drain interval and after- sales services.
-      </p>
+      <p> {{$settings->about_us}} </p>
     </section>
 
     <!-- End Service -->
