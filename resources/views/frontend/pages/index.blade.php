@@ -137,21 +137,13 @@
     </section>
 
     <section>
+      @foreach($engines as $engine)
       <div class="engine-oil">
-        <h1> Automotive Engine Oil </h1>
-        <p> Mexon lubricants contain various substances that consist of base oils enhanced with various additives,
-          particularly anti-wear additives, detergents, dispersal, and, for multi-grade oils, viscosity index improves.
-          Which helps internal combustion engines. The main function of motor oil is to reduce friction and wear on
-          moving parts and to clean the engine from sludge (one of the functions of dispersal) and varnish (detergents).
-          It also neutralizes acids that originate from fuel and from oxidation of the lubricant (detergents), Mexon
-          lubricants contain the perfect viscosity which improves sealing of piston rings, and cools the engine by
-          carrying heat away from moving parts.</p>
-        <br>
-        <h1>Industrial Engine Oil</h1>
-        <p> As a industrial machinery which is much bigger, stronger and heaver which goes upto high level of heat and
-          keeping that in consider Mexon Lubricants gives extra concentration on industrial engine oil so the lubricant
-          can maintain its viscosity and its quality on highest Level.</p>
+        <h1> {{$engine->name}} </h1>
+        <p> {!!$engine->description!!}</p>
+        
       </div>
+      @endforeach
     </section>
     <!-- Multiple Image Slide Start-->
     <section class="auto-slide">

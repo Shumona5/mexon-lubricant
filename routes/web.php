@@ -66,8 +66,8 @@ Route::get('/engine',[EngineOilController::class,'list'])->name('engine.list');
 Route::get('/engine/create',[EngineOilController::class,'create'])->name('engine.create');
 Route::post('/engine/store',[EngineOilController::class,'store'])->name('engine.store');
 Route::get('/engine/edit/{id}',[EngineOilController::class,'edit'])->name('engine.edit');
-Route::post('/engine/update',[EngineOilController::class,'update'])->name('engine.update');
-Route::get('/engine/delete',[EngineOilController::class,'delete'])->name('engine.delete');
+Route::put('/engine/update/{id}',[EngineOilController::class,'update'])->name('engine.update');
+Route::get('/engine/delete/{id}',[EngineOilController::class,'delete'])->name('engine.delete');
 
 //........................Backend...................
 
@@ -153,7 +153,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
     Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
     Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
-    Route::post('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
+    Route::put('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
     Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
    

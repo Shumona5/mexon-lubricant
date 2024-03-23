@@ -14,11 +14,11 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="120x120" href="{{url('/image/favicon_io/apple-touch-icon.png')}}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{url('/image/favicon_io/favicon-32x32.png')}}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{url('/image/favicon_io/favicon-16x16.png')}}">
-  <link rel="manifest" href="{{url('/image/favicon_io/site.webmanifest')}}">
-  <link rel="mask-icon" href="{{url('/image/favicon_io/safari-pinned-tab.svg')}}" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{url('/frontend/image/favicon_io/apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url('/frontend/image/favicon_io/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url('/frontend/image/favicon_io/favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url('/frontend/image/favicon_io/site.webmanifest')}}">
+  <link rel="mask-icon" href="{{url('/frontend/image/favicon_io/safari-pinned-tab.svg')}}" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 

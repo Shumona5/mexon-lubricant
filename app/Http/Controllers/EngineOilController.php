@@ -43,6 +43,37 @@ class EngineOilController extends Controller
 
     public function update(Request $request, $id){
 
+        $validator=Validator::make($request->all(),[
+            'name'=>'required|unique:engine_oil',
+            'description'=>'required'
+
+        ]);
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $engines=EngineOil::find($id);
+        $engines->update([
+            'name'         => $request->name,
+            'description'  =>$request->description
+
+        ]);
+        notify()->success('Engine oil Updated Successfully');
+        return redirect()->route('engine.list');
+
+
+    }
+    public function delete($id){
+        $test=EngineOil::find($id);
+        if($test){
+            $test->delete();
+            notify()->success('Engine Oil Deleted Successfully');
+            return redirect()->route('engine.list');
+        } else{
+            notify()->error('Engine Oil Not Found');
+            return redirect()->route('engine.list');
+        }
+        
     }
    
 

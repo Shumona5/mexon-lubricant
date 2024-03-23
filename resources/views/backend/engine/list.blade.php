@@ -118,7 +118,7 @@ Engine Oil List
                                         clip-rule="evenodd" />
                                 </svg>
                             </a>
-                            <a title="Delete" href=""
+                            <a title="Delete" href="{{route('engine.delete',$engine->id)}}"
                                 onclick="return confirm('Are you sure you want to delete it ?')"
                                 class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-red-600" viewBox="0 0 20 20" fill="currentColor">
