@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-
+    <!-- ckeditor -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto&display=swap" rel="stylesheet">
 
 </head>
 
@@ -72,7 +73,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.6/dist/datepicker.js"></script>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> -->
+    
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
     <script src="{{asset('backend/js/app.js')}}" defer></script>
 
@@ -82,6 +85,12 @@
                 console.error(error);
             });
     </script>
+    <!-- ckeditor -->
+     <script type="text/javascript">
+        $(document).ready(function() {
+           $('.ckeditor').ckeditor();
+        });
+    </script> 
 </body>
 
 </html>

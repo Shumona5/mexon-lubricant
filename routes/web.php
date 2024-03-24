@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\TeamsController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\BusinessPromotionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController as ControllersCustomerController;
 use App\Http\Controllers\DeliveryManController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\IndustrialController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\HomePageImageController;
 use App\Http\Controllers\LocationController as ControllersLocationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
@@ -156,8 +158,20 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
     Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
-   
+    Route::get('/businessPromotion',[BusinessPromotionController::class,'list'])->name('businessPromotion.list');
+    Route::get('/businessPromotion/create',[BusinessPromotionController::class,'create'])->name('businessPromotion.create');
+    Route::post('/businessPromotion/store',[BusinessPromotionController::class,'store'])->name('businessPromotion.store');
+    Route::get('/businessPromotion/edit/{id}',[BusinessPromotionController::class,'edit'])->name('businessPromotion.edit');
+    Route::put('/businessPromotion/update/{id}',[BusinessPromotionController::class,'update'])->name('businessPromotion.update');
+    Route::get('/businessPromotion/delete/{id}',[BusinessPromotionController::class,'delete'])->name('businessPromotion.delete');
     
+    Route::get('/homeimage',[HomePageImageController::class,'list'])->name('home.image');
+    Route::get('/homeimage/create',[HomePageImageController::class,'create'])->name('home.image.create');
+    Route::post('/homeimage/store',[HomePageImageController::class,'store'])->name('home.image.store');
+    Route::get('/homeimage/edit',[HomePageImageController::class,'edit'])->name('home.image.edit');
+    Route::put('/homeimage/update',[HomePageImageController::class,'update'])->name('home.image.update');
+    Route::get('/homeimage/delete',[HomePageImageController::class,'delete'])->name('home.image.delete');
+
     
    
     
