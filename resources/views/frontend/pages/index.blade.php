@@ -162,7 +162,7 @@
         <div class="slide-img">
           <img src="{{url('/frontend/image/motorbike5.png')}}" alt="" >
         </div>
-        <!-- Doubled -->
+      
         <div class="slide-img">
           <img src="{{url('/frontend/image/motorbike6.png')}}" alt="" >
         </div>

@@ -10,12 +10,17 @@
 
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{{route('products.list')}}" id="navbarDropdown" role="button"
+            <a class="d-block d-md-none nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products
+            </a>
+            <a class=" d-none d-md-block nav-link dropdown-toggle" href="{{route('products.list')}}" id="navbarDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              
+           
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="{{route('products.auto')}}" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
