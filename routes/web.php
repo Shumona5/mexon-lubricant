@@ -165,13 +165,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/businessPromotion/update/{id}',[BusinessPromotionController::class,'update'])->name('businessPromotion.update');
     Route::get('/businessPromotion/delete/{id}',[BusinessPromotionController::class,'delete'])->name('businessPromotion.delete');
     
-    Route::get('/homeimage',[HomePageImageController::class,'list'])->name('home.image');
+    Route::get('/homeimage',[HomePageImageController::class,'edit'])->name('home.image');
     Route::get('/homeimage/create',[HomePageImageController::class,'create'])->name('home.image.create');
     Route::post('/homeimage/store',[HomePageImageController::class,'store'])->name('home.image.store');
-    Route::get('/homeimage/edit',[HomePageImageController::class,'edit'])->name('home.image.edit');
-    Route::put('/homeimage/update',[HomePageImageController::class,'update'])->name('home.image.update');
-    Route::get('/homeimage/delete',[HomePageImageController::class,'delete'])->name('home.image.delete');
-
+    // Route::get('/homeimage/edit/{id}',[HomePageImageController::class,'edit'])->name('home.image.edit');
+    Route::put('/homeimage/update/{id}',[HomePageImageController::class,'update'])->name('home.image.update');
+   
     
    
     

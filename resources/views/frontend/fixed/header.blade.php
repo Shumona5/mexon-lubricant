@@ -22,7 +22,11 @@
            
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{{route('products.auto')}}" id="navbarDropdown" role="button"
+                <a class=" d-block d-md-none nav-link dropdown-toggle" href="{{route('products.auto')}}" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Automotive
+                </a>
+                <a class=" d-none d-md-block nav-link dropdown-toggle" href="{{route('products.auto')}}" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Automotive
                 </a>
@@ -34,7 +38,11 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{{route('products.industrial')}}" id="navbarDropdown" role="button"
+                <a class="d-block d-md-none nav-link dropdown-toggle" href="{{route('products.industrial')}}" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Industrial
+                </a>
+                <a class=" d-none d-md-block nav-link dropdown-toggle" href="{{route('products.industrial')}}" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Industrial
                 </a>
@@ -59,7 +67,11 @@
                
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class=" d-block d-md-none nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Others
+                </a>
+                <a class="d-none d-md-block nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
                   Others
                 </a>
