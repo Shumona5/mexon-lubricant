@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\LocationController;
+use App\Http\Controllers\AutomotiveController;
 use App\Http\Controllers\Backend\ChangePassword;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ForgetPasswordController;
@@ -171,7 +172,12 @@ Route::group(['middleware' => ['auth']], function () {
     // Route::get('/homeimage/edit/{id}',[HomePageImageController::class,'edit'])->name('home.image.edit');
     Route::put('/homeimage/update/{id}',[HomePageImageController::class,'update'])->name('home.image.update');
    
-    
+    Route::get('/automotive',[AutomotiveController::class,'list'])->name('automotive.list');
+    Route::get('/automotive/create',[AutomotiveController::class,'create'])->name('automotive.create');
+    Route::post('/automotive/store',[AutomotiveController::class,'store'])->name('automotive.store');
+    Route::get('/automotive/edit',[AutomotiveController::class,'edit'])->name('automotive.edit');
+    Route::put('/automotive/update',[AutomotiveController::class,'update'])->name('automotive.update');
+    Route::delete('/automotive/delete',[AutomotiveController::class,'delete'])->name('automotive.delete');
    
     
 

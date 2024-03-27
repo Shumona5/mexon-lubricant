@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('business_promotions', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('long_description');
+            $table->longText('long_description')->nullable();
             $table->timestamps();
         });
     }

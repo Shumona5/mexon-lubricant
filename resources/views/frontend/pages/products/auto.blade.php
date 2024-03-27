@@ -47,7 +47,8 @@
           <article class="col-lg-3 col-md-4 col-sm-6">
             <div class="col-content">
               <span class="col_icon">
-                <i class="fa fa-motorcycle"></i>
+                <!-- <i class="fa fa-motorcycle"></i> -->
+                <img src="{{url('/frontend/image/motorcycle.jpg')}}" alt="" style="width: 100px;" class="zoom">
               </span>
               <h3>
                 <a href="{{route('products.motorbike')}}" class=" ">

@@ -41,14 +41,14 @@
                     Home Page Image 
                 </a>
 
-                <!-- <a href="{{route('product.list')}}" class="{{ isRouteActive('product.list*') }} group flex items-center px-2 py-2 text-sm leading-5 hover:bg-gray-100 font-medium text-gray-600 rounded-md focus:outline-none  transition ease-in-out duration-150">
+                <a href="{{route('product.list')}}" class="{{ isRouteActive('product.list*') }} group flex items-center px-2 py-2 text-sm leading-5 hover:bg-gray-100 font-medium text-gray-600 rounded-md focus:outline-none  transition ease-in-out duration-150">
                     <i class="fa-solid fa-person-circle-question mx-3"></i>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" class="mr-3 text-gray-900">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                     </svg>
                     Product
                 </a>
-                 -->
+                
                 
                 <!-- <div class="relative">
                     <li class="flex items-center justify-between px-2 py-2 mt-1 text-sm font-medium leading-5 text-gray-600 transition duration-150 ease-in-out rounded-md group hover:text-gray-800 hover:bg-gray-100 focus:outline-none">
@@ -144,6 +144,14 @@
                     </svg>
 
                     Business Promotion
+                </a> 
+                <a href="{{route('automotive.list')}}" class=" {{ isRouteActive('automotive.list*') }} group flex items-center px-2 py-2 text-sm leading-5 hover:bg-gray-100 font-medium text-gray-600 rounded-md focus:outline-none  transition ease-in-out duration-150">
+                    <i class="fa-solid fa-person-circle-question mx-3"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                    </svg>
+
+                    Automotive 
                 </a> 
                 <a href="{{route('contact.list')}}" class=" {{ isRouteActive('contact.list*') }} group flex items-center px-2 py-2 text-sm leading-5 hover:bg-gray-100 font-medium text-gray-600 rounded-md focus:outline-none  transition ease-in-out duration-150">
                     <i class="fa-solid fa-person-circle-question mx-3"></i>

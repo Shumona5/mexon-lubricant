@@ -14,18 +14,15 @@ class ProductController extends Controller
 {
     public function list()
     {
-        if(\request()->search){
-            $products=Product::where('name','LIKE','%'. \request()->search . '%')->with('service')->paginate(20);
-        }else{
-        $products = Product::with('service')->paginate(20);
-        }
-        return view('backend.product.list', compact('products'));
+        $mexonProduct=Product::first();
+        $products=Product::get();  
+       return view('backend.product.list', compact('products','mexonProduct'));
     }
 
     public function create()
     {
-        $services = Service::all();
-        return view('backend.product.create', compact('services'));
+       
+        return view('backend.product.create');
     }
 
     public function store(Request $request)
@@ -34,12 +31,8 @@ class ProductController extends Controller
 
         $validate = Validator::make($request->all(), [
 
-            'name'               => 'required',
-            'service_id'        => 'required|numeric',
-            'description'        => 'required',
-            // 'quantity'           => 'required|numeric',
-            'price'              => 'required|numeric|gt:0',
-            // 'status'             => 'required'
+            'title1' => 'required',
+            
 
         ]);
         if ($validate->fails()) {
@@ -56,20 +49,11 @@ class ProductController extends Controller
             }
 
 
-            $products = Product::create([
-                //t-shirt1,t-shirt2
-                'name' => $request->name,
-                'slug' => Str::slug($request->name).$request->service_id,
-                'service_id' => $request->service_id,
-
-                'description' => $request->description,
+            $mexonProduc = Product::create([
+                
+                'title1' => $request->title1,
+                'title2' => $request->title2,
                 'image' => $image,
-                 'quantity' => 1,
-                'price' => $request->price,
-                'discount' => $request->discount,
-                'discount_type' => $request->discount_type,
-
-
             ]);
 
             notify()->success('Product Created Successfully');
@@ -83,27 +67,17 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        $products = Product::find($id);
-        $services = Service::all();
-        return view('backend.product.edit', compact('products','services'));
+        $mexonProduct=Product::first();
+        return view('backend.product.edit', compact('mexonProduct'));
     }
 
     public function update(Request $request, $id)
     {
         // dd($request->all());
-        $products = Product::find($id);
+        $mexonProduct=Product::first();
         $validate = Validator::make($request->all(), [
 
-            'name'               => 'required',
-            'service_id'        => 'required|numeric',
-            'description'        => 'required',
-            // 'quantity'           => 'required|numeric',
-            'price'              => 'required|numeric|gt:0',
-            'status'             => 'required'
-
-            // ],
-            // [
-            //     'name'       => 'Invalid format, Phone number should be like:01XXXXXXXXX'
+            'title1' => 'required',
 
         ]);
         if ($validate->fails()) {
@@ -112,24 +86,17 @@ class ProductController extends Controller
         }
 
 
-        $image = $products->getRawOriginal('image');
+        $image = $mexonProduct->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/product', $image);
         }
          
-        $products->update([
+        $mexonProduct->update([
 
-            'name' => $request->name,
-            // 'slug' => Str::slug($request->name).$request->service_id,
-            'service_id' => $request->service_id,
-            'description' => $request->description,
+            'title1' => $request->title1,
+            'title2' => $request->title2,
             'image' => $image,
-            // 'quantity' => $request->quantity,
-            'price' => $request->price,
-            'discount' => $request->discount,
-            'discount_type' => $request->discount_type,
-            'status' => $request->status,
         ]);
         notify()->success('Product Updated Successfully');
         return redirect()->route('product.list');

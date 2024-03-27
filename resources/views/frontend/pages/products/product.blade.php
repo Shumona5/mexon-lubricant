@@ -14,6 +14,9 @@
 </section>
 
 <div>
+  @foreach($products as $key=>$product)
+  @if($key%2==0)
+  <!-- left side design -->
   <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/auto.jpg');">
     <div class="container flex-contain product_intro">
       <div class="row">
@@ -30,7 +33,8 @@
       </div>
     </div>
   </section>
-
+@else
+  <!-- right side design -->
   <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/industry.jpg');">
     <div class="container flex-contain product_intro">
       <div class="row">
@@ -48,7 +52,8 @@
       </div>
     </div>
   </section>
-
+  @endif
+@endforeach
   <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/Marine.jpg');">
     <div class="container flex-contain product_intro">
       <div class="row">
