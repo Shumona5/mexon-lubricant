@@ -30,6 +30,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TransmissionController;
 use App\Models\Category;
+use App\Models\ProductsDetails;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -127,6 +128,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
         Route::put('/update/{id}', [ProductController::class, 'update'])->name('product.update');
         Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+        Route::get('/subProduct/create',[ProductController::class,'subProductCreate'])->name('subProduct.create');
+        Route::post('/subProduct/store',[ProductController::class,'subProductStore'])->name('subProduct.store');
+        Route::get('/subProduct/edit/{id}',[ProductController::class,'subProductEdit'])->name('subProduct.edit');
+        Route::put('/subProduct/update/{id}',[ProductController::class,'subProductUpdate'])->name('subProduct.update');
+        Route::get('/subProduct/delete/{id}',[ProductController::class,'subProductDelete'])->name('subProduct.delete');
     });
 
 
@@ -179,7 +185,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/automotive/update',[AutomotiveController::class,'update'])->name('automotive.update');
     Route::delete('/automotive/delete',[AutomotiveController::class,'delete'])->name('automotive.delete');
    
-    
+    Route::get('/productsDetails',[ProductsDetails::class,'list'])->name('productsDetails.list');
 
     
 });

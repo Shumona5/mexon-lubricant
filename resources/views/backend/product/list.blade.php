@@ -26,7 +26,7 @@ Product List
                     </div>
                     <div class="mt-1.5">
                         <button type="submit" class="px-4 py-2 mt-5 ml-5 space-x-6 text-white bg-indigo-600 rounded-md focus:outline-none">
-                            submit
+                            Submit
                         </button>
                         @if (request()->query('search'))
                         <a href="{{route('product.list')}}" class="focus:outline-none space-x-6 bg-indigo-600 text-white rounded-md px-4 py-2.5 ml-5 mt-5">
@@ -87,14 +87,14 @@ Product List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$mexonProduct->title1}}
+                                    {{optional($mexonProduct)->title1}}
                                 </div>
                             </div>
                         </td>
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                {{$mexonProduct->title2}}
+                                {{optional($mexonProduct)->title2}}
                                 </div>
                             </div>
                         </td>
@@ -103,13 +103,13 @@ Product List
                                 <div class="text-sm font-medium text-gray-900">
 
 
-                                    <img width="150 px" src=" {{$mexonProduct->image}}" class=" object-contain rounded-full h-14 w-14" alt="">
+                                    <img width="150 px" src=" {{optional($mexonProduct)->image}}" class=" object-contain rounded-full h-14 w-14" alt="">
                                 </div>
                             </div>
                         </td>
 
                         <td class="flex px-8 py-8 space-x-2 text-sm font-medium text-right whitespace-nowrap">
-                            <a title="Edit" href="{{route('product.edit',$mexonProduct->id)}}" class="text-indigo-600 hover:text-indigo-900">
+                        <a title="Edit" href="{{route('product.edit')}}" class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                                     <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
@@ -133,16 +133,49 @@ Product List
         
     </div>
 
-<div >
-<div>
-        <div class="space-x-10 py-4">
-            <a x-ref="#tab1" class="px-4 py-2 text-xl font-bold  outline-none border-b-2 hover:border-green-400 focus:border-green-500 active:border-indigo-500 visited:border-indigo-500" href="#" x-on:click.prevent="tab = '#tab1'">General Information</a>
-
-           
+</div>
 
 
+<!-- Products Details -->
+<div class="container flex flex-col px-8">
+    <!-- Primary -->
+    <div class="flex items-center justify-between px-9">
+        <div class="">
+            <span class="inline-flex rounded-md shadow-sm">
+                <a href="{{route('subProduct.create')}}" class="inline-flex items-center px-2.5 py-2 w-30 border border-transparent text-base leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>Add
+                </a>
+            </span>
+        </div>
+        <div>
+            <form action="{{route('subProduct.store')}}" method="get" class="w-full">
+                <div class="flex items-center justify-center mb-10">
+                    <div class="space-x-6 w-1/8">
+                        <label for="email" class="ml-5 text-sm font-medium leading-5 text-gray-700 "></label>
+                        <div class="mt-1 rounded-md shadow-sm">
+                            <input id="email" name="search" type="text" placeholder="Search" class="w-full py-2 form-input" value="{{ request()->query('search') }}">
+                        </div>
+                    </div>
+                    <div class="mt-1.5">
+                        <button type="Submit" class="px-4 py-2 mt-5 ml-5 space-x-6 text-white bg-indigo-600 rounded-md focus:outline-none">
+                            submit
+                        </button>
+                        @if (request()->query('search'))
+                        <a href="" class="focus:outline-none space-x-6 bg-indigo-600 text-white rounded-md px-4 py-2.5 ml-5 mt-5">
+                            Reset
+                        </a>
+                        @endif
+
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+
+
+
     <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
         @if (request()->query('search'))
         <div class="flex mb-10 items-left">
@@ -157,15 +190,14 @@ Product List
                             Serial
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                           Title 1
+                            Title
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                        Title 2
+                            Design Pattern
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                            Image 
+                            Image
                         </th>
-                       
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Action
                         </th>
@@ -175,12 +207,19 @@ Product List
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  
+                @foreach($products as $key=>$product)  
                     <tr>
+                    <td class="text-sm text-gray-900">
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">
+                                 {{$key+1}}
+                                </div>
+                            </div>
+                        </td>
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    1
+                                {{$product->subtitle_name}}
                                 </div>
                             </div>
                         </td>
@@ -188,29 +227,22 @@ Product List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$mexonProduct->title1}}
+                                {{$product->design_pattern}}
                                 </div>
                             </div>
                         </td>
+
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                {{$mexonProduct->title2}}
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-sm text-gray-900">
-                            <div class="ml-4">
-                                <div class="text-sm font-medium text-gray-900">
-
-
-                                    <img width="150 px" src=" {{$mexonProduct->image}}" class=" object-contain rounded-full h-14 w-14" alt="">
+                                    <img width="150 px" src=" {{$product->image}}"
+                                        class=" object-contain rounded-full h-14 w-14" alt=""> 
                                 </div>
                             </div>
                         </td>
 
                         <td class="flex px-8 py-8 space-x-2 text-sm font-medium text-right whitespace-nowrap">
-                            <a title="Edit" href="{{route('product.edit',$mexonProduct->id)}}" class="text-indigo-600 hover:text-indigo-900">
+                            <a title="Edit" href="{{route('subProduct.edit',$products->id)}}" class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                                     <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
@@ -224,22 +256,12 @@ Product List
                         </td>
 
                     </tr>
-                    
-                   
+                @endforeach
+                    <!-- More people... -->
                 </tbody>
             </table>
-           
+            
         </div>
-
-        </div>  
     </div>
-
-    <div x-data="{ tab: '#tab1' }" x-init="$refs[tab].focus()" class="pl-8">
-
-
-
-
-
-</div>
 </div>
 @endsection

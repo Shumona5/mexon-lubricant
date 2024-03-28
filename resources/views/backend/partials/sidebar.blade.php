@@ -48,7 +48,7 @@
                     </svg>
                     Product
                 </a>
-                
+            
                 
                 <!-- <div class="relative">
                     <li class="flex items-center justify-between px-2 py-2 mt-1 text-sm font-medium leading-5 text-gray-600 transition duration-150 ease-in-out rounded-md group hover:text-gray-800 hover:bg-gray-100 focus:outline-none">
