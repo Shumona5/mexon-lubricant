@@ -93,7 +93,7 @@ Mexon List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$whyMexon->name}}
+                                    {{optional($whyMexon)->name}}
                                 </div>
                             </div>
                         </td>
@@ -101,7 +101,7 @@ Mexon List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {!!($whyMexon->description)!!}
+                                    {!!(optional($whyMexon)->description)!!}
                                 </div>
                             </div>
                         </td>
