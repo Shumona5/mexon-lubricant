@@ -29,6 +29,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TransmissionController;
+use App\Http\Controllers\WhyMexonController;
 use App\Models\Category;
 use App\Models\ProductsDetails;
 use Illuminate\Support\Facades\Route;
@@ -125,9 +126,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', [ProductController::class, 'list'])->name('product.list');
         Route::get('/create', [ProductController::class, 'create'])->name('product.create');
         Route::post('/store', [ProductController::class, 'store'])->name('product.store');
-        Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
-        Route::put('/update/{id}', [ProductController::class, 'update'])->name('product.update');
-        Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+        Route::get('/edit', [ProductController::class, 'edit'])->name('product.edit');
+        Route::put('/update', [ProductController::class, 'update'])->name('product.update');
+        Route::get('/delete', [ProductController::class, 'delete'])->name('product.delete');
         Route::get('/subProduct/create',[ProductController::class,'subProductCreate'])->name('subProduct.create');
         Route::post('/subProduct/store',[ProductController::class,'subProductStore'])->name('subProduct.store');
         Route::get('/subProduct/edit/{id}',[ProductController::class,'subProductEdit'])->name('subProduct.edit');
@@ -185,7 +186,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/automotive/update',[AutomotiveController::class,'update'])->name('automotive.update');
     Route::delete('/automotive/delete',[AutomotiveController::class,'delete'])->name('automotive.delete');
    
-    Route::get('/productsDetails',[ProductsDetails::class,'list'])->name('productsDetails.list');
+    Route::get('/whymexon',[WhyMexonController::class,'list'])->name('whyMexon.list');
+    Route::get('/whymexon/create',[WhyMexonController::class,'create'])->name('whyMexon.create');
+    Route::post('/whymexon/store',[WhyMexonController::class,'store'])->name('whyMexon.store');
+    Route::get('/whymexon/edit',[WhyMexonController::class,'edit'])->name('whyMexon.edit');
+    Route::put('/whymexon/update',[WhyMexonController::class,'update'])->name('whyMexon.update');
+    Route::get('/whymexon/store',[WhyMexonController::class,'delete'])->name('whyMexon.delete');
+
 
     
 });

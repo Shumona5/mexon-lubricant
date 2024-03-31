@@ -8,7 +8,7 @@ class AutomotiveController extends Controller
 {
     public function list()
     {
-        $automotives=AutomotiveController::al
+        $automotives=AutomotiveController::all();
         return view('backend.automotive.list');
     }
 

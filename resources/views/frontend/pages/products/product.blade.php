@@ -54,7 +54,7 @@
   </section>
   @endif
 @endforeach
-  <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/Marine.jpg');">
+  <!-- <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/Marine.jpg');">
     <div class="container flex-contain product_intro">
       <div class="row">
         <div class="col-md-5">
@@ -70,9 +70,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/Special.jpg');">
+  <!-- <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/Special.jpg');">
     <div class="container flex-contain product_intro">
       <div class="row">
         <div class="col-md-7"> </div>
@@ -86,7 +86,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </div>
 
 @endsection

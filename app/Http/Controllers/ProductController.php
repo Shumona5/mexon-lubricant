@@ -67,7 +67,7 @@ class ProductController extends Controller
         }
     }
 
-    public function edit($id)
+    public function edit()
     {
         $mexonProduct=Product::first();
         return view('backend.product.edit', compact('mexonProduct'));
@@ -104,11 +104,11 @@ class ProductController extends Controller
         return redirect()->route('product.list');
     }
 
-    public function delete($id)
+    public function delete()
     {
         try{ 
          
-        $test = Product::find($id);
+        $test = Product::first();
         if ($test) {
             $test->delete();
             notify()->success('Product Deleted Successfully');
@@ -145,7 +145,7 @@ class ProductController extends Controller
                 $request->file('image')->storeAs('/subProduct', $image);
             }
 
-          $products=Product::create([
+          $products=ProductsDetails::create([
             'subtitle_name' => $request->subtitle_name,
             'description' => $request->description,
             'image' => $image,
@@ -157,8 +157,8 @@ class ProductController extends Controller
          notify()->success('Sub Product Created Successfully');
          return redirect()->route('product.list');
 
-        } catch (Exception $e) {
-          
+        } catch (\Throwable $th) {
+        //    notify()->error($th->getMessage());
             notify()->error('This Product Can not Added');
             
             return redirect()->back();
@@ -168,7 +168,7 @@ class ProductController extends Controller
     }
 
     public function subProductEdit($id){
-        $products=Product::find($id);
+        $products=ProductsDetails::find($id);
         return view('backend.sub-products.edit',compact('products'));
     }
     public function subProductUpdate(Request $request ,$id){
@@ -186,7 +186,7 @@ class ProductController extends Controller
         }
 
 
-        $products=Product::find($id);
+        $products=ProductsDetails::find($id);
         $image = $products->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
@@ -211,7 +211,7 @@ class ProductController extends Controller
     public function subProductDelete($id){
         try{ 
          
-            $test = Product::find($id);
+            $test = ProductsDetails::find($id);
             if ($test) {
                 $test->delete();
                 notify()->success('Sub Product Deleted Successfully');
