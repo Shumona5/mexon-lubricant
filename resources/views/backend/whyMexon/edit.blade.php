@@ -1,6 +1,6 @@
 @extends('backend.layout.app')
 @section('title')
-Engine Oil Edit
+Why Mexon Edit
 @endsection
 @section('main')
 <form action="{{route('whyMexon.update')}}" method="post" class="px-6 py-6 rounded-md  space-y-7" >

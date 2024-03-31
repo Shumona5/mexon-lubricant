@@ -177,7 +177,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/homeimage/create',[HomePageImageController::class,'create'])->name('home.image.create');
     Route::post('/homeimage/store',[HomePageImageController::class,'store'])->name('home.image.store');
     // Route::get('/homeimage/edit/{id}',[HomePageImageController::class,'edit'])->name('home.image.edit');
-    Route::put('/homeimage/update/{id}',[HomePageImageController::class,'update'])->name('home.image.update');
+    Route::put('/homeimage/update',[HomePageImageController::class,'update'])->name('home.image.update');
    
     Route::get('/automotive',[AutomotiveController::class,'list'])->name('automotive.list');
     Route::get('/automotive/create',[AutomotiveController::class,'create'])->name('automotive.create');

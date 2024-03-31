@@ -18,12 +18,10 @@
 
     <!-- Why Mexon Lubricants -->
     <section class="mexon">
-      <h1> <b style="font-family: 'Times New Roman', Times, serif;">Why Mexon Lubricants </b></h1>
-      <p> There are lot of products in the market. You may do not know what is best for you. However, we guarantee that
-        our product, packaging quality and handling of materials until it reaches to your hand are rather safe and best
-        value for money. Therefore, we can offer the following advantages than others.
+      <h1> <b style="font-family: 'Times New Roman', Times, serif;">{{$whyMexon->name}} </b></h1>
+      <p> {!!$whyMexon->description!!} 
       </p>
-      <div class="row">
+      <!-- <div class="row">
 
         <div class="left-side">
           <p>
@@ -39,7 +37,7 @@
           <img src="{{url('frontend/image/why_mexon.jpg')}}" style="width: 350px; height: 250px;">
         </div>
 
-      </div>
+      </div> -->
 
       <div class="row">
         <div class="mexon-col">

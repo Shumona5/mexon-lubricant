@@ -48,7 +48,7 @@ class HomePageImageController extends Controller
         return view('backend.homeImage.edit',compact('homeImages'));
 
     }
-    public function update(Request $request ,$id){
+    public function update(Request $request){
         $homeImages=HomePageImage::first();
 
         $first_image = $homeImages->getRawOriginal('first_image');

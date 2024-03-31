@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\EngineOil;
 use App\Models\Slider;
+use App\Models\WhyMexon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,8 @@ class HomeController extends Controller
     {
         $sliders=Slider::all();
         $engines=EngineOil::all();
-    return view('frontend.pages.index',compact('sliders','engines'));    
+        $whyMexon=WhyMexon::first();
+    return view('frontend.pages.index',compact('sliders','engines','whyMexon'));    
     }
 
     public function privacyPolicy()
