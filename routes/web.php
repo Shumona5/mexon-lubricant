@@ -186,12 +186,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/automotive/update',[AutomotiveController::class,'update'])->name('automotive.update');
     Route::delete('/automotive/delete',[AutomotiveController::class,'delete'])->name('automotive.delete');
    
-    Route::get('/whymexon',[WhyMexonController::class,'list'])->name('whyMexon.list');
-    Route::get('/whymexon/create',[WhyMexonController::class,'create'])->name('whyMexon.create');
-    Route::post('/whymexon/store',[WhyMexonController::class,'store'])->name('whyMexon.store');
-    Route::get('/whymexon/edit',[WhyMexonController::class,'edit'])->name('whyMexon.edit');
-    Route::put('/whymexon/update',[WhyMexonController::class,'update'])->name('whyMexon.update');
-    Route::get('/whymexon/store',[WhyMexonController::class,'delete'])->name('whyMexon.delete');
+    Route::get('/whymexon',[WhyMexonController::class,'editView'])->name('whyMexon.list');
+    Route::put('/whymexon/update',[WhyMexonController::class,'createOrUpdate'])->name('whyMexon.update');
+   
 
 
     
