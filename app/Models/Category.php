@@ -19,7 +19,7 @@ class Category extends Model
         if($value){
             return Storage::url('/category/'.$value);
         }
-        return url('uploads/noImage.jpg');
+        return url('uploads/user.jpg');
     }
 
     public function parent()

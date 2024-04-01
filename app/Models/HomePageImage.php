@@ -17,7 +17,7 @@ class HomePageImage extends Model
             return Storage::url('/homeImage/'.$value);
 
         }
-        return url('/images/user.jpg');
+        return url('uploads/noImage.jpg');
     }
 
 }

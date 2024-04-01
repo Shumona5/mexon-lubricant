@@ -26,12 +26,15 @@ use App\Http\Controllers\HomePageImageController;
 use App\Http\Controllers\LocationController as ControllersLocationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductTypesDetailsController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SubProductTypesDetailsController;
 use App\Http\Controllers\TransmissionController;
 use App\Http\Controllers\WhyMexonController;
 use App\Models\Category;
 use App\Models\ProductsDetails;
+use App\Models\ProductTypesDetails;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -179,15 +182,22 @@ Route::group(['middleware' => ['auth']], function () {
     // Route::get('/homeimage/edit/{id}',[HomePageImageController::class,'edit'])->name('home.image.edit');
     Route::put('/homeimage/update',[HomePageImageController::class,'update'])->name('home.image.update');
    
-    Route::get('/automotive',[AutomotiveController::class,'list'])->name('automotive.list');
-    Route::get('/automotive/create',[AutomotiveController::class,'create'])->name('automotive.create');
-    Route::post('/automotive/store',[AutomotiveController::class,'store'])->name('automotive.store');
-    Route::get('/automotive/edit',[AutomotiveController::class,'edit'])->name('automotive.edit');
-    Route::put('/automotive/update',[AutomotiveController::class,'update'])->name('automotive.update');
-    Route::delete('/automotive/delete',[AutomotiveController::class,'delete'])->name('automotive.delete');
+    Route::get('/productTypes',[ProductTypesDetailsController::class,'list'])->name('products.type.list');
+    Route::get('/productTypes/create',[ProductTypesDetailsController::class,'create'])->name('products.type.create');
+    Route::post('/productTypes/store',[ProductTypesDetailsController::class,'store'])->name('products.type.store');
+    Route::get('/productTypes/edit/{id}',[ProductTypesDetailsController::class,'edit'])->name('products.type.edit');
+    Route::put('/productTypes/update/{id}',[ProductTypesDetailsController::class,'update'])->name('products.type.update');
+    Route::get('/productTypes/delete/{id}',[ProductTypesDetailsController::class,'delete'])->name('products.type.delete');
    
     Route::get('/whymexon',[WhyMexonController::class,'editView'])->name('whyMexon.list');
     Route::put('/whymexon/update',[WhyMexonController::class,'createOrUpdate'])->name('whyMexon.update');
+
+    Route::get('/productsSubtitle',[SubProductTypesDetailsController::class,'list'])->name('subProducts.details.list');
+    Route::get('/productsSubtitle/create',[SubProductTypesDetailsController::class,'create'])->name('subProducts.details.create');
+    Route::post('/productsSubtitle/store',[SubProductTypesDetailsController::class,'store'])->name('subProducts.details.store');
+    Route::get('/productsSubtitle/edit',[SubProductTypesDetailsController::class,'edit'])->name('subProducts.details.edit');
+    Route::put('/productsSubtitle/update',[SubProductTypesDetailsController::class,'update'])->name('subProducts.details.update');
+    Route::get('/productsSubtitle/delete',[SubProductTypesDetailsController::class,'delete'])->name('subProducts.details.delete');
    
 
 

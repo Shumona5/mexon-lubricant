@@ -8,6 +8,7 @@ use App\Models\Service;
 use Exception;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Throwable;
 
@@ -90,6 +91,8 @@ class ProductController extends Controller
 
         $image = $mexonProduct->getRawOriginal('image');
         if ($request->hasFile('image')) {
+            $remove = public_path().'/uploads/product/'.$image;
+            File::delete($remove);
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/product', $image);
         }

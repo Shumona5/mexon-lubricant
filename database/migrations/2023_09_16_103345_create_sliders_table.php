@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('subtitle')->nullable();
             $table->string('image');
+            $table->integer('position')->default('1');
             $table->string('slug')->unique();
             $table->boolean('is_has_button')->default(false);
             $table->string('button_text')->nullable();

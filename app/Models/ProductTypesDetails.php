@@ -6,23 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Product extends Model
+class ProductTypesDetails extends Model
 {
     use HasFactory;
     protected $guarded=[];
 
-    public function getImageAttribute($value)
+    public function category()
     {
-
-        if ($value) {
-            return Storage::url('/product/' . $value);
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+    public function getImageAttribute($value){
+        if($value){
+            return Storage::url('/productType/' . $value);
         }
         return url('uploads/user.jpg');
     }
-
-    public function service()
-    {
-        return $this->belongsTo(Service::class );
-    }
-
 }

@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('automotives', function (Blueprint $table) {
+        Schema::create('sub_product_types_details', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
-            $table->text('description')->nullable();
-            $table->string('subtitle_name')->nullable();
-            $table->string('image')->nullable();
+            $table->string('subtitle');
+            $table->foreignId('category_id')->constrained('categories')->restrictOnDelete();
+            $table->string('subtitle_name');
             $table->string('subtitle_image')->nullable();
+            $table->string('status')->default('active');
+            $table->string('button_url')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('automotives');
+        Schema::dropIfExists('sub_product_types_details');
     }
 };
