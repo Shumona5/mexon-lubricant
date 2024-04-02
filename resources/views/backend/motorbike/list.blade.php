@@ -1,6 +1,6 @@
 @extends('backend.layout.app')
 @section('title')
-Sub Products Type Details List
+Motorbikes List
 @endsection
 @section('main')
 <div class="container flex flex-col px-8">
@@ -8,7 +8,7 @@ Sub Products Type Details List
     <div class="flex items-center justify-between px-9">
         <div class="">
             <span class="inline-flex rounded-md shadow-sm">
-                <a href="{{route('subProducts.details.create')}}" class="inline-flex items-center px-2.5 py-2 w-30 border border-transparent text-base leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                <a href="{{route('motorbike.create')}}" class="inline-flex items-center px-2.5 py-2 w-30 border border-transparent text-base leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>Add
@@ -16,7 +16,7 @@ Sub Products Type Details List
             </span>
         </div>
         <div>
-            <form action="{{route('subProducts.details.list')}}" method="get" class="w-full">
+            <form action="{{route('motorbike.list')}}" method="get" class="w-full">
                 <div class="flex items-center justify-center mb-10">
                     <div class="space-x-6 w-1/8">
                         <label for="email" class="ml-5 text-sm font-medium leading-5 text-gray-700 "></label>
@@ -29,7 +29,7 @@ Sub Products Type Details List
                             Submit
                         </button>
                         @if (request()->query('search'))
-                        <a href="{{route('products.type.list')}}" class="focus:outline-none space-x-6 bg-indigo-600 text-white rounded-md px-4 py-2.5 ml-5 mt-5">
+                        <a href="{{route('motorbike.list')}}" class="focus:outline-none space-x-6 bg-indigo-600 text-white rounded-md px-4 py-2.5 ml-5 mt-5">
                             Reset
                         </a>
                         @endif
@@ -56,26 +56,24 @@ Sub Products Type Details List
                             Serial
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                        Subtitle Name
+                        Title 1
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                        Subtitle Image
+                        Title 2
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                            Category Name
+                            Image
                         </th>
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Status
                         </th>
-
-
                         <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                             Action
                         </th>
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($details as $key=>$data)
+                    @foreach($motorbikes as $key=>$data)
                     <tr>
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
@@ -87,22 +85,21 @@ Sub Products Type Details List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$data->subtitle_name}}
+                                    {{$data->title1}}
                                 </div>
                             </div>
                         </td>
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    <img width="150 px" src=" {{$data->subtitle_image}}" class=" object-contain rounded-full h-14 w-14" alt="">
+                                    {{$data->title2}}
                                 </div>
                             </div>
                         </td>
-
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$data->subtitle_name}}
+                                    <img width="150 px" src="{{$data->image}}" class=" object-contain rounded-full h-14 w-14" alt="">
                                 </div>
                             </div>
                         </td>
@@ -113,17 +110,14 @@ Sub Products Type Details List
                                 </div>
                             </div>
                         </td>
-
-                        
-
                         <td class="flex px-8 py-8 space-x-2 text-sm font-medium text-right whitespace-nowrap">
-                            <a title="Edit" href="{{route('subProducts.details.edit',$data->id)}}" class="text-indigo-600 hover:text-indigo-900">
+                            <a title="Edit" href="{{route('motorbike.edit',$data->id)}}" class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                                     <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
                                 </svg>
                             </a>
-                            <a title="Delete" href="{{route('subProducts.details.delete',$data->id)}}" onclick="return confirm('Are you sure you want to delete it ?')" class="text-indigo-600 hover:text-indigo-900">
+                            <a title="Delete" href="{{route('motorbike.delete',$data->id)}}" onclick="return confirm('Are you sure you want to delete it ?')" class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-red-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
                                 </svg>

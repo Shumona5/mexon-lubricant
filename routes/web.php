@@ -24,6 +24,7 @@ use App\Http\Controllers\Frontend\IndustrialController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\HomePageImageController;
 use App\Http\Controllers\LocationController as ControllersLocationController;
+use App\Http\Controllers\MotorbikeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductTypesDetailsController;
@@ -195,10 +196,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/productsSubtitle',[SubProductTypesDetailsController::class,'list'])->name('subProducts.details.list');
     Route::get('/productsSubtitle/create',[SubProductTypesDetailsController::class,'create'])->name('subProducts.details.create');
     Route::post('/productsSubtitle/store',[SubProductTypesDetailsController::class,'store'])->name('subProducts.details.store');
-    Route::get('/productsSubtitle/edit',[SubProductTypesDetailsController::class,'edit'])->name('subProducts.details.edit');
-    Route::put('/productsSubtitle/update',[SubProductTypesDetailsController::class,'update'])->name('subProducts.details.update');
-    Route::get('/productsSubtitle/delete',[SubProductTypesDetailsController::class,'delete'])->name('subProducts.details.delete');
+    Route::get('/productsSubtitle/edit/{id}',[SubProductTypesDetailsController::class,'edit'])->name('subProducts.details.edit');
+    Route::put('/productsSubtitle/update/{id}',[SubProductTypesDetailsController::class,'update'])->name('subProducts.details.update');
+    Route::get('/productsSubtitle/delete/{id}',[SubProductTypesDetailsController::class,'delete'])->name('subProducts.details.delete');
    
+    Route::get('/motorbike',[MotorbikeController::class,'list'])->name('motorbike.list');
+    Route::get('/motorbike/create',[MotorbikeController::class,'create'])->name('motorbike.create');
+    Route::post('/motorbike/store',[MotorbikeController::class,'store'])->name('motorbike.store');
+    Route::get('/motorbike/edit/{id}',[MotorbikeController::class,'edit'])->name('motorbike.edit');
+    Route::put('/motorbike/update/{id}',[MotorbikeController::class,'update'])->name('motorbike.update');
+    Route::get('/motorbike/delete/{id}',[MotorbikeController::class,'delete'])->name('motorbike.delete');
 
 
     

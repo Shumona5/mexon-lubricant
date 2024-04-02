@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class SubProductTypesDetails extends Model
+class Motorbike extends Model
 {
     use HasFactory;
     protected $guarded=[];
-
     public function getImageAttribute($value)
     {
-        if($value){
-            return Storage::url('/subproductType/' .$value);
+        if ($value) {
+            return Storage::url('/motorbike/' . $value);
         }
-        return url('/uploads/user.jpg');
+        return url('/images/user.jpg');
     }
 }
