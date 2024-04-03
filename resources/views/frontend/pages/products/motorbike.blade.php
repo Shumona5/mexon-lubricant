@@ -94,7 +94,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" height="300px">
+                            <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" >
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike5.png')}}" alt="" height="300px">
+                            <img src="{{url('/frontend/image/motorbike5.png')}}" alt="" >
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                             Pack size: 1 Liter </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike6.png')}}" alt="" height="300px">
+                            <img src="{{url('/frontend/image/motorbike6.png')}}" alt="" >
                         </div>
 
                     </div>
@@ -237,7 +237,7 @@
                                 ml </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike7.png')}}" alt="" height="300px">
+                            <img src="{{url('/frontend/image/motorbike7.png')}}" alt="" >
                         </div>
 
                     </div>
@@ -284,7 +284,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img src="{{url('/frontend/image/motorbike8.png')}}" alt="" height="300px">
+                            <img src="{{url('/frontend/image/motorbike8.png')}}" alt="" >
                         </div>
 
                     </div>
@@ -331,7 +331,7 @@
                         <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">Pack size: 1 Liter </p>
                     </div>
                     <div class="col-md-4">
-                        <img src="{{url('/frontend/image/motorbike10.png')}}" alt="" height="300px">
+                        <img src="{{url('/frontend/image/motorbike10.png')}}" alt="" >
                     </div>
 
                 </div>
@@ -373,7 +373,7 @@
                             ml</p>
                     </div>
                     <div class="col-md-4">
-                        <img src="{{url('/frontend/image/motorbike11.png')}}" alt="" height="300px">
+                        <img src="{{url('/frontend/image/motorbike11.png')}}" alt="" >
                     </div>
 
                 </div>

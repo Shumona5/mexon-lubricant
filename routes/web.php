@@ -22,6 +22,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\IndustrialController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\GasolineController;
 use App\Http\Controllers\HomePageImageController;
 use App\Http\Controllers\LocationController as ControllersLocationController;
 use App\Http\Controllers\MotorbikeController;
@@ -206,6 +207,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/motorbike/edit/{id}',[MotorbikeController::class,'edit'])->name('motorbike.edit');
     Route::put('/motorbike/update/{id}',[MotorbikeController::class,'update'])->name('motorbike.update');
     Route::get('/motorbike/delete/{id}',[MotorbikeController::class,'delete'])->name('motorbike.delete');
+    
+    Route::get('/gasoline',[GasolineController::class,'list'])->name('gasoline.list');
+    Route::get('/gasoline/create',[GasolineController::class,'create'])->name('gasoline.create');
+    Route::post('/gasoline/store',[GasolineController::class,'store'])->name('gasoline.store');
+    Route::get('/gasoline/edit/{id}',[GasolineController::class,'edit'])->name('gasoline.edit');
+    Route::put('/gasoline/update/{id}',[GasolineController::class,'update'])->name('gasoline.update');
+    Route::get('/gasoline/delete/{id}',[GasolineController::class,'delete'])->name('gasoline.delete');
 
 
     

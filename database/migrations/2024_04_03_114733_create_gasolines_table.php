@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('why_mexons', function (Blueprint $table) {
+        Schema::create('gasolines', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->text('description')->nullable();
+            $table->string('title');
+            $table->text('short_description')->nullable();
+            $table->longText('long_description')->nullable();
+            $table->string('image')->nullable();
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('why_mexons');
+        Schema::dropIfExists('gasolines');
     }
 };

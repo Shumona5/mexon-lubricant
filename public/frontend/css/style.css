@@ -1804,6 +1804,7 @@ transform: rotateZ(180deg);
     padding: 0px 20px;
   }
   
+  
 
 }
 
@@ -1812,8 +1813,8 @@ transform: rotateZ(180deg);
 
 
 .pdf img{
- height: 10%;
-  width:10%;
+ height: 5%;
+  width:5%;
 }
 
 .memox {

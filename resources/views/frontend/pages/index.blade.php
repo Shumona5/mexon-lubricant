@@ -149,29 +149,29 @@
     <div class="image-slide" style="background-color: rgb(245, 241, 236);">
       <div class="slide-track">
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike6.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.png')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike2.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.jpg')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.4.png')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike5.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.3.png')}}" alt="" >
         </div>
       
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike6.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.2.png')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike2.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike3.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.png')}}" alt="" >
         </div>
         <div class="slide-img">
-          <img src="{{url('/frontend/image/motorbike5.png')}}" alt="" >
+          <img src="{{url('/frontend/image/MUG_1.jpg')}}" alt="" >
         </div>
         
       </div>
