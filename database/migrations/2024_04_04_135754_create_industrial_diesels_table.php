@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('home_page_images', function (Blueprint $table) {
+        Schema::create('industrial_diesels', function (Blueprint $table) {
             $table->id();
-            $table->string('first_image')->nullable();
-            $table->string('second_image')->nullable();
-            $table->string('third_image')->nullable();
-            $table->text('video')->nullable();
+            $table->string('title');
+            $table->text('short_description')->nullable();
+            $table->longText('long_description')->nullable();
+            $table->string('product_image')->nullable();
+            $table->string('image')->nullable();
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_page_images');
+        Schema::dropIfExists('industrial_diesels');
     }
 };

@@ -15,6 +15,7 @@ use App\Http\Controllers\BusinessPromotionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController as ControllersCustomerController;
 use App\Http\Controllers\DeliveryManController;
+use App\Http\Controllers\DieselController;
 use App\Http\Controllers\EngineController;
 use App\Http\Controllers\EngineOilController;
 use App\Http\Controllers\Frontend\AutoController;
@@ -215,6 +216,20 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/gasoline/update/{id}',[GasolineController::class,'update'])->name('gasoline.update');
     Route::get('/gasoline/delete/{id}',[GasolineController::class,'delete'])->name('gasoline.delete');
 
+    Route::get('/diesel',[DieselController::class,'list'])->name('diesel.list');
+    Route::get('/diesel/create',[DieselController::class,'create'])->name('diesel.create');
+    Route::post('/diesel/store',[DieselController::class,'store'])->name('diesel.store');
+    Route::get('/diesel/edit/{id}',[DieselController::class,'edit'])->name('diesel.edit');
+    Route::put('/diesel/update/{id}',[DieselController::class,'update'])->name('diesel.update');
+    Route::get('/diesel/delete/{id}',[DieselController::class,'delete'])->name('diesel.delete');
 
+    Route::get('/industrial',[DieselController::class,'industrialDiesellist'])->name('industrial.diesel.list');
+    Route::get('/industrial/diesel/create',[DieselController::class,'industrialDieselcreate'])->name('industrial.diesel.create');
+    Route::post('/industrial/diesel/store',[DieselController::class,'industrialDieselstore'])->name('industrial.diesel.store');
+    Route::get('/industrial/diesel/edit/{id}',[DieselController::class,'industrialDieseledit'])->name('industrial.diesel.edit');
+    Route::put('/industrial/diesel/update/{id}',[DieselController::class,'industrialDieselupdate'])->name('industrial.diesel.update');
+    Route::get('/industrial/diesel/delete/{id}',[DieselController::class,'industrialDieseldelete'])->name('industrial.diesel.delete');
+
+    
     
 });

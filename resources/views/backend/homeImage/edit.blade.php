@@ -60,6 +60,17 @@ Home Page Image Edit
             @enderror
         </div>
 
+        <div>
+            <label for="video" class="block text-sm leading-5 font-medium text-gray-700">
+                Video <span class="text-red-600"> * </span>
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="video" value="{{ $homeImages->video}}" name="video" type="text"
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none"
+                    placeholder="Enter Video" />
+            </div>
+            @error('video')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
+        </div>
 
     </div>
     <div class="pt-5 mt-8">
