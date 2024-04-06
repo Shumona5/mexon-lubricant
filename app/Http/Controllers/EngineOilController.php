@@ -44,7 +44,7 @@ class EngineOilController extends Controller
     public function update(Request $request, $id){
 
         $validator=Validator::make($request->all(),[
-            'name'=>'required|unique:engine_oil',
+            'name'=>'required',
             'description'=>'required'
 
         ]);

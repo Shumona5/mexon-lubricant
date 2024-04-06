@@ -3,7 +3,7 @@
 Business Promotion Edit
 @endsection
 @section('main')
-<form action="{{route('businessPromotion.edit',$businessPromotion->id)}}" method="post" class="px-6 py-6 rounded-md  space-y-7" >
+<form action="{{route('businessPromotion.update')}}" method="post" class="px-6 py-6 rounded-md  space-y-7" >
     @csrf
     @method('put')
     <div class="py-12 bg-white rounded-lg shadow-md">

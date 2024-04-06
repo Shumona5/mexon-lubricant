@@ -12,6 +12,7 @@
   <!-- For Dropdown -->
   <link href="{{url('/frontend/css/bootstrap.min.css')}}" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="120x120" href="{{url('/frontend/image/favicon_io/apple-touch-icon.png')}}">
@@ -69,6 +70,21 @@
     })
   </script>
 
+  <!-- Multiple image -->
+  <!-- <script>
+  window.onload=function(){
+  $('.slider').slick({
+  autoplay:true,
+  autoplaySpeed:1500,
+  arrows:true,
+  prevArrow:'<button type="button" class="slick-prev"></button>',
+  nextArrow:'<button type="button" class="slick-next"></button>',
+  centerMode:true,
+  slidesToShow:3,
+  slidesToScroll:1
+  });
+};
+</script> -->
 </body>
 
 </html>

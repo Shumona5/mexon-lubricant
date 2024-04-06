@@ -32,6 +32,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductTypesDetailsController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SubMexonController;
 use App\Http\Controllers\SubProductTypesDetailsController;
 use App\Http\Controllers\TransmissionController;
 use App\Http\Controllers\WhyMexonController;
@@ -172,12 +173,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
     Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
-    Route::get('/businessPromotion',[BusinessPromotionController::class,'list'])->name('businessPromotion.list');
-    Route::get('/businessPromotion/create',[BusinessPromotionController::class,'create'])->name('businessPromotion.create');
-    Route::post('/businessPromotion/store',[BusinessPromotionController::class,'store'])->name('businessPromotion.store');
-    Route::get('/businessPromotion/edit/{id}',[BusinessPromotionController::class,'edit'])->name('businessPromotion.edit');
-    Route::put('/businessPromotion/update/{id}',[BusinessPromotionController::class,'update'])->name('businessPromotion.update');
-    Route::get('/businessPromotion/delete/{id}',[BusinessPromotionController::class,'delete'])->name('businessPromotion.delete');
+    Route::get('/businessPromotion',[BusinessPromotionController::class,'edit'])->name('businessPromotion.list');
+    Route::put('/businessPromotion/update',[BusinessPromotionController::class,'update'])->name('businessPromotion.update');
+  
     
     Route::get('/homeimage',[HomePageImageController::class,'edit'])->name('home.image');
     Route::get('/homeimage/create',[HomePageImageController::class,'create'])->name('home.image.create');
@@ -230,6 +228,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/industrial/diesel/update/{id}',[DieselController::class,'industrialDieselupdate'])->name('industrial.diesel.update');
     Route::get('/industrial/diesel/delete/{id}',[DieselController::class,'industrialDieseldelete'])->name('industrial.diesel.delete');
 
-    
+    Route::get('/subMexon',[SubMexonController::class,'list'])->name('subMexon.list');
+    Route::get('/subMexon/create',[SubMexonController::class,'create'])->name('subMexon.create');
+    Route::post('/subMexon/store',[SubMexonController::class,'store'])->name('subMexon.store');
+    Route::get('/subMexon/edit/{id}',[SubMexonController::class,'edit'])->name('subMexon.edit');
+    Route::put('/subMexon/update/{id}',[SubMexonController::class,'update'])->name('subMexon.update');
+    Route::get('/subMexon/delete/{id}',[SubMexonController::class,'delete'])->name('subMexon.delete');
     
 });
