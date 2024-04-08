@@ -79,7 +79,7 @@ Sub Mexon List
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($engines as $key=>$engine)
+                    @foreach($mexons as $key=>$data)
                     <tr>
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
@@ -93,7 +93,7 @@ Sub Mexon List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$engine->name}}
+                                    {{$data->title}}
                                 </div>
                             </div>
                         </td>
@@ -101,14 +101,14 @@ Sub Mexon List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {!!($engine->description)!!}
+                                    {!!($data->description)!!}
                                 </div>
                             </div>
                         </td>
                        
 
                         <td class="flex px-8 py-8 space-x-2 text-sm font-medium text-right whitespace-nowrap">
-                            <a title="Edit" href="{{route('engine.edit',$engine->id)}}"
+                            <a title="Edit" href="{{route('subMexon.edit',$data->id)}}"
                                 class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path
@@ -118,7 +118,7 @@ Sub Mexon List
                                         clip-rule="evenodd" />
                                 </svg>
                             </a>
-                            <a title="Delete" href="{{route('engine.delete',$engine->id)}}"
+                            <a title="Delete" href="{{route('subMexon.delete',$data->id)}}"
                                 onclick="return confirm('Are you sure you want to delete it ?')"
                                 class="text-indigo-600 hover:text-indigo-900">
                                 <svg class="w-5 h-5 text-red-600" viewBox="0 0 20 20" fill="currentColor">
