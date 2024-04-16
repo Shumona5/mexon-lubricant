@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function list()
     {
         $mexonProduct=Product::first();
-        $products=Product::all();  
+        $products=ProductsDetails::all();  
        return view('backend.product.list', compact('products','mexonProduct'));
     }
 
@@ -175,6 +175,7 @@ class ProductController extends Controller
         return view('backend.sub-products.edit',compact('products'));
     }
     public function subProductUpdate(Request $request ,$id){
+        
 
         $validate = Validator::make($request->all(), [
 

@@ -18,8 +18,8 @@
 
 <!-- Why Mexon Lubricants -->
 <section class="mexon">
-  <h1> <b style="font-family: 'Times New Roman', Times, serif;">{{$whyMexon->name}} </b></h1>
-  <p> {!!$whyMexon->description!!}
+  <h1> <b style="font-family: 'Times New Roman', Times, serif;">{{optional($whyMexon)->name}} </b></h1>
+  <p> {!!optional($whyMexon)->description!!}
   </p>
   <!-- <div class="row">
 
@@ -46,7 +46,7 @@
         that your clients receive the best lubricants for their cars and gear, we place a premium on quality.
       </p>
     </div>
-    <div class="mexon-col">
+    <!-- <div class="mexon-col">
       <h6> Diverse Product Portfolio </h6>
       <p> We provide an extensive inventory of engine oils that are appropriate for a variety of applications,
         regardless of whether you work in the automotive or industrial sectors. Select from a variety of formulas
@@ -59,7 +59,7 @@
         customers are made possible by our effective distribution network, which guarantees that distributors and
         retailers receive their orders on time.
       </p>
-    </div>
+    </div> -->
 
   </div>
 
@@ -151,26 +151,26 @@
         <img src="{{url('/frontend/image/MUG_1.png')}}" alt="">
       </div>
       <div class="slide-img">
-        <img src="{{url('/frontend/image/MUG_1.jpg')}}" alt="">
+        <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt="">
       </div>
-      <div class="slide-img">
-        <img src="{{url('/frontend/image/MUG_1.4.png')}}" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="{{url('/frontend/image/MUG_1.3.png')}}" alt="">
-      </div>
-
       <div class="slide-img">
         <img src="{{url('/frontend/image/MUG_1.2.png')}}" alt="">
       </div>
       <div class="slide-img">
+        <img src="{{url('/frontend/image/MUG_1.png')}}" alt="">
+      </div>
+
+      <div class="slide-img">
         <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt="">
+      </div>
+      <div class="slide-img">
+        <img src="{{url('/frontend/image/MUG_1.2.png')}}" alt="">
       </div>
       <div class="slide-img">
         <img src="{{url('/frontend/image/MUG_1.png')}}" alt="">
       </div>
       <div class="slide-img">
-        <img src="{{url('/frontend/image/MUG_1.jpg')}}" alt="">
+        <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt="">
       </div>
 
     </div>

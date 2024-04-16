@@ -3,7 +3,7 @@
 Products Type Details Edit
 @endsection
 @section('main')
-<form action="{{route('products.type.update',$detail->id)}}" method="post" class="px-6 py-6 rounded-md  space-y-7" >
+<form action="{{route('products.type.update',$detail->id)}}" method="post" class="px-6 py-6 rounded-md  space-y-7" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="py-12 bg-white rounded-lg shadow-md">
@@ -77,7 +77,7 @@ Products Type Details Edit
                     Image<span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a>
                 </label>
                 <div class="relative mt-1 rounded-md shadow-sm">
-                    <input id="image" value="{{$detail->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
+                    <input id="image" value="{{$detail->subtitle_image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
                 </div>
                 @error('image')<p class="mt-5 text-red-600">{{$message}}</p>@enderror
             </div>

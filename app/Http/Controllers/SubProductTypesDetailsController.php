@@ -71,7 +71,7 @@ class SubProductTypesDetailsController extends Controller
         }
         $image = $typeDetails->getRawOriginal('subtitle_image');
         if ($request->hasFile('subtitle_image')) {
-            $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
+            $image = date('Ymdhsis') . '.' . $request->file('subtitle_image')->getClientOriginalExtension();
             $request->file('subtitle_image')->storeAs('/subproductType', $image);
         }
         $typeDetails->update([

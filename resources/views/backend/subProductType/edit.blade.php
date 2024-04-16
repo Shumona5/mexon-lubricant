@@ -3,7 +3,7 @@
 Sub Products Type Details Edit
 @endsection
 @section('main')
-<form action="{{route('subProducts.details.update',$typeDetails->id)}}" method="post" class="px-6 py-6 rounded-md  space-y-7" >
+<form action="{{route('subProducts.details.update',$typeDetails->id)}}" method="post" class="px-6 py-6 rounded-md  space-y-7" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="py-12 bg-white rounded-lg shadow-md">

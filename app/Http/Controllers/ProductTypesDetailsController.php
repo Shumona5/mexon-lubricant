@@ -34,12 +34,12 @@ class ProductTypesDetailsController extends Controller
         $image = null;
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/productType', $image);
+            $request->file('image')->storeAs('/subproductType', $image);
         }
         ProductTypesDetails::create([
             'title1'=>$request->title1,
             'title2'=>$request->title2,
-            'image'=>$image,
+            'subtitle_image'=>$image,
             'long_description'=>$request->long_description,
             'category_id'=>$request->category_id,
 
@@ -55,6 +55,7 @@ class ProductTypesDetailsController extends Controller
     }
 
     public function update(Request $request, $id){
+        // dd($request->all());
         $detail=ProductTypesDetails::find($id);
 
         $validate = Validator::make($request->all(), [
@@ -69,12 +70,12 @@ class ProductTypesDetailsController extends Controller
         $image = $detail->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/productType', $image);
+            $request->file('image')->storeAs('/subproductType', $image);
         }
         $detail->update([
             'title1'=>$request->title1,
             'title2'=>$request->title2,
-            'image'=>$image,
+            'subtitle_image'=>$image,
             'long_description'=>$request->long_description,
             'category_id'=>$request->category_id,
 
