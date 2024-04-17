@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Motorbike;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class MotorbikeController extends Controller
@@ -28,16 +29,32 @@ class MotorbikeController extends Controller
 
             return redirect()->back()->withErrors($validate)->withInput();
         }
+        $first_image = null;
+        if ($request->hasFile('first_image')) {
+            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
+            $request->file('first_image')->storeAs('/motorbike', $first_image);
+        }
+        $second_image = null;
+        if ($request->hasFile('second_image')) {
+            $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
+            $request->file('second_image')->storeAs('/motorbike', $second_image);
+        }
+        $image = null;
+        if ($request->hasFile('image')) {
+            $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/motorbike', $image);
+        }
+
         $motorbikes=Motorbike::create([
             'title1' => $request->title1,
             'first_short_description' => $request->first_short_description,
             'first_long_description' => $request->first_long_description,
-            'first_image' => $request->first_image,
+            'first_image' => $first_image,
             'title2' => $request->title2,
             'second_short_description' => $request->second_short_description,
             'second_long_description' => $request->second_long_description,
-            'second_image' => $request->second_image,
-            'image' => $request->image,
+            'second_image' => $second_image,
+            'image' => $image,
             'status' => $request->status,
         ]);
         notify()->success('Motorbike Created Successfully');
@@ -49,7 +66,7 @@ class MotorbikeController extends Controller
     }
     public function update(Request $request, $id)
     {
-        // dd($request->all());
+        $motorbikes=Motorbike::find($id);
         $validate = Validator::make($request->all(), [
 
             'title1' => 'required',
@@ -60,17 +77,40 @@ class MotorbikeController extends Controller
 
             return redirect()->back()->withErrors($validate)->withInput();
         }
-        $motorbikes=Motorbike::find($id);
+
+        $first_image = $motorbikes->getRawOriginal('first_image');
+        if ($request->hasFile('first_image')) {
+            $remove = public_path().'/uploads/motorbike/'.$first_image;
+            File::delete($remove);
+            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
+            $request->file('first_image')->storeAs('/motorbike', $first_image);
+        }
+
+        $second_image = $motorbikes->getRawOriginal('second_image');
+        if ($request->hasFile('second_image')) {
+            $remove = public_path().'/uploads/motorbike/'.$second_image;
+            File::delete($remove);
+            $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
+            $request->file('second_image')->storeAs('/motorbike', $second_image);
+        }
+        $image = $motorbikes->getRawOriginal('image');
+        if ($request->hasFile('image')) {
+            $remove = public_path().'/uploads/motorbike/'.$image;
+            File::delete($remove);
+            $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/motorbike', $image);
+        }
+    
         $motorbikes->update([
             'title1' => $request->title1,
             'first_short_description' => $request->first_short_description,
             'first_long_description' => $request->first_long_description,
-            'first_image' => $request->first_image,
+            'first_image' => $first_image,
             'title2' => $request->title2,
             'second_short_description' => $request->second_short_description,
             'second_long_description' => $request->second_long_description,
-            'second_image' => $request->second_image,
-            'image' => $request->image,
+            'second_image' => $second_image,
+            'image' => $image,
             'status' => $request->status,
 
         ]);

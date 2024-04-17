@@ -3,7 +3,7 @@
 Product Edit
 @endsection
 @section('main')
-<form action="{{route('product.update')}}" method="post" class=" px-6 py-6 rounded-md space-y-7" enctype="multipart/form-data">
+<form action="{{route('product.update',$mexonProduct->id)}}" method="post" class=" px-6 py-6 rounded-md space-y-7" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="bg-white py-12 rounded-lg shadow-md">

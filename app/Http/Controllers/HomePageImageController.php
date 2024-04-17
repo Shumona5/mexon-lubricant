@@ -49,10 +49,11 @@ class HomePageImageController extends Controller
 
     }
     public function update(Request $request){
+        // dd($request->all());
         $homeImages=HomePageImage::first();
 
         $first_image = $homeImages->getRawOriginal('first_image');
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('first_image')) {
             $remove = public_path().'/uploads/homeImage/'.$first_image;
             File::delete($remove);
             $first_image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
@@ -73,11 +74,20 @@ class HomePageImageController extends Controller
             $third_image = date('Ymdhsis') . '.' . $request->file('third_image')->getClientOriginalExtension();
             $request->file('third_image')->storeAs('/homeImage', $third_image);
         }
+        $video = $homeImages->getRawOriginal('video');
+        if ($request->hasFile('video')) {
+            $remove = public_path().'/uploads/homeImage/'.$video;
+            File::delete($remove);
+            $video = date('Ymdhsis') . '.' . $request->file('video')->getClientOriginalExtension();
+            $request->file('video')->storeAs('/homeImage', $video);
+        }
+
 
         $homeImages->update([
             'first_image' => $first_image,
             'second_image' => $second_image,
             'third_image' => $third_image,
+            'video' => $video,
 
         ]);
         notify()->success('Home Image Updated Successfully');

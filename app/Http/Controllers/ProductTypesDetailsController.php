@@ -39,7 +39,7 @@ class ProductTypesDetailsController extends Controller
         ProductTypesDetails::create([
             'title1'=>$request->title1,
             'title2'=>$request->title2,
-            'subtitle_image'=>$image,
+            'image'=>$image,
             'long_description'=>$request->long_description,
             'category_id'=>$request->category_id,
 
@@ -55,7 +55,7 @@ class ProductTypesDetailsController extends Controller
     }
 
     public function update(Request $request, $id){
-        // dd($request->all());
+        
         $detail=ProductTypesDetails::find($id);
 
         $validate = Validator::make($request->all(), [
@@ -75,7 +75,7 @@ class ProductTypesDetailsController extends Controller
         $detail->update([
             'title1'=>$request->title1,
             'title2'=>$request->title2,
-            'subtitle_image'=>$image,
+            'image'=>$image,
             'long_description'=>$request->long_description,
             'category_id'=>$request->category_id,
 

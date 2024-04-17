@@ -77,7 +77,7 @@ Products Type Details Edit
                     Image<span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a>
                 </label>
                 <div class="relative mt-1 rounded-md shadow-sm">
-                    <input id="image" value="{{$detail->subtitle_image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
+                    <input id="image" value="{{$detail->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
                 </div>
                 @error('image')<p class="mt-5 text-red-600">{{$message}}</p>@enderror
             </div>
@@ -86,7 +86,7 @@ Products Type Details Edit
     <div class="pt-5 mt-8">
         <div class="flex justify-end">
             <span class="inline-flex rounded-md shadow-sm">
-                <a href="{{route('businessPromotion.list')}}" class="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
+                <a href="" class="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
                     Cancel
                 </a>
             </span>

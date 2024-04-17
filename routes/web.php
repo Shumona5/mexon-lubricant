@@ -133,9 +133,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', [ProductController::class, 'list'])->name('product.list');
         Route::get('/create', [ProductController::class, 'create'])->name('product.create');
         Route::post('/store', [ProductController::class, 'store'])->name('product.store');
-        Route::get('/edit', [ProductController::class, 'edit'])->name('product.edit');
-        Route::put('/update', [ProductController::class, 'update'])->name('product.update');
-        Route::get('/delete', [ProductController::class, 'delete'])->name('product.delete');
+        Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+        Route::put('/update/{id}', [ProductController::class, 'update'])->name('product.update');
+        Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
         Route::get('/subProduct/create',[ProductController::class,'subProductCreate'])->name('subProduct.create');
         Route::post('/subProduct/store',[ProductController::class,'subProductStore'])->name('subProduct.store');
         Route::get('/subProduct/edit/{id}',[ProductController::class,'subProductEdit'])->name('subProduct.edit');
@@ -170,6 +170,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
     Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
     Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
+    // Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
     Route::put('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
     Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
