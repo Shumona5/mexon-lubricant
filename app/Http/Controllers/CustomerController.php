@@ -148,4 +148,6 @@ class CustomerController extends Controller
         // dd('hi');
         return Excel::download(new CustomersExport, 'customer_list.xlsx');
     }
+
+
 }

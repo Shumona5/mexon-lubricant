@@ -157,6 +157,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/view/{id}', [ControllersCustomerController::class, 'view'])->name('customer.view');
         Route::get('/delete/{id}', [ControllersCustomerController::class, 'delete'])->name('customer.delete');
         Route::get('/export', [ControllersCustomerController::class, 'excelExport'])->name('customer.export');
+     
     });
 
     Route::get('/category',[CategoryController::class,'list'])->name('category.list');
