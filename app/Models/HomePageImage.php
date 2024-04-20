@@ -11,7 +11,23 @@ class HomePageImage extends Model
     use HasFactory;
     protected $guarded =[];
 
-    public function getImageAttribute($value)
+    public function getFirstImageAttribute($value)
+    {
+        if($value){
+            return Storage::url('/homeImage/'.$value);
+
+        }
+        return url('uploads/noImage.jpg');
+    }
+    public function getSecondImageAttribute($value)
+    {
+        if($value){
+            return Storage::url('/homeImage/'.$value);
+
+        }
+        return url('uploads/noImage.jpg');
+    }
+    public function getThirdImageAttribute($value)
     {
         if($value){
             return Storage::url('/homeImage/'.$value);

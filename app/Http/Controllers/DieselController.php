@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Diesel;
+use App\Models\IndustrialDiesel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -94,7 +95,7 @@ class DieselController extends Controller
     }
     public function industrialDiesellist()
     {
-        $industrialDiesel=Diesel::all();
+        $industrialDiesel=IndustrialDiesel::all();
         return view('backend.industrialDiesel.list',compact('industrialDiesel'));
     }
     public function industrialDieselcreate(){
@@ -109,16 +110,21 @@ class DieselController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate)->withInput();
         }
+        $productImage = null;
+        if ($request->hasFile('product_image')) {
+            $productImage = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/industrialDiesel', $productImage);
+        }
         $image = null;
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/diesel', $image);
+            $request->file('image')->storeAs('/industrialDiesel', $image);
         }
-        $industrialDiesel=Diesel::create([
+        $industrialDiesel=IndustrialDiesel::create([
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'product_image' => $request->product_image,
+            'product_image' => $productImage,
             'image' => $image,
             'status' => $request->status,
         ]);
@@ -128,12 +134,12 @@ class DieselController extends Controller
     }
     public function industrialDieseledit($id)
     {
-        $industrialDiesel=Diesel::find($id);
+        $industrialDiesel=IndustrialDiesel::find($id);
         return view('backend.industrialDiesel.edit',compact('industrialDiesel'));
     }
     public function industrialDieselupdate(Request $request,$id)
     {
-        $industrialDiesel=Diesel::find($id);
+        $industrialDiesel=IndustrialDiesel::find($id);
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'status' => 'required',
@@ -143,17 +149,22 @@ class DieselController extends Controller
             return redirect()->back()->withErrors($validate)->withInput();
         }
 
+        $productImage = $industrialDiesel->getRawOriginal('product_image');
+        if ($request->hasFile('product_image')) {
+            $productImage = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/industrialDiesel', $productImage);
+        }
+
         $image = $industrialDiesel->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/diesel', $image);
+            $request->file('image')->storeAs('/industrialDiesel', $image);
         }
         $industrialDiesel->update([
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
             'product_image' => $request->product_image,
-            'pdf_image' => $request->pdf_image,
             'image' => $image,
             'status' => $request->status,
 
@@ -162,7 +173,7 @@ class DieselController extends Controller
         return redirect()->route('industrial.diesel.list');
     }
     public function industrialDieseldelete($id){
-        $test = Diesel::find($id);
+        $test = IndustrialDiesel::find($id);
         if ($test) {
             $test->delete();
             notify()->success('Industrial Diesel Deleted Successfully');

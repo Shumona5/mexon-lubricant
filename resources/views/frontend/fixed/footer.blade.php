@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-md-3 col-sm-12 wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="100">
           <a href="{{route('web.home')}}">
-            <img src="{{url('/frontend/image/mexon_logo.png')}}" alt="" style="width: 130px;">
+            <img src="{{$settings->logo}}" alt="" style="width: 130px;">
           </a>
         </div>
 

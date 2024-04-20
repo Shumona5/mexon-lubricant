@@ -14,7 +14,7 @@ class BusinessPromotionController extends Controller
         return view('backend.business-promotion.edit',compact('businessPromotion'));
 
     }
-    public function update(Request $request){
+    public function createOrUpdate(Request $request){
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'long_description' => 'required',
@@ -26,11 +26,21 @@ class BusinessPromotionController extends Controller
         }
 
         $businessPromotion=BusinessPromotion::first();
-        $businessPromotion->update([
-            'title' => $request->title,
-            'long_description' => $request->long_description,
+        if($businessPromotion){
+            // if data exist then update
+            $businessPromotion->update([
+                'title' => $request->title,
+                'long_description' => $request->long_description,
+            ]);
 
-        ]);
+        }else{
+            // if no data then create
+            BusinessPromotion::create([
+                'title' => $request->title,
+                'long_description' => $request->long_description,
+            ]);
+        }
+        
         notify()->success('Business Promotion Updated Successfully');
         return redirect()->route('businessPromotion.list');
 

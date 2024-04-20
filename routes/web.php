@@ -175,14 +175,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
 
     Route::get('/businessPromotion',[BusinessPromotionController::class,'edit'])->name('businessPromotion.list');
-    Route::put('/businessPromotion/update',[BusinessPromotionController::class,'update'])->name('businessPromotion.update');
+    Route::put('/businessPromotion/update',[BusinessPromotionController::class,'createOrUpdate'])->name('businessPromotion.update');
   
     
     Route::get('/homeimage',[HomePageImageController::class,'edit'])->name('home.image');
-    Route::get('/homeimage/create',[HomePageImageController::class,'create'])->name('home.image.create');
-    Route::post('/homeimage/store',[HomePageImageController::class,'store'])->name('home.image.store');
+   
     // Route::get('/homeimage/edit/{id}',[HomePageImageController::class,'edit'])->name('home.image.edit');
-    Route::put('/homeimage/update',[HomePageImageController::class,'update'])->name('home.image.update');
+    Route::put('/homeimage/update',[HomePageImageController::class,'createOrUpdate'])->name('home.image.update');
    
     Route::get('/productTypes',[ProductTypesDetailsController::class,'list'])->name('products.type.list');
     Route::get('/productTypes/create',[ProductTypesDetailsController::class,'create'])->name('products.type.create');

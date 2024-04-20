@@ -48,7 +48,7 @@ class HomePageImageController extends Controller
         return view('backend.homeImage.edit',compact('homeImages'));
 
     }
-    public function update(Request $request){
+    public function createOrUpdate(Request $request){
         // dd($request->all());
         $homeImages=HomePageImage::first();
 
@@ -56,7 +56,7 @@ class HomePageImageController extends Controller
         if ($request->hasFile('first_image')) {
             $remove = public_path().'/uploads/homeImage/'.$first_image;
             File::delete($remove);
-            $first_image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
+            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
             $request->file('first_image')->storeAs('/homeImage', $first_image);
         }
 
@@ -81,15 +81,25 @@ class HomePageImageController extends Controller
             $video = date('Ymdhsis') . '.' . $request->file('video')->getClientOriginalExtension();
             $request->file('video')->storeAs('/homeImage', $video);
         }
+        if($homeImages){
 
+            $homeImages->update([
+                'first_image' => $first_image,
+                'second_image' => $second_image,
+                'third_image' => $third_image,
+                'video' => $video,
+    
+            ]);
+        }else{
+            HomePageImage::create([
+                'first_image' => $first_image,
+                'second_image' => $second_image,
+                'third_image' => $third_image,
+                'video' => $video,
+            ]);
+        }
 
-        $homeImages->update([
-            'first_image' => $first_image,
-            'second_image' => $second_image,
-            'third_image' => $third_image,
-            'video' => $video,
-
-        ]);
+       
         notify()->success('Home Image Updated Successfully');
         return redirect()->route('home.image');
 
