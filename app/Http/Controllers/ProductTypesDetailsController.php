@@ -34,7 +34,7 @@ class ProductTypesDetailsController extends Controller
         $image = null;
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/subproductType', $image);
+            $request->file('image')->storeAs('/productType', $image);
         }
         ProductTypesDetails::create([
             'title1'=>$request->title1,
@@ -70,7 +70,7 @@ class ProductTypesDetailsController extends Controller
         $image = $detail->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/subproductType', $image);
+            $request->file('image')->storeAs('/productType', $image);
         }
         $detail->update([
             'title1'=>$request->title1,

@@ -62,7 +62,7 @@ Route::get('/auto/motorbike',[AutoController::class,'motorbike'])->name('product
 Route::get('/auto/gasoline',[AutoController::class,'gasoline'])->name('products.gasoline');
 Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.diesel');
 
-Route::get('/industrial',[IndustrialController::class,'industrial'])->name('products.industrial');
+Route::get('/industrial/products',[IndustrialController::class,'industrial'])->name('products.industrial');
 Route::get('/industrial/diesel',[IndustrialController::class,'diesel'])->name('product.diesel');
 Route::get('/industrial/grease',[IndustrialController::class,'grease'])->name('products.grease');
 
@@ -169,10 +169,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category',[CategoryController::class,'list'])->name('category.list');
     Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
     Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
-    Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
-    // Route::get('/category/edit/{$slug}',[CategoryController::class,'edit'])->name('category.edit');
-    Route::put('/category/update/{$slug}',[CategoryController::class,'update'])->name('category.update');
-    Route::get('/category/delete/{$slug}',[CategoryController::class,'delete'])->name('category.delete');
+    Route::get('/category/edit/{slug}',[CategoryController::class,'edit'])->name('category.edit');
+    Route::put('/category/update/{slug}',[CategoryController::class,'update'])->name('category.update');
+    Route::get('/category/delete/{slug}',[CategoryController::class,'delete'])->name('category.delete');
 
     Route::get('/businessPromotion',[BusinessPromotionController::class,'edit'])->name('businessPromotion.list');
     Route::put('/businessPromotion/update',[BusinessPromotionController::class,'createOrUpdate'])->name('businessPromotion.update');

@@ -63,6 +63,7 @@ Category Create
             </div>
             @error('image')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
         </div>
+       
 
         <div class="px-10">
             <label for="position" class="block text-sm leading-5 font-medium text-gray-700">

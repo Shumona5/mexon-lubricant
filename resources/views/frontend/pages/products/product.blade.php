@@ -3,14 +3,14 @@
 
 <section>
   <div class="solution">
-    <img src="{{url('/frontend/image/products.png')}}" alt="" style="width: 100%; height: 520px;">
+    <img src=" {{$mexonProduct->image}}" alt="" style="width: 100%; height: 520px;">
 
   </div>
-  <span class="top-left1"> Products & Services </span>
+  <span class="top-left1"> {{$mexonProduct->title1}} </span>
 </section>
 
 <section>
-  <p class="products-p"> <b style="color:#f44336 ;">Our</b> Products </p>
+  <p class="products-p">  {{$mexonProduct->title2}} </p>
 </section>
 
 <div>
@@ -22,11 +22,8 @@
       <div class="row">
         <div class="col-md-5">
           <div class="inner">
-            <h2 style="color: #ffffff;">Auto</h2>
-            <p style="color: #ffffff;">Automotive engine oil plays a crucial role in the proper functioning and
-              longevity of a vehicle's engine.
-              Certainly no one is more knowledgeable in vehicle's engine like <b>Mexon </b>
-              Because we only focus on lubricants as an independent manufacturer of lubricants.</p>
+            <h2 style="color: #ffffff;">{{$product->subtitle_name}}</h2>
+            <p style="color: #ffffff;">{!!$product->description!!}</p>
             <a href="{{route('products.auto')}}" class="btn1 btn1-mini btn-color">Read more</a>
           </div>
         </div>
@@ -41,11 +38,8 @@
         <div class="col-md-7"> </div>
         <div class="col-md-5 ">
           <div class="inner right">
-            <h2 style="color: #ffffff;">Industrial</h2>
-            <p style="color: #ffffff;"> <strong>Mexon</strong> maintains a focus on the requirements set forth by
-              all Original Equipment Manufacturers (OEMs) in the industrial sector to make sure that the lubricants
-              satisfy the most recent criteria in the industry...
-            </p>
+            <h2 style="color: #ffffff;">{{$product->subtitle_name}}</h2>
+            <p style="color: #ffffff;"> {!!$product->description!!} </p>
             <a href="{{route('products.industrial')}}" class="btn1 btn1-mini btn-color">Read more</a>
           </div>
         </div>

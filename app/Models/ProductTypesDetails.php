@@ -19,6 +19,6 @@ class ProductTypesDetails extends Model
         if($value){
             return Storage::url('/productType/' . $value);
         }
-        return url('uploads/user.jpg');
+        return url('/uploads/user.jpg');
     }
 }

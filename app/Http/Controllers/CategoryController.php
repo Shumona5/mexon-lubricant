@@ -45,6 +45,7 @@ class CategoryController extends Controller
             'image' => $image,
             'slug'  => Str::slug($request->name),
             'parent_id'  => $request->parent_id,
+            
             'position'  => $request->position,
         ]);
 
@@ -89,6 +90,7 @@ class CategoryController extends Controller
             'image' => $image,
             'slug'  => $slug,
             'parent_id'  => $request->parent_id,
+           
             'position'  => $request->position,
         ]);
         notify()->success('Category updated successfully');
@@ -100,11 +102,13 @@ class CategoryController extends Controller
         try {
             Category::where('slug', $slug)->first()->delete();
             notify()->success('Category deleted successfully');
+            return redirect()->route('category.list');
         } catch (\Throwable $th) {
-            // notify()->error($th->getMessage());
-            notify()->error('This category cannot be deleted');
+            notify()->error($th->getMessage());
+            // notify()->error('This category cannot be deleted');
+            return redirect()->back();
         }
-        return to_route('category.index');
+       
     }
 
    

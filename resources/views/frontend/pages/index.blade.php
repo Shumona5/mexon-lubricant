@@ -40,12 +40,13 @@
       </div> -->
 
   <div class="row">
+    @foreach($subMexons as $submexon)
     <div class="mexon-col">
-      <h6> <b> Quality Assurance</b> </h6>
-      <p> We test our engine oils rigorously to ensure they meet and surpass industry requirements. To guarantee
-        that your clients receive the best lubricants for their cars and gear, we place a premium on quality.
-      </p>
+      <h6> <b> {{$submexon->title}}</b> </h6>
+      <p> {!!$submexon->description!!}</p>
+      
     </div>
+    @endforeach
     <!-- <div class="mexon-col">
       <h6> Diverse Product Portfolio </h6>
       <p> We provide an extensive inventory of engine oils that are appropriate for a variety of applications,
@@ -219,8 +220,8 @@
 <section class="mexon">
 
   <div class="business_promotion" id="business_promotion">
-    <h1> Business Promotion </h1>
-    <ul> Mexon Lubricants</ul>
+    <h1> {{optional($businessPromotion)->title}}</h1>
+    <!-- <ul> Mexon Lubricants</ul>
     <p style="color:darkslategray"> Your Trusted Partner in Automotive and Industrial Lubricants!</p>
     <p>Mexon Lubricants is an expert in offering premium engine oils for use in industrial and automotive settings.
       We serve retailers and distributors with a dedication to quality, making sure they have access to premium
@@ -246,7 +247,8 @@
           <br>
           Our Products comes with lots attractive gifts and promotional packages (travel, Tour, vacation and many
           more) depends on buying and selling of our products.” </b> </i></p>
-    <li>Condition applies.</li>
+    <li>Condition applies.</li> -->
+    <p>{!!optional($businessPromotion)->long_description!!}</p>
   </div>
 </section>
 
