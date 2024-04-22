@@ -30,7 +30,7 @@ class CategoryController extends Controller
        
         $validator = Validator::make($request->all(), [
             'name'  => 'required|unique:categories',
-            'image' => 'required|image',
+           
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
@@ -94,7 +94,7 @@ class CategoryController extends Controller
             'position'  => $request->position,
         ]);
         notify()->success('Category updated successfully');
-        return redirect()->route('backend.category.list');
+        return redirect()->route('category.list');
     }
 
     public function delete($slug)

@@ -58,22 +58,23 @@ Diesel Edit
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="pdf_image" value="{{$diesel->pdf_image}}" name="pdf_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
+                <input id="pdf_image" value="{{$diesel->pdf_image}}" name="pdf_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
             @error('pdf_image')
             <p class="text-red-600 mt-5">{{ $message }}</p>
             @enderror
         </div>
         <div class="px-10">
-            <label for="name" class="block text-sm leading-5 font-medium text-gray-700">
-                Pdf URL 
+            <label for="pdf" class="block text-sm leading-5 font-medium text-gray-700">
+            Upload Pdf  <span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
+                <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="button_url" value="{{$diesel->button_url}}" name="button_url" type="text"
-                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none"
-                    placeholder="Enter Button URL" />
+                <input id="pdf" value="{{$diesel->pdf}}" name="pdf" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
-            @error('button_url')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
+            @error('pdf')
+            <p class="text-red-600 mt-5">{{ $message }}</p>
+            @enderror
         </div>
         <div class="px-10">
             <label for="image" class="block text-sm leading-5 font-medium text-gray-700">
@@ -81,7 +82,7 @@ Diesel Edit
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="image" value="{{$diesel->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
+                <input id="image" value="{{$diesel->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none"  />
             </div>
             @error('image')
             <p class="text-red-600 mt-5">{{ $message }}</p>

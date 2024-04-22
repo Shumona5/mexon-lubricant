@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('product_image')->nullable();
             $table->string('pdf_image')->nullable();
             $table->string('image')->nullable();
-            $table->string('button_url')->nullable();
+            $table->string('pdf')->nullable();
             $table->string('status')->default('active');
             $table->timestamps();
         });

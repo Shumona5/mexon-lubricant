@@ -2,78 +2,40 @@
 @section('content')
 
 
+@foreach($gasolines as $data)
+    <section class="cta">
+        <img src="{{$data->first_image}}" alt="" style="width: 100%">
+    </section>
+    <section class="cta">
+        <img src="{{url('/frontend/image/Gasoline2.jpg')}}" alt="" style="width: 100%">
+    </section>
 
-<section class="cta">
-    <img src="{{url('/frontend/image/Gasoline1.jpg')}}" alt="" style="width: 100%">
-</section>
-<section class="cta">
-    <img src="{{url('/frontend/image/Gasoline2.jpg')}}" alt="" style="width: 100%">
-</section>
 
+    <div>
+        <div class="motor-header">
+            <h1> {{$data->title}} </h1>
+            <br>
+            <p style="font-size: 16px; color: darkslategray;"> {!!$data->short_description!!}</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
 
-<div>
-    <div class="motor-header">
-        <h1> RunX Hybrid Engine Oil 0W-20 </h1>
-        <br>
-        <p style="font-weight: 600; font-size: 18px; font-family: 'Times New Roman', Times, serif;"> <b>API
-                SN/CF [Full
-                Synthetic]</b> </p>
-        <p style="font-size: 16px; color: darkslategray;"><b>Application:</b> <br>
-            Mexon RunX Hybrid Fully Synthetic 0W-20 is a fantastic multi grade engine oil based on synthetic
-            base stocks and
-            formulated with the very latest in advanced technology. This Hybrid Engine Oil is produced using a
-            super high
-            performance engine oil which delivers excellent fuel economy, offering the consumer savings. RunX
-            Hybrid Fully
-            Synthetic Engine Oil 0w/20 has been blended to the highest quality to provide outstanding
-            lubrication
-            performance in up to date multi valve power units which, using advanced design technology, require
-            the use of
-            lower viscosity multi grade engine oils whilst also providing improved film strength and oxidation
-            stability.
-        </p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1">
+                </div>
+                <div class="col-md-7">
+
+                   
+                    <p> {!!$data->long_description!!}</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{$data->product_image}}" alt="">
+                </div>
 
             </div>
-            <div class="col-md-7">
-
-                <h6 class="gesoline-benefits"> <b> Benefits:</b></h6>
-                <ul class="text-color" style="margin-bottom: 40px !important">
-                    <li style="list-style-type: disc" class="mb-10">
-                        Effective fuel efficiency
-                    </li>
-                    <li style="list-style-type: disc" class="mb-10"> Excellent high and low temperature
-                        performance</li>
-                    <li style="list-style-type: disc" class="mb-10"> Exceptional long term anti-wear
-                        characteristics</li>
-                    <li style="list-style-type: disc" class="mb-10"> Very high standard of engine cleanliness
-                    </li>
-                    <li style="list-style-type: disc" class="mb-10">Long lasting dispersal performance and
-                        corrosion protection</li>
-                    <li style="list-style-type: disc" class="mb-10">Excellent sludge control for stop-go city
-                        motoring</li>
-                    <li style="list-style-type: disc" class="mb-10">High temperature protection</li>
-                    <li style="list-style-type: disc" class="mb-10">Long lasting dispersal performance and
-                        corrosion protection</li>
-                    <li style="list-style-type: disc" class="mb-10">Excellent oil performance</li>
-                    <li style="list-style-type: disc" class="mb-10">Excellent reduction in oil consumption</li>
-                    <li style="list-style-type: disc" class="mb-10">Low emissions</li>
-                </ul>
-                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
-                    <b>Pack size:4 Liters</b>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <img src="{{url('/frontend/image/Gasoline3.png')}}" alt="">
-            </div>
-
         </div>
     </div>
-</div>
-<br>
+
+<!-- <br>
 
 
 <div>
@@ -301,11 +263,11 @@
 </div>
 <br>
 
-<br>
+<br> -->
 <div>
-    <img src="{{url('/frontend/image/Gasoline9.jpg')}}" alt="" style="width: 100%; height: auto;">
+    <img src="{{$data->second_image}}" alt="" style="width: 100%; height: auto;">
 </div>
-
+@endforeach
 
 
 

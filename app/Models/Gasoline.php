@@ -11,12 +11,28 @@ class Gasoline extends Model
     use HasFactory;
     protected $guarded=[];
 
-    public function getImageAttribute($value)
+    public function getFirstImageAttribute($value)
     {
 
         if ($value) {
             return Storage::url('/gasoline/' . $value);
         }
-        return url('/images/user.jpg');
+        return url('/uploads/user.jpg');
+    }
+    public function getSecondImageAttribute($value)
+    {
+
+        if ($value) {
+            return Storage::url('/gasoline/' . $value);
+        }
+        return url('/uploads/user.jpg');
+    }
+    public function getProductImageAttribute($value)
+    {
+
+        if ($value) {
+            return Storage::url('/gasoline/' . $value);
+        }
+        return url('/uploads/user.jpg');
     }
 }

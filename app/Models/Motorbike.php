@@ -17,4 +17,18 @@ class Motorbike extends Model
         }
         return url('/images/user.jpg');
     }
+    public function getFirstImageAttribute($value)
+    {
+        if ($value) {
+            return Storage::url('/motorbike/' . $value);
+        }
+        return url('/images/user.jpg');
+    }
+    public function getSecondImageAttribute($value)
+    {
+        if ($value) {
+            return Storage::url('/motorbike/' . $value);
+        }
+        return url('/images/user.jpg');
+    }
 }

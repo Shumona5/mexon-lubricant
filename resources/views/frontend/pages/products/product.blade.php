@@ -17,7 +17,7 @@
   @foreach($products as $key=>$product)
   @if($key%2==0)
   <!-- left side design -->
-  <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('/frontend/image/auto.jpg');">
+  <section class="lead_sec1 fullbg flexStretch over_effect" style="background-image: url('{{$product->image}}');">
     <div class="container flex-contain product_intro">
       <div class="row">
         <div class="col-md-5">

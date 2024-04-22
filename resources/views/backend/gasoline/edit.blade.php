@@ -41,14 +41,38 @@ Gasoline Edit
             @enderror
         </div>
         <div class="px-10">
-            <label for="image" class="block text-sm leading-5 font-medium text-gray-700">
-             Image  <span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
+            <label for="first_image" class="block text-sm leading-5 font-medium text-gray-700">
+            first_image  <span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="image" value="{{$gasolines->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter category image" />
+                <input id="first_image" value="{{$gasolines->first_image}}" name="first_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none"  />
             </div>
-            @error('image')
+            @error('first_image')
+            <p class="text-red-600 mt-5">{{ $message }}</p>
+            @enderror
+        </div>
+        <div class="px-10">
+            <label for="second_image" class="block text-sm leading-5 font-medium text-gray-700">
+            second_image  <span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
+                <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="second_image" value="{{$gasolines->second_image}}" name="second_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+            </div>
+            @error('second_image')
+            <p class="text-red-600 mt-5">{{ $message }}</p>
+            @enderror
+        </div>
+        <div class="px-10">
+            <label for="product_image" class="block text-sm leading-5 font-medium text-gray-700">
+            Product Image  <span class="text-red-600"> * </span> <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
+                <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="product_image" value="{{$gasolines->product_image}}" name="product_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+            </div>
+            @error('product_image')
             <p class="text-red-600 mt-5">{{ $message }}</p>
             @enderror
         </div>

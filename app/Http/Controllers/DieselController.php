@@ -33,6 +33,16 @@ class DieselController extends Controller
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/diesel', $image);
         }
+        $pdf_image = null;
+        if ($request->hasFile('pdf_image')) {
+            $pdf_image = date('Ymdhsis') . '.' . $request->file('pdf_image')->getClientOriginalExtension();
+            $request->file('pdf_image')->storeAs('/diesel', $pdf_image);
+        }
+        $pdf = null;
+        if ($request->hasFile('pdf')) {
+            $pdf = date('Ymdhsis') . '.' . $request->file('pdf')->getClientOriginalExtension();
+            $request->file('pdf')->storeAs('/diesel', $pdf);
+        }
         $diesel=Diesel::create([
             'title' => $request->title,
             'short_description' => $request->short_description,
@@ -40,6 +50,8 @@ class DieselController extends Controller
             'product_image' => $request->product_image,
             'pdf_image' => $request->pdf_image,
             'image' => $image,
+            'pdf_image' => $pdf_image,
+            'pdf' => $pdf,
             'status' => $request->status,
         ]);
         notify()->success('Diesel Created Successfully');
@@ -66,6 +78,16 @@ class DieselController extends Controller
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/diesel', $image);
         }
+        $pdf_image = $diesel->getRawOriginal('pdf_image');
+        if ($request->hasFile('pdf_image')) {
+            $pdf_image = date('Ymdhsis') . '.' . $request->file('pdf_image')->getClientOriginalExtension();
+            $request->file('pdf_image')->storeAs('/diesel', $pdf_image);
+        }
+        $pdf = $diesel->getRawOriginal('pdf');
+        if ($request->hasFile('pdf')) {
+            $pdf = date('Ymdhsis') . '.' . $request->file('pdf')->getClientOriginalExtension();
+            $request->file('pdf')->storeAs('/diesel', $pdf);
+        }
         $diesel->update([
             'title' => $request->title,
             'short_description' => $request->short_description,
@@ -73,6 +95,8 @@ class DieselController extends Controller
             'product_image' => $request->product_image,
             'pdf_image' => $request->pdf_image,
             'image' => $image,
+            'pdf_image' => $pdf_image,
+            'pdf' => $pdf,
             'status' => $request->status,
 
         ]);

@@ -28,17 +28,30 @@ class GasolineController extends Controller
             return redirect()->back()->withErrors($validate)->withInput();
         }
 
-        $image = null;
-        if ($request->hasFile('image')) {
-            $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/gasoline', $image);
+        $first_image = null;
+        if ($request->hasFile('first_image')) {
+            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
+            $request->file('first_image')->storeAs('/gasoline', $first_image);
         }
+        $second_image = null;
+        if ($request->hasFile('second_image')) {
+            $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
+            $request->file('second_image')->storeAs('/gasoline', $second_image);
+        }
+        $product_image = null;
+        if ($request->hasFile('product_image')) {
+            $product_image = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/gasoline', $product_image);
+        }
+
 
         $gasolines=Gasoline::create([
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'image' => $image,
+            'first_image' => $first_image,
+            'second_image' => $second_image,
+            'product_image' => $product_image,
             'status' => $request->status,
         ]);
         notify()->success('Gasoline Created Successfully');
@@ -64,16 +77,28 @@ class GasolineController extends Controller
 
             return redirect()->back()->withErrors($validate)->withInput();
         }
-        $image = $gasolines->getRawOriginal('image');
-        if ($request->hasFile('image')) {
-            $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/gasoline', $image);
+        $first_image = $gasolines->getRawOriginal('first_image');
+        if ($request->hasFile('first_image')) {
+            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
+            $request->file('first_image')->storeAs('/gasoline', $first_image);
+        }
+        $second_image = $gasolines->getRawOriginal('second_image');
+        if ($request->hasFile('second_image')) {
+            $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
+            $request->file('second_image')->storeAs('/gasoline', $second_image);
+        }
+        $product_image = $gasolines->getRawOriginal('product_image');
+        if ($request->hasFile('product_image')) {
+            $product_image = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/gasoline', $product_image);
         }
         $gasolines->update([
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'image' => $image,
+            'first_image' => $first_image,
+            'second_image' => $second_image,
+            'product_image' => $product_image,
             'status' => $request->status,
 
         ]);

@@ -91,7 +91,7 @@ Gasoline List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    <img width="150 px" src="{{$data->image}}" class=" object-contain rounded-full h-14 w-14" alt="">
+                                    <img width="150 px" src="{{$data->product_image}}" class=" object-contain rounded-full h-14 w-14" alt="">
                                 </div>
                             </div>
                         </td>
