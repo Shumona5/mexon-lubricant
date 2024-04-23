@@ -19,13 +19,19 @@ class DieselController extends Controller
 
     }
     public function store(Request $request){
+       
         $validate = Validator::make($request->all(), [
-            'title' => 'required',
+            
             'status' => 'required',
         ]);
         if ($validate->fails()) {
 
             return redirect()->back()->withErrors($validate)->withInput();
+        }
+        $product_image = null;
+        if ($request->hasFile('product_image')) {
+            $product_image = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/diesel', $product_image);
         }
 
         $image = null;
@@ -47,8 +53,8 @@ class DieselController extends Controller
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'product_image' => $request->product_image,
-            'pdf_image' => $request->pdf_image,
+            'product_image' => $product_image,
+            'pdf_image' => $pdf_image,
             'image' => $image,
             'pdf_image' => $pdf_image,
             'pdf' => $pdf,
@@ -63,15 +69,20 @@ class DieselController extends Controller
         return view('backend.diesel.edit',compact('diesel'));
     }
     public function update(Request $request ,$id)
-    {
+    { 
         $diesel=Diesel::find($id);
         $validate = Validator::make($request->all(), [
-            'title' => 'required',
+           
             'status' => 'required',
         ]);
         if ($validate->fails()) {
 
             return redirect()->back()->withErrors($validate)->withInput();
+        }
+        $product_image = $diesel->getRawOriginal('product_image');
+        if ($request->hasFile('product_image')) {
+            $product_image = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/diesel', $product_image);
         }
         $image = $diesel->getRawOriginal('image');
         if ($request->hasFile('image')) {
@@ -92,8 +103,8 @@ class DieselController extends Controller
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'product_image' => $request->product_image,
-            'pdf_image' => $request->pdf_image,
+            'product_image' => $product_image,
+            'pdf_image' => $pdf_image,
             'image' => $image,
             'pdf_image' => $pdf_image,
             'pdf' => $pdf,
@@ -127,6 +138,7 @@ class DieselController extends Controller
     }
     public function industrialDieselstore(Request $request)
     {
+        // dd($request->all());
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'status' => 'required',
@@ -134,10 +146,10 @@ class DieselController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate)->withInput();
         }
-        $productImage = null;
+        $product_image = null;
         if ($request->hasFile('product_image')) {
-            $productImage = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
-            $request->file('product_image')->storeAs('/industrialDiesel', $productImage);
+            $product_image = date('Ymdhsis') . '.' . $request->file('product_image')->getClientOriginalExtension();
+            $request->file('product_image')->storeAs('/industrialDiesel', $product_image);
         }
         $image = null;
         if ($request->hasFile('image')) {
@@ -148,7 +160,7 @@ class DieselController extends Controller
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'product_image' => $productImage,
+            'product_image' => $product_image,
             'image' => $image,
             'status' => $request->status,
         ]);
@@ -188,7 +200,7 @@ class DieselController extends Controller
             'title' => $request->title,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'product_image' => $request->product_image,
+            'product_image' => $productImage,
             'image' => $image,
             'status' => $request->status,
 

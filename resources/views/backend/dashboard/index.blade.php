@@ -11,7 +11,7 @@ Mexon
           <div class="flex items-center justify-between  p-8">
 
             <div class="space-y-4">
-              <p class="text-gray-500 text-xl font-semibold">Total Customers</p>
+              <p class="text-gray-500 text-xl font-semibold">Total Categories</p>
               <div class="flex items-baseline space-x-4">
                 <h2 class="text-2xl font-semibold">
                  0
@@ -31,7 +31,7 @@ Mexon
         <div class="shadow-md bg-white rounded-lg h-36">
           <div class="flex items-center justify-between  p-8">
             <div class="space-y-4">
-              <p class="text-gray-500 text-xl font-semibold">All Orders</p>
+              <p class="text-gray-500 text-xl font-semibold">All Products</p>
               <div class="flex items-baseline space-x-4">
                 <h2 class="text-2xl font-semibold">
                    0
@@ -49,7 +49,7 @@ Mexon
 
         </div>
       </a>
-      <a href="">
+      <!-- <a href="">
         <div class="shadow-md bg-white rounded-lg h-36">
           <div class="flex items-center justify-between  p-6">
 
@@ -71,7 +71,7 @@ Mexon
           </div>
 
         </div>
-      </a>
+      </a> -->
     </div>
   </div>
 

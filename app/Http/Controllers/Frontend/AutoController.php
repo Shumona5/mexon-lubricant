@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Diesel;
 use App\Models\Gasoline;
 use App\Models\Motorbike;
 use App\Models\ProductTypesDetails;
@@ -28,6 +29,7 @@ class AutoController extends Controller
     }
 
     public function diesel(){
-        return view('frontend.pages.products.diesel');
+        $diesel=Diesel::all();
+        return view('frontend.pages.products.diesel',compact('diesel'));
     }
 }

@@ -183,32 +183,7 @@
 </section> 
 <!-- Multiple Image Slide End-->
 
-<!-- Multiple slide Image -->
 
-<!-- <div class="slider">
-  <div class="slide">
-    <img src="{{url('/frontend/image/MUG_1.png')}}" alt="" class="img-responsive" />
-    <h1>slide 1</h1>
-  </div>
-  <div class="slide">
-    <img src="{{url('/frontend/image/MUG_1.jpg')}}" alt="" class="img-responsive" />
-    <h1>slide 2</h1>
-  </div>
-  <div class="slide">
-    <img src="{{url('/frontend/image/MUG_1.4.png')}}" alt="" class="img-responsive" />
-    <h1>slide 3</h1>
-  </div>
-  <div class="slide">
-    <img src="{{url('/frontend/image/MUG_1.3.png')}}" alt="" class="img-responsive" />
-    <h1>slide 4</h1>
-  </div>
-  <div class="slide">
-    <img src="http://fillmurray.com/300/300" alt="" class="img-responsive" />
-    <h1>slide 5</h1>
-  </div>
-</div> -->
-
-<!-- Multiple Image end  -->
 
 <section class="">
   <img src="{{url('/frontend/image/business_promotion.jpg')}}" alt="" style="width: 100%;">

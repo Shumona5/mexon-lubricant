@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('diesels', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->text('short_description')->nullable();
             $table->longText('long_description')->nullable();
             $table->string('product_image')->nullable();

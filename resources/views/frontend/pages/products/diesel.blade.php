@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('content')
 
-
+@foreach($diesel as $data)
 <section class="cta">
-    <img src="{{url('/frontend/image/Diesel1.jpg')}}" alt="" style="width: 100%">
+    <img src="{{$data->image}}" alt="" style="width: 100%">
 
 </section>
 <br>
@@ -13,36 +13,14 @@
     <div class="container" style="padding-top: 30px;">
         <div class="row">
             <div class="col-md-8">
-                <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">SAE 15W-40,API CI-4/SL
-                </p>
+                <p style=" font-weight: 600; color: rgb(2, 109, 112);font-size: 18px;">{{$data->title}} </p>
                 <p class="application" style="font-size: 16px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-                    <b style="font-size: 18px;">Application:</b> <br>
-                    Mexon DriveX 15W-40 has been formulated using new generation high performance base oils and
-                    the
-                    most recent additive technology to meet the latest CI-4 performance requirements. Mexon
-                    DriveX
-                    15W40 provides optimum protection and control of corrosion, oil thickening due to soot build
-                    up,
-                    piston deposits, oxidation, sludge build up and high temperature
-                    stability.
-                </p>
-                <h6> <b> Benefits:</b></h6>
-                <ul class="text-color" style="margin-bottom: 40px !important">
-                    <li style="list-style-type: disc" class="mb-10">High performance diesel engine oil designed
-                        for
-                        use in the latest European, US and Japanese heavy duty diesel engines.</li>
-                    <li style="list-style-type: disc" class="mb-10">High soot loading is experienced for
-                        extended
-                        drain or severe service conditions</li>
-                    <li style="list-style-type: disc" class="mb-10">Extended drain intervals.</li>
-
-                </ul>
-                <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
-                    <b>Pack size:1, 5, 20, 205 Liter</b>
-                </p>
-            </div>
+                {!!$data->short_description!!} </p>
+                 <p style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: slategray; font-weight: 200px;">
+                {!!$data->long_description!!}  </p>
+               </div>
             <div class="col-md-4">
-                <img src="{{url('/frontend/image/DriveX 15W-20 D_1-17-12.png')}}" alt="" height="350px" width="350px">
+                <img src="{{$data->product_image}}" alt="" height="350px" width="350px">
             </div>
         </div>
     </div>
@@ -53,11 +31,11 @@
 
 <section class="container">
     <div class="pdf">
-    <a href="{{url('/frontend/image/Mexon DriveX TDS 15W-40.pdf')}}" target="_blank"><img src="{{url('/frontend/image/pdf.webp')}}" alt="" ></a>
+    <a href="{{$data->pdf}}" target="_blank"><img src="{{$data->pdf_image}}" alt="" ></a>
     </div>
 </section>
-
-<div>
+@endforeach
+<!-- <div>
     <img src="{{url('/frontend/image/Diesel3.jpg')}}" alt="" style="width: 100%; background-position: center; 
             background-size: cover">
 </div>
@@ -146,6 +124,6 @@
 <div>
     <img src="{{url('/frontend/images/Diesel9.jpg')}}" alt="" style="width: 100%; background-position: center; 
             background-size: cover">
-</div>
+</div> -->
 
 @endsection

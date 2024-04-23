@@ -49,7 +49,7 @@ class HomePageImageController extends Controller
 
     }
     public function createOrUpdate(Request $request){
-        // dd($request->all());
+        //  dd($request->all());
         $homeImages=HomePageImage::first();
 
         $first_image = $homeImages->getRawOriginal('first_image');
