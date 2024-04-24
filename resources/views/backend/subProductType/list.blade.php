@@ -102,7 +102,7 @@ Sub Products Type Details List
                         <td class="text-sm text-gray-900">
                             <div class="ml-4">
                                 <div class="text-sm font-medium text-gray-900">
-                                    {{$data->subtitle_name}}
+                                    {{$data->subproducts->name}}
                                 </div>
                             </div>
                         </td>

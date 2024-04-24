@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class SubProductTypesDetailsController extends Controller
 {
     public function list(){
-        $details=SubProductTypesDetails::all();
+        $details=SubProductTypesDetails::with('subproducts')->get();
         return view('backend.subProductType.list',compact('details'));
     }
     public function create(){

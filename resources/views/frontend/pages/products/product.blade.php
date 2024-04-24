@@ -3,14 +3,14 @@
 
 <section>
   <div class="solution">
-    <img src=" {{$mexonProduct->image}}" alt="" style="width: 100%; height: 520px;">
+    <img src=" {{optional($mexonProduct)->image}}" alt="" style="width: 100%; height: 520px;">
 
   </div>
-  <span class="top-left1"> {{$mexonProduct->title1}} </span>
+  <span class="top-left1"> {{optional($mexonProduct)->title1}} </span>
 </section>
 
 <section>
-  <p class="products-p">  {{$mexonProduct->title2}} </p>
+  <p class="products-p">  {{optional($mexonProduct)->title2}} </p>
 </section>
 
 <div>

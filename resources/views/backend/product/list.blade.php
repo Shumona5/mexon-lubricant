@@ -6,7 +6,7 @@ Product List
 <div class="container flex flex-col px-8">
     <!-- Primary -->
     <div class="flex items-center justify-between px-9">
-        <!-- <div class="">
+        <div class="">
             <span class="inline-flex rounded-md shadow-sm">
                 <a href="{{route('product.create')}}" class="inline-flex items-center px-2.5 py-2 w-30 border border-transparent text-base leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,7 +14,7 @@ Product List
                     </svg>Add
                 </a>
             </span>
-        </div> -->
+        </div>
         <div>
             <form action="{{route('product.list')}}" method="get" class="w-full">
                 <div class="flex items-center justify-center mb-10">

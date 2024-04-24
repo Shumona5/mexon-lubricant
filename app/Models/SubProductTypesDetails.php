@@ -10,6 +10,10 @@ class SubProductTypesDetails extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    public function subproducts()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 
     public function getSubtitleImageAttribute($value)
     {

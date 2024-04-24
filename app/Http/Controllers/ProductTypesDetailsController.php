@@ -13,7 +13,7 @@ class ProductTypesDetailsController extends Controller
 {
     public function list()
     {
-        $details=ProductTypesDetails::all();
+        $details=ProductTypesDetails::with('category')->get();
         return view('backend.productsType.list',compact('details'));
     }
     public function create()
@@ -64,14 +64,21 @@ class ProductTypesDetailsController extends Controller
             
         ]);
 
+        
+
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate)->withInput();
         }
+
+        // dd($request->all());
+        
         $image = $detail->getRawOriginal('image');
         if ($request->hasFile('image')) {
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/productType', $image);
+            
         }
+        
         $detail->update([
             'title1'=>$request->title1,
             'title2'=>$request->title2,

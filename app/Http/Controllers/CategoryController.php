@@ -27,7 +27,8 @@ class CategoryController extends Controller
     }
 
     public function store(Request $request){
-       
+        
+    //    dd($request->all());
         $validator = Validator::make($request->all(), [
             'name'  => 'required|unique:categories',
            
@@ -45,8 +46,8 @@ class CategoryController extends Controller
             'image' => $image,
             'slug'  => Str::slug($request->name),
             'parent_id'  => $request->parent_id,
-            
             'position'  => $request->position,
+            
         ]);
 
         notify()->success('Category Created Successfully');
@@ -90,8 +91,8 @@ class CategoryController extends Controller
             'image' => $image,
             'slug'  => $slug,
             'parent_id'  => $request->parent_id,
-           
             'position'  => $request->position,
+           
         ]);
         notify()->success('Category updated successfully');
         return redirect()->route('category.list');

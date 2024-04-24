@@ -52,7 +52,12 @@ class HomePageImageController extends Controller
         //  dd($request->all());
         $homeImages=HomePageImage::first();
 
-        $first_image = $homeImages->getRawOriginal('first_image');
+      
+            $first_image = $homeImages?$homeImages->getRawOriginal('first_image'):null;
+            $second_image = $homeImages?$homeImages->getRawOriginal('second_image'):null;
+            $third_image = $homeImages?$homeImages->getRawOriginal('third_image'):null;
+            $video = $homeImages?$homeImages->getRawOriginal('video'):null;
+
         if ($request->hasFile('first_image')) {
             $remove = public_path().'/uploads/homeImage/'.$first_image;
             File::delete($remove);
@@ -60,21 +65,21 @@ class HomePageImageController extends Controller
             $request->file('first_image')->storeAs('/homeImage', $first_image);
         }
 
-        $second_image = $homeImages->getRawOriginal('second_image');
+        
         if ($request->hasFile('second_image')) {
             $remove = public_path().'/uploads/homeImage/'.$second_image;
             File::delete($remove);
             $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
             $request->file('second_image')->storeAs('/homeImage', $second_image);
         }
-        $third_image = $homeImages->getRawOriginal('third_image');
+        
         if ($request->hasFile('third_image')) {
             $remove = public_path().'/uploads/homeImage/'.$third_image;
             File::delete($remove);
             $third_image = date('Ymdhsis') . '.' . $request->file('third_image')->getClientOriginalExtension();
             $request->file('third_image')->storeAs('/homeImage', $third_image);
         }
-        $video = $homeImages->getRawOriginal('video');
+       
         if ($request->hasFile('video')) {
             $remove = public_path().'/uploads/homeImage/'.$video;
             File::delete($remove);
