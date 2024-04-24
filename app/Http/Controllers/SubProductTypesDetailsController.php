@@ -22,7 +22,7 @@ class SubProductTypesDetailsController extends Controller
     {
         
         $validate = Validator::make($request->all(), [
-            'subtitle' => 'required',
+            
             'category_id'=> 'required|numeric',
             'subtitle_name' => 'required',
             'status' => 'required',
@@ -59,7 +59,7 @@ class SubProductTypesDetailsController extends Controller
     public function update(Request $request, $id){
         $typeDetails=SubProductTypesDetails::find($id);
         $validate = Validator::make($request->all(), [
-            'subtitle' => 'required',
+           
             'category_id'=> 'required|numeric',
             'subtitle_name' => 'required',
             'status' => 'required',

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('sub_product_types_details', function (Blueprint $table) {
             $table->id();
-            $table->string('subtitle');
+            $table->string('subtitle')->nullable();
             $table->foreignId('category_id')->constrained('categories')->restrictOnDelete();
             $table->string('subtitle_name');
             $table->string('subtitle_image')->nullable();

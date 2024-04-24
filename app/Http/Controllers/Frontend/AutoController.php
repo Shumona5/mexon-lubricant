@@ -7,6 +7,7 @@ use App\Models\Diesel;
 use App\Models\Gasoline;
 use App\Models\Motorbike;
 use App\Models\ProductTypesDetails;
+use App\Models\SubProductTypesDetails;
 use Illuminate\Http\Request;
 
 class AutoController extends Controller
@@ -14,7 +15,8 @@ class AutoController extends Controller
     public function auto()
     { 
         $details=ProductTypesDetails::all();
-        return view('frontend.pages.products.auto',compact('details'));
+        $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
+        return view('frontend.pages.products.auto',compact('details','subdetails'));
     }
 
     public function motorbike()
