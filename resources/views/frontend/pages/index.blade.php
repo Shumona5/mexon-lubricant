@@ -150,7 +150,7 @@
     <div class="slide-track">
       <div class="slide-img">
         <img src="{{url('/frontend/image/MUG_1.png')}}" alt="">
-      </div>
+      </div>  
       <div class="slide-img">
         <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt="">
       </div>

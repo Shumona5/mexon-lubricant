@@ -28,7 +28,6 @@ class Category extends Model
     }
 
     public function childs(): HasMany
-
    {
 
        return $this->hasMany(__CLASS__, 'parent_id', 'id') ;

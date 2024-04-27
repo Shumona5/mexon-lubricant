@@ -92,6 +92,8 @@ Route::post('/forget/password/post', [ForgetPasswordController::class, 'forgetPa
 Route::get('/reset-password/{token}', [ForgetPasswordController::class, 'resetPassword'])->name('admin.reset.password');
 Route::post('/reset-password/{token}', [ForgetPasswordController::class, 'resetPasswordPost'])->name('admin.reset.password.post');
 
+Route::get('/category-wise-product/{slug}', [FrontendProductController::class, 'getProductByCategorySlug'])->name('category.wise.product');
+
 
 Route::group(['middleware' => ['auth']], function () {
 

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use App\Models\Setting;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
@@ -51,6 +52,10 @@ class AppServiceProvider extends ServiceProvider
             if (Schema::hasTable('settings')) {
                 $settings = Setting::first();
                 View::share('settings', $settings);
+            }
+            if(Schema::hasTable('categories')){
+                $categories=Category::where('status','active')->where('parent_id',null)->get();
+                View::share('categories',$categories);
             }
         }
     }

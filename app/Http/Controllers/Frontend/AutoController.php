@@ -15,7 +15,10 @@ class AutoController extends Controller
     public function auto()
     { 
         $details=ProductTypesDetails::all();
-        $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
+        // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
+        $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
+            $query->where('parent_id', null);
+        })->get();
         return view('frontend.pages.products.auto',compact('details','subdetails'));
     }
 
