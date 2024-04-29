@@ -27,6 +27,24 @@ Business Promotion Edit
             <p class="text-red-600 mt-5">{{ $message }}</p>
             @enderror
         </div>
+        <div class="px-10">
+            <div class="ml-4">
+                <div class="text-sm font-medium text-gray-900">
+                    <img width="150 px" src="{{optional($businessPromotion)->image}}" class="object-contain rounded-full h-14 w-14" alt="No Image">
+                </div>
+            </div>
+
+            <label for="image" class="block text-sm leading-5 font-medium text-gray-700">
+                 Image <a class="text-blue-600 underline" href="https://squoosh.app/" target="_blank">Resize here</a> <br>
+                <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="image" value="{{optional($businessPromotion)->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+            </div>
+            @error('image')
+            <p class="text-red-600 mt-5">{{ $message }}</p>
+            @enderror
+        </div>
 
     </div>
     <div class="pt-5 mt-8">

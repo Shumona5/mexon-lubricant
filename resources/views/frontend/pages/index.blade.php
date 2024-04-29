@@ -120,17 +120,17 @@
 <!-- End Service -->
 
 <section class="cta">
-  <img src="{{url('/frontend/image/home2.jpg')}}" alt="" style="width: 100%">
+  <img src="{{optional($homeImages)->first_image}}" alt="" style="width: 100%">
 
 </section>
 
 <section class="distribution">
-  <img src="{{url('/frontend/image/p_distribution.jpg')}}" alt="" style="width: 100%;">
+  <img src="{{optional($homeImages)->second_image}}" alt="" style="width: 100%;">
 
 </section>
 
 <section class="products-index">
-  <img class="product_section_image" src="{{url('/frontend/image/products.jpg')}}" alt="products">
+  <img class="product_section_image" src="{{optional($homeImages)->third_image}}" alt="products">
 
 </section>
 
@@ -186,7 +186,7 @@
 
 
 <section class="">
-  <img src="{{url('/frontend/image/business_promotion.jpg')}}" alt="" style="width: 100%;">
+  <img src="{{optional($businessPromotion)->image}}" alt="" style="width: 100%;">
 
 </section>
 
