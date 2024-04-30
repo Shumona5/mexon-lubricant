@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'BDWash'),
+    'name' => env('APP_NAME', 'Mexon'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://bdwash.com/'),
+    'url' => env('APP_URL', 'http://mexon.org/'),
 
     'asset_url' => env('ASSET_URL'),
 
