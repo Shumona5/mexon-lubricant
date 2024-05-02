@@ -44,7 +44,7 @@
     <div class="mexon-col">
       <h6> <b> {{$submexon->title}}</b> </h6>
       <p> {!!$submexon->description!!}</p>
-      
+
     </div>
     @endforeach
     <!-- <div class="mexon-col">
@@ -144,7 +144,7 @@
   @endforeach
 </section>
 <!-- Multiple Image Slide Start-->
- <section class="auto-slide">
+<!-- <section class="auto-slide">
   <h1 style="color: darkblue; font-weight: 800;"> Promotional Item</h1>
   <div class="image-slide" style="background-color: rgb(245, 241, 236);">
     <div class="slide-track">
@@ -180,11 +180,35 @@
 
 
 
-</section> 
+</section>  -->
 <!-- Multiple Image Slide End-->
 
 
+<!-- Promotional Item start  -->
+<!-- 
+<div class="your-class">
+  <div class="inner-slider">1</div>
+  <div class="inner-slider">2</div>
+  <div class="inner-slider">3</div>
+  <div class="inner-slider">4</div>
+  <div class="inner-slider">5</div>
+  <div class="inner-slider">6</div>
+</div> -->
 
+<!-- Promotional item end  -->
+
+<!-- Promotional Item start  -->
+<section class="service">
+<h1> Promotional Item</h1>
+<div class="demo">
+<div class="item"> <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt=""></div>
+<div class="item"> <img src="{{url('/frontend/image/MUG_1.2.png')}}" alt=""></div>
+<div class="item"> <img src="{{url('/frontend/image/MUG_1.png')}}" alt=""></div>
+<div class="item"> <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt=""></div>
+</div>
+</section>
+
+<!-- Promotional item end  -->
 <section class="">
   <img src="{{optional($businessPromotion)->image}}" alt="" style="width: 100%;">
 

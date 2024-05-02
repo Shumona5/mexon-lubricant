@@ -30,6 +30,7 @@ use App\Http\Controllers\MotorbikeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductTypesDetailsController;
+use App\Http\Controllers\PromotionalItemController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SubMexonController;
@@ -235,5 +236,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/subMexon/edit/{id}',[SubMexonController::class,'edit'])->name('subMexon.edit');
     Route::put('/subMexon/update/{id}',[SubMexonController::class,'update'])->name('subMexon.update');
     Route::get('/subMexon/delete/{id}',[SubMexonController::class,'delete'])->name('subMexon.delete');
+
+    Route::get('/promotional',[PromotionalItemController::class,'list'])->name('promotional.list');
+    Route::get('/promotional/create',[PromotionalItemController::class,'create'])->name('promotional.create');
+    Route::get('/promotional/store',[PromotionalItemController::class,'store'])->name('promotional.store');
+    Route::get('/promotional/edit',[PromotionalItemController::class,'edit'])->name('promotional.edit');
+    Route::get('/promotional/update',[PromotionalItemController::class,'update'])->name('promotional.update');
+    Route::get('/promotional/delete',[PromotionalItemController::class,'delete'])->name('promotional.delete');
     
 });
