@@ -239,9 +239,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/promotional',[PromotionalItemController::class,'list'])->name('promotional.list');
     Route::get('/promotional/create',[PromotionalItemController::class,'create'])->name('promotional.create');
-    Route::get('/promotional/store',[PromotionalItemController::class,'store'])->name('promotional.store');
-    Route::get('/promotional/edit',[PromotionalItemController::class,'edit'])->name('promotional.edit');
-    Route::get('/promotional/update',[PromotionalItemController::class,'update'])->name('promotional.update');
-    Route::get('/promotional/delete',[PromotionalItemController::class,'delete'])->name('promotional.delete');
+    Route::post('/promotional/store',[PromotionalItemController::class,'store'])->name('promotional.store');
+    Route::get('/promotional/edit/{id}',[PromotionalItemController::class,'edit'])->name('promotional.edit');
+    Route::put('/promotional/update/{id}',[PromotionalItemController::class,'update'])->name('promotional.update');
+    Route::get('/promotional/delete/{id}',[PromotionalItemController::class,'delete'])->name('promotional.delete');
     
 });

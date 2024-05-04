@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\HomePageImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class HomePageImageController extends Controller
 {
@@ -50,6 +51,13 @@ class HomePageImageController extends Controller
     }
     public function createOrUpdate(Request $request){
         //  dd($request->all());
+        $validate = Validator::make($request->all(), [
+            'video'  => 'mimes:mp4,mov,ogg | max:20000'
+        ]);
+
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate)->withInput();
+        }
         $homeImages=HomePageImage::first();
 
       

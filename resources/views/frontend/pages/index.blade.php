@@ -182,30 +182,14 @@
 
 </section>  -->
 <!-- Multiple Image Slide End-->
-
-
-<!-- Promotional Item start  -->
-<!-- 
-<div class="your-class">
-  <div class="inner-slider">1</div>
-  <div class="inner-slider">2</div>
-  <div class="inner-slider">3</div>
-  <div class="inner-slider">4</div>
-  <div class="inner-slider">5</div>
-  <div class="inner-slider">6</div>
-</div> -->
-
-<!-- Promotional item end  -->
-
 <!-- Promotional Item start  -->
 <section class="service">
-<h1> Promotional Item</h1>
-<div class="demo">
-<div class="item"> <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt=""></div>
-<div class="item"> <img src="{{url('/frontend/image/MUG_1.2.png')}}" alt=""></div>
-<div class="item"> <img src="{{url('/frontend/image/MUG_1.png')}}" alt=""></div>
-<div class="item"> <img src="{{url('/frontend/image/MUG_1.1.png')}}" alt=""></div>
-</div>
+  <h1> Promotional Products </h1>
+  <div class="demo">
+    @foreach($promotionalProducts as $promotionalProduct)
+    <div class="item"> <img src="{{$promotionalProduct->image}}" alt=""></div>
+    @endforeach
+  </div>
 </section>
 
 <!-- Promotional item end  -->

@@ -47,7 +47,7 @@ class CategoryController extends Controller
             'slug'  => Str::slug($request->name),
             'parent_id'  => $request->parent_id,
             'position'  => $request->position,
-            
+            'status'  => $request->status,
         ]);
 
         notify()->success('Category Created Successfully');
@@ -92,7 +92,7 @@ class CategoryController extends Controller
             'slug'  => $slug,
             'parent_id'  => $request->parent_id,
             'position'  => $request->position,
-           
+            'status'  => $request->status,
         ]);
         notify()->success('Category updated successfully');
         return redirect()->route('category.list');

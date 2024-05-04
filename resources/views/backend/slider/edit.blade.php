@@ -68,6 +68,17 @@ Slider Edit
             </div>
             @error('button_url')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
         </div>
+        <div class="px-10">
+            <label for="position" class="block text-sm leading-5 font-medium text-gray-700">
+            Position<span class="text-red-600"> * </span>
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="position" value="{{$sliders->position}}" name="position" type="number"
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none"
+                    placeholder="Enter position " />
+            </div>
+            @error('position')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
+        </div>
 
         <div class="px-10">
             <label for="name" class="block text-sm leading-5 font-medium text-gray-700">

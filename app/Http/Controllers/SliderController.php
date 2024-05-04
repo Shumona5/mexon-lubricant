@@ -53,6 +53,8 @@ class SliderController extends Controller
             'is_has_button' => $request->is_has_button,
             'button_text' => $request->button_text,
             'button_url' => $request->button_url,
+            'position' => $request->position,
+
 
 
         ]);
@@ -102,7 +104,7 @@ class SliderController extends Controller
             'is_has_button' => $request->is_has_button,
             'button_text' => $request->button_text,
             'button_url' => $request->button_url,
-
+            'position' => $request->position,
 
         ]);
 
