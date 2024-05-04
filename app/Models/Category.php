@@ -12,25 +12,36 @@ use Illuminate\Support\Facades\Storage;
 class Category extends Model
 {
     use HasFactory;
-    protected $guarded=[];
+    protected $guarded = [];
+
+    public function productTypeDetails()
+    {
+        return $this->hasOne(ProductTypesDetails::class, 'category_id');
+    }
+
+
+    public function subProductTypesDetails()
+    {
+        return $this->hasMany(SubProductTypesDetails::class, 'category_id');
+    }
+
 
     public function getImageAttribute($value): string|UrlGenerator|Application
     {
-        if($value){
-            return Storage::url('/category/'.$value);
+        if ($value) {
+            return Storage::url('/category/' . $value);
         }
         return url('uploads/user.jpg');
     }
 
     public function parent()
     {
-       return $this->belongsTo(Category::class,'parent_id','id');
+        return $this->belongsTo(Category::class, 'parent_id', 'id');
     }
 
     public function childs(): HasMany
-   {
+    {
 
-       return $this->hasMany(__CLASS__, 'parent_id', 'id') ;
-
-   }
+        return $this->hasMany(__CLASS__, 'parent_id', 'id');
+    }
 }

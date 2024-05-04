@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductsDetails;
 use App\Models\ProductTypesDetails;
@@ -20,6 +21,12 @@ class ProductController extends Controller
 
     public function getProductByCategorySlug($slug)
     {
+        $checkParent=Category::with('productTypeDetails','subProductTypesDetails')->where('parent_id',null)->where('slug',$slug)->first();
+        if($checkParent)
+        {
+            
+            return view('frontend.pages.products.auto', compact('checkParent'));
+        }
 
         if ($slug == 'automotive') {
             $details = ProductTypesDetails::all();
@@ -29,6 +36,7 @@ class ProductController extends Controller
             })->get();
             return view('frontend.pages.products.auto', compact('details', 'subdetails'));
         }
+
         if ($slug == 'industrial') {
             $details = ProductTypesDetails::all();
             // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();

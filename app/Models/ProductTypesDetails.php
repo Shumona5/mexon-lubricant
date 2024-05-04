@@ -15,6 +15,9 @@ class ProductTypesDetails extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    
+    
     public function getImageAttribute($value){
         if($value){
             return Storage::url('/productType/' . $value);

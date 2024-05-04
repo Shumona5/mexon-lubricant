@@ -81,6 +81,36 @@ Category Edit
                 </div>
                 @error('position')<p class="text-red-600 mt-5">{{$message}}</p>@enderror
             </div>
+
+            <div class="px-10">
+                <label for="status" class="block text-sm leading-5 font-medium text-gray-700">
+                    Status<span class="text-red-600"> * </span>
+                </label>
+                <div class="mt-1 relative rounded-md shadow-sm">
+                    <select required name="status" class="form-select appearance-none
+                                block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-white bg-clip-padding bg-no-repeat
+                                border border-solid border-gray-300
+                                rounded
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                        <option @if ($category->status == 'active') selected @endif value="active">Active</option>
+                        <option @if ($category->status == 'inactive') selected @endif value="inactive">Inactive</option>
+    
+                    </select>
+                </div>
+                @error('status')
+                <p class="text-red-600 mt-5">{{ $message }}</p>
+                @enderror
+            </div>
         </div>
 
     </div>
