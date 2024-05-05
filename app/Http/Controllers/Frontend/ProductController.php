@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Motorbike;
 use App\Models\Product;
 use App\Models\ProductsDetails;
 use App\Models\ProductTypesDetails;
@@ -28,47 +29,9 @@ class ProductController extends Controller
             return view('frontend.pages.products.auto', compact('checkParent'));
         }
 
-        if ($slug == 'automotive') {
-            $details = ProductTypesDetails::all();
-            // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
-            $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
-                $query->where('parent_id', null);
-            })->get();
-            return view('frontend.pages.products.auto', compact('details', 'subdetails'));
-        }
-
-        if ($slug == 'industrial') {
-            $details = ProductTypesDetails::all();
-            // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
-            $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
-                $query->where('parent_id', null);
-            })->get();
-
-            return view('frontend.pages.products.industrial', compact('details', 'subdetails'));
-        }
-        if ($slug == 'marine-and-offshore') {
-            $details = ProductTypesDetails::all();
-            // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
-            $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
-                $query->where('parent_id', null);
-            })->get();
-            return view();
-        }
-        if ($slug == 'speciality-grades') {
-            $details = ProductTypesDetails::all();
-            // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
-            $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
-                $query->where('parent_id', null);
-            })->get();
-            return view();
-        }
-        if ($slug == 'motorbike') {
-            $details = ProductTypesDetails::all();
-            // $subdetails=SubProductTypesDetails::where('parent_id' , null)->get();
-            $subdetails = SubProductTypesDetails::whereHas('subproducts', function ($query) {
-                $query->where('parent_id', null);
-            })->get();
-            return view('frontend.pages.products.motorbike',compact('details', 'subdetails'));
+    if ($slug == 'motorbike') {
+        $motorbikes=Motorbike::all();
+            return view('frontend.pages.products.motorbike',compact('motorbikes'));
         }
         if ($slug == 'gasoline') {
             $details = ProductTypesDetails::all();

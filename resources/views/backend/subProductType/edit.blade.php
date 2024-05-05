@@ -7,7 +7,7 @@ Sub Products Type Details Edit
     @csrf
     @method('put')
     <div class="py-12 bg-white rounded-lg shadow-md">
-        <div class="px-10">
+        <!-- <div class="px-10">
             <label for="subtitle" class="block text-sm font-medium leading-5 text-gray-700">
                 Subtitle<span class="text-red-600"> * </span>
             </label>
@@ -15,7 +15,7 @@ Sub Products Type Details Edit
                 <input id="subtitle" value="{{$typeDetails->subtitle}}" name="subtitle" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
             @error('subtitle')<p class="mt-5 text-red-600">{{$message}}</p>@enderror
-        </div>
+        </div> -->
         <div class="px-10">
             <label for="subtitle_name" class="block text-sm font-medium leading-5 text-gray-700">
                 Subtitle Name<span class="text-red-600"> * </span>

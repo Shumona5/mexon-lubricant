@@ -80,25 +80,6 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <!-- demo jquery cdn -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-
-  <!-- <script type="text/javascript">
-    $(document).ready(function() {
-      $('.your-class').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>',
-        centerMode: true,
-      });
-    });
-  </script> -->
   <!-- Promotional item end  -->
   <script type="text/javascript">
     $(document).ready(function() {

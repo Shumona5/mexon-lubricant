@@ -6,7 +6,7 @@
 <form action="{{route('subProducts.details.store')}}" method="post" class=" px-6 py-6 rounded-md space-y-7" enctype="multipart/form-data">
     @csrf
     <div class="bg-white py-12 rounded-lg shadow-md">
-        <div class="px-10">
+        <!-- <div class="px-10">
             <label for="subtitle" class="block text-sm leading-5 font-medium text-gray-700">
             Subtitle<span class="text-red-600"> * </span>
             </label>
@@ -16,7 +16,7 @@
             @error('subtitle')
             <p class="text-red-600 mt-5">{{ $message }}</p>
             @enderror
-        </div>
+        </div> -->
         <div class="px-10">
             <label for="subtitle_name" class="block text-sm leading-5 font-medium text-gray-700">
             Subtitle Name<span class="text-red-600"> * </span>

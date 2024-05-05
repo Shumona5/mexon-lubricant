@@ -40,7 +40,7 @@
                                         @foreach ($category->childs as $childCategory)
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('products.transmission') }}">{{ $childCategory->name }}</a>
+                                                    href="{{url('/category-wise-product/' . $childCategory->slug) }}">{{ $childCategory->name }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
