@@ -45,7 +45,7 @@
                                         <i class="fa fa-envelope"></i>
                                     </div>
                                     <div class="contact-info-dec">
-                                        <p> info@mexonoil.com
+                                        <p> info@mexon.org 
                                             <a href="mailto:info@omoxoil.com" class="text-decoration-none text-color"></a>
                                         </p>
                                     </div>
