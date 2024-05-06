@@ -22,7 +22,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         @foreach ($categories as $category)
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropend">
                                 <a class=" d-block d-md-none nav-link dropdown-toggle" href="#"
                                     id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">

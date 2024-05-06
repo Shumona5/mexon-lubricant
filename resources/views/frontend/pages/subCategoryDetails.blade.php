@@ -3,25 +3,25 @@
 
 
 <section class="cta">
-    <img src="{{url('/frontend/image/motorbike1.jpg')}}" alt="" style="width: 100%">
+    <img src="{{$category->image}}" alt="" style="width: 100%">
 </section>
 
 <section>
-    @foreach ($motorbikes as $motorbike)
+    @foreach ($category->subCategoryDetails as $data)
     <div>
         <div>
             <div class="motor-header">
-                <h1> {{$motorbike->title1}} </h1>
-                <p style="font-size: 16px;">{!!$motorbike->first_short_description!!}</p>
+                <h1> {{$data->title1}} </h1>
+                <p style="font-size: 16px;">{!!$data->first_short_description!!}</p>
             </div>
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <p style=" font-weight: 500; color: rgb(2, 109, 112);font-size: 16px;">{!!$motorbike->first_long_description!!}</p>
+                        <p style=" font-weight: 500; color: rgb(2, 109, 112);font-size: 16px;">{!!$data->first_long_description!!}</p>
                     </div>
                     <div class="col-md-4">
-                        <img src="{{$motorbike->first_image}}" alt="">
+                        <img src="{{$data->first_image}}" alt="">
                     </div>
                 </div>
             </div>
@@ -29,17 +29,17 @@
          <br>
         <div>
             <div class="motor-header">
-                <h1>{{$motorbike->title2}}</h1>
-                <p style="font-size: 16px;">{!!$motorbike->second_short_description!!} </p>
+                <h1>{{$data->title2}}</h1>
+                <p style="font-size: 16px;">{!!$data->second_short_description!!} </p>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-1"> </div>
                     <div class="col-md-7">
-                        <p> {!!$motorbike->second_long_description!!}</p>
+                        <p> {!!$data->second_long_description!!}</p>
                     </div>
                     <div class="col-md-4">
-                        <img src="{{$motorbike->second_image}}" alt="">
+                        <img src="{{$data->second_image}}" alt="">
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
         </section>
         <br>
         <div>
-            <img src="{{$motorbike->image}}" alt="" style="width: 100%; background-position: center; 
+            <img src="{{$data->image}}" alt="" style="width: 100%; background-position: center; 
                  background-size: cover">
         </div>
         <br>

@@ -23,8 +23,8 @@
                                 <div class="single-contact-info my-4">
                                     <div class="contact-info-dec text-color">
                                         <h4>Mexon Lubricants</h4>
-                                        <!-- <h6 class="secondary-text-color">2 Darzciema iela,</h6>
-                                        <h6 class="secondary-text-color">Riga, Latvia.</h6> -->
+                                        <h6 class="secondary-text-color">2 Darzciema iela,</h6>
+                                        <h6 class="secondary-text-color">Riga, Latvia.</h6>
                                     </div>
                                 </div>
 
@@ -33,8 +33,8 @@
                                         <i class="fa fa-map-marker"></i>
                                     </div>
                                     <div class="contact-info-dec ">
-                                        <p class="text-color"> House # 47, Priyoprangon Azizah,Road # 15<br> Rabindra Sarani,
-                                            <br>Dhaka -1230
+                                        <p class="text-color"> Asia Pacific Office<br>19/64 Soi:13,Sukhumvit Rd Wattana
+                                            <br>Bangkok-10110 Thailand
                                         </p>
                                         <p></p>
                                     </div>
@@ -52,7 +52,7 @@
                                 </div>
 
 
-                                <!-- <div class="single-contact-info d-flex align-items-baseline">
+                                <div class="single-contact-info d-flex align-items-baseline">
                                     <div class="contact-icon pr-10">
                                         <i class="fa fa-map-marker"></i>
                                     </div>
@@ -62,13 +62,13 @@
                                         </p>
                                         <p></p>
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="single-contact-info d-flex align-items-baseline">
                                     <div class="contact-icon pr-10">
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="contact-info-dec">
-                                        <p class="text-color">+8809666742742</p>
+                                        <p class="text-color">+371 2 8810000</p>
                                     </div>
                                 </div>
 

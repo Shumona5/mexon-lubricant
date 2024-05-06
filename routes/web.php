@@ -23,6 +23,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\IndustrialController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\Frontend\SubCateoryDetailsController;
 use App\Http\Controllers\GasolineController;
 use App\Http\Controllers\HomePageImageController;
 use App\Http\Controllers\LocationController as ControllersLocationController;
@@ -33,6 +34,7 @@ use App\Http\Controllers\ProductTypesDetailsController;
 use App\Http\Controllers\PromotionalItemController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SubCategoryDetailsController;
 use App\Http\Controllers\SubMexonController;
 use App\Http\Controllers\SubProductTypesDetailsController;
 use App\Http\Controllers\TransmissionController;
@@ -58,7 +60,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'home'])->name('web.home');
 Route::get('/products',[FrontendProductController::class,'list'])->name('products.list');
 
+Route::get('/subDetails',[SubCateoryDetailsController::class,'subCategory'])->name('frontend.subCategory');
+
 Route::get('/auto',[AutoController::class,'auto'])->name('products.auto');
+
 Route::get('/auto/motorbike',[AutoController::class,'motorbike'])->name('products.motorbike');
 Route::get('/auto/gasoline',[AutoController::class,'gasoline'])->name('products.gasoline');
 Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.diesel');
@@ -243,5 +248,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/promotional/edit/{id}',[PromotionalItemController::class,'edit'])->name('promotional.edit');
     Route::put('/promotional/update/{id}',[PromotionalItemController::class,'update'])->name('promotional.update');
     Route::get('/promotional/delete/{id}',[PromotionalItemController::class,'delete'])->name('promotional.delete');
+
+    Route::get('/subCategory',[SubCategoryDetailsController::class,'list'])->name('subCategory.list');
+    Route::get('/subCategory/create',[SubCategoryDetailsController::class,'create'])->name('subCategory.create');
+    Route::post('/subCategory/store',[SubCategoryDetailsController::class,'store'])->name('subCategory.store');
+    Route::get('/subCategory/edit/{id}',[SubCategoryDetailsController::class,'edit'])->name('subCategory.edit');
+    Route::put('/subCategory/update/{id}',[SubCategoryDetailsController::class,'update'])->name('subCategory.update');
+    Route::get('/subCategory/delete/{id}',[SubCategoryDetailsController::class,'delete'])->name('subCategory.delete');
     
 });

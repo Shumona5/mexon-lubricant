@@ -25,13 +25,17 @@ class Category extends Model
         return $this->hasMany(SubProductTypesDetails::class, 'category_id');
     }
 
+    public function subCategoryDetails(){
+        return $this->hasMany(SubCategoryDetails::class,'category_id');
+    }
+
 
     public function getImageAttribute($value): string|UrlGenerator|Application
     {
         if ($value) {
             return Storage::url('/category/' . $value);
         }
-        return url('uploads/user.jpg');
+        return url('images/user.jpg');
     }
 
     public function parent()
