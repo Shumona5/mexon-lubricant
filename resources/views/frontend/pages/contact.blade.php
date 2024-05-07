@@ -101,7 +101,8 @@
                                 <span style="color: #fa693c;"> Feel Free To </span> Write Us
                             </h2>
                             <div class="main-contact-area">
-                                <form action="{{route('contactUs.store')}}">
+                                <form action="{{route('contactUs.store')}}" method="POST">
+                                @csrf 
                                     <div style="margin-bottom: 7px;" class="row">
                                         <div class="col-md-6 col-sm-12 input-area mb-10">
                                             <input type="text" class="form-control" placeholder="Your name" style=" font-size: 18px;" name="name">

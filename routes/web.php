@@ -78,7 +78,7 @@ Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.dies
 
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/contact-us',[ContactController::class,'list'])->name('contact.list');
-Route::get('/contact-us/store',[ContactController::class,'store'])->name('contactUs.store');
+Route::post('/contact-us/store',[ContactController::class,'store'])->name('contactUs.store');
 
 Route::get('/engine',[EngineOilController::class,'list'])->name('engine.list');
 Route::get('/engine/create',[EngineOilController::class,'create'])->name('engine.create');
