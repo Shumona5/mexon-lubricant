@@ -69,7 +69,7 @@ class HomePageImageController extends Controller
         if ($request->hasFile('first_image')) {
             $remove = public_path().'/uploads/homeImage/'.$first_image;
             File::delete($remove);
-            $first_image = date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
+            $first_image = 'first_image_'.date('Ymdhsis') . '.' . $request->file('first_image')->getClientOriginalExtension();
             $request->file('first_image')->storeAs('/homeImage', $first_image);
         }
 
@@ -77,21 +77,21 @@ class HomePageImageController extends Controller
         if ($request->hasFile('second_image')) {
             $remove = public_path().'/uploads/homeImage/'.$second_image;
             File::delete($remove);
-            $second_image = date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
+            $second_image = 'second_image_'.date('Ymdhsis') . '.' . $request->file('second_image')->getClientOriginalExtension();
             $request->file('second_image')->storeAs('/homeImage', $second_image);
         }
         
         if ($request->hasFile('third_image')) {
             $remove = public_path().'/uploads/homeImage/'.$third_image;
             File::delete($remove);
-            $third_image = date('Ymdhsis') . '.' . $request->file('third_image')->getClientOriginalExtension();
+            $third_image = 'third_image_'.date('Ymdhsis') . '.' . $request->file('third_image')->getClientOriginalExtension();
             $request->file('third_image')->storeAs('/homeImage', $third_image);
         }
        
         if ($request->hasFile('video')) {
             $remove = public_path().'/uploads/homeImage/'.$video;
             File::delete($remove);
-            $video = date('Ymdhsis') . '.' . $request->file('video')->getClientOriginalExtension();
+            $video = 'video_'.date('Ymdhsis') . '.' . $request->file('video')->getClientOriginalExtension();
             $request->file('video')->storeAs('/homeImage', $video);
         }
         if($homeImages){
@@ -111,8 +111,7 @@ class HomePageImageController extends Controller
                 'video' => $video,
             ]);
         }
-
-       
+        
         notify()->success('Home Image Updated Successfully');
         return redirect()->route('home.image');
 

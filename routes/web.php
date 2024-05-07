@@ -68,12 +68,12 @@ Route::get('/auto/motorbike',[AutoController::class,'motorbike'])->name('product
 Route::get('/auto/gasoline',[AutoController::class,'gasoline'])->name('products.gasoline');
 Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.diesel');
 
-Route::get('/industrial/products',[IndustrialController::class,'industrial'])->name('products.industrial');
-Route::get('/industrial/diesel',[IndustrialController::class,'diesel'])->name('product.diesel');
-Route::get('/industrial/grease',[IndustrialController::class,'grease'])->name('products.grease');
+// Route::get('/industrial/products',[IndustrialController::class,'industrial'])->name('products.industrial');
+// Route::get('/industrial/diesel',[IndustrialController::class,'diesel'])->name('product.diesel');
+// Route::get('/industrial/grease',[IndustrialController::class,'grease'])->name('products.grease');
 
-Route::get('/transmission',[TransmissionController::class,'transmission'])->name('products.transmission');
-Route::get('/transmission/memox',[TransmissionController::class,'memox'])->name('transmission.memox');
+// Route::get('/transmission',[TransmissionController::class,'transmission'])->name('products.transmission');
+// Route::get('/transmission/memox',[TransmissionController::class,'memox'])->name('transmission.memox');
 
 
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
@@ -151,9 +151,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/subProduct/delete/{id}',[ProductController::class,'subProductDelete'])->name('subProduct.delete');
     });
 
-
-   
-
     Route::group(['prefix' => 'sliders'], function () {
         Route::get('/', [SliderController::class, 'list'])->name('slider.list');
         Route::get('/create', [SliderController::class, 'create'])->name('slider.create');
@@ -207,34 +204,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/productsSubtitle/update/{id}',[SubProductTypesDetailsController::class,'update'])->name('subProducts.details.update');
     Route::get('/productsSubtitle/delete/{id}',[SubProductTypesDetailsController::class,'delete'])->name('subProducts.details.delete');
    
-    Route::get('/motorbike',[MotorbikeController::class,'list'])->name('motorbike.list');
-    Route::get('/motorbike/create',[MotorbikeController::class,'create'])->name('motorbike.create');
-    Route::post('/motorbike/store',[MotorbikeController::class,'store'])->name('motorbike.store');
-    Route::get('/motorbike/edit/{id}',[MotorbikeController::class,'edit'])->name('motorbike.edit');
-    Route::put('/motorbike/update/{id}',[MotorbikeController::class,'update'])->name('motorbike.update');
-    Route::get('/motorbike/delete/{id}',[MotorbikeController::class,'delete'])->name('motorbike.delete');
-    
-    Route::get('/gasoline',[GasolineController::class,'list'])->name('gasoline.list');
-    Route::get('/gasoline/create',[GasolineController::class,'create'])->name('gasoline.create');
-    Route::post('/gasoline/store',[GasolineController::class,'store'])->name('gasoline.store');
-    Route::get('/gasoline/edit/{id}',[GasolineController::class,'edit'])->name('gasoline.edit');
-    Route::put('/gasoline/update/{id}',[GasolineController::class,'update'])->name('gasoline.update');
-    Route::get('/gasoline/delete/{id}',[GasolineController::class,'delete'])->name('gasoline.delete');
-
-    Route::get('/diesel',[DieselController::class,'list'])->name('diesel.list');
-    Route::get('/diesel/create',[DieselController::class,'create'])->name('diesel.create');
-    Route::post('/diesel/store',[DieselController::class,'store'])->name('diesel.store');
-    Route::get('/diesel/edit/{id}',[DieselController::class,'edit'])->name('diesel.edit');
-    Route::put('/diesel/update/{id}',[DieselController::class,'update'])->name('diesel.update');
-    Route::get('/diesel/delete/{id}',[DieselController::class,'delete'])->name('diesel.delete');
-
-    Route::get('/industrial',[DieselController::class,'industrialDiesellist'])->name('industrial.diesel.list');
-    Route::get('/industrial/diesel/create',[DieselController::class,'industrialDieselcreate'])->name('industrial.diesel.create');
-    Route::post('/industrial/diesel/store',[DieselController::class,'industrialDieselstore'])->name('industrial.diesel.store');
-    Route::get('/industrial/diesel/edit/{id}',[DieselController::class,'industrialDieseledit'])->name('industrial.diesel.edit');
-    Route::put('/industrial/diesel/update/{id}',[DieselController::class,'industrialDieselupdate'])->name('industrial.diesel.update');
-    Route::get('/industrial/diesel/delete/{id}',[DieselController::class,'industrialDieseldelete'])->name('industrial.diesel.delete');
-
     Route::get('/subMexon',[SubMexonController::class,'list'])->name('subMexon.list');
     Route::get('/subMexon/create',[SubMexonController::class,'create'])->name('subMexon.create');
     Route::post('/subMexon/store',[SubMexonController::class,'store'])->name('subMexon.store');

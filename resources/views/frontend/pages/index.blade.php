@@ -130,7 +130,7 @@
 </section>
 
 <section class="products-index">
-  <img class="product_section_image" src="{{optional($homeImages)->third_image}}" alt="products">
+  <img class="product_section_image" src="{{optional($homeImages)->third_image}}" alt="">
 
 </section>
 
