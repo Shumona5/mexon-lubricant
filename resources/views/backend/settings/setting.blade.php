@@ -225,7 +225,7 @@ Settings
             @error('terms_and_conditions')<span class="text-red-600">{{$message}}</span>@enderror
         </div>
 
-        <div class="px-10">
+        <!-- <div class="px-10">
             <label for="delivery_charge" class="block text-sm leading-5 font-medium text-gray-700">
                 Delivery Charge
             </label>
@@ -235,7 +235,7 @@ Settings
                     placeholder="Enter delivery charge" />
             </div>
             @error('delivery_charge')<span class="text-red-600">{{$message}}</span>@enderror
-        </div>
+        </div> -->
 
 
 

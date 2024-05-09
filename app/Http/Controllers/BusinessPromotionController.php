@@ -16,6 +16,7 @@ class BusinessPromotionController extends Controller
 
     }
     public function createOrUpdate(Request $request){
+       
         $validate = Validator::make($request->all(), [
             'title' => 'required',
         ]);
@@ -38,6 +39,7 @@ class BusinessPromotionController extends Controller
             $businessPromotion->update([
                 'title' => $request->title,
                 'long_description' => $request->long_description,
+                'image' => $image,
             ]);
 
         }else{
@@ -45,6 +47,7 @@ class BusinessPromotionController extends Controller
             BusinessPromotion::create([
                 'title' => $request->title,
                 'long_description' => $request->long_description,
+                'image' => $image,
             ]);
         }
         

@@ -12,7 +12,7 @@ Why Mexon Edit
                 Name<span class="text-red-600"> * </span>
             </label>
             <div class="relative mt-1 rounded-md shadow-sm">
-                <input id="name" value="{{optional($whyMexon)->name}}" name="name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter engine oil name" />
+                <input id="name" value="{{optional($whyMexon)->name}}" name="name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" placeholder="Enter name" />
             </div>
             @error('name')<p class="mt-5 text-red-600">{{$message}}</p>@enderror
         </div>

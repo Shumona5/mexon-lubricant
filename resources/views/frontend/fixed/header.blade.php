@@ -43,8 +43,8 @@
         </li> -->
 
         <li class="dropdown">
-          <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">Pproducts <b class="caret"></b></a>
-          <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle" data-toggle="dropdown">Pproducts <b class="caret"></b></a>
+          <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+          <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
           @foreach ($categories as $category)
@@ -66,12 +66,7 @@
             @endforeach
           </ul>
         </li>
-
-
-
-
-
-        <li> <a href="{{ url('/#business_promotion') }}"> Business Promotion</a></li>
+      <li> <a href="{{ url('/#business_promotion') }}"> Business Promotion</a></li>
         <li> <a href="{{ route('contact') }}"> Contacts</a></li>
         <a href="https://bosssend.com/" target="_blank" class="buy-btn"> Buy Online</a>
       </ul>
