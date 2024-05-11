@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Opportunity;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Test;
@@ -18,9 +19,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data['total_user'] =Customer::count();
+        // $data['total_user'] =Customer::count();
         // $data['today_order']=Order::whereDate('created_at', Carbon::today())->get()->count();
-       
+           $data['total_category'] =Category::count();
 
 
         return view('backend.dashboard.index',compact('data'));

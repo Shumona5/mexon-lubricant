@@ -6,7 +6,7 @@ Mexon
 <div class="flex items-center justify-center">
   <div class="p-4 rounded w-full">
     <div class="md:grid md:grid-cols-3 md:gap-4 lg:grid-cols-3 space-y-4 md:space-y-0 mt-4 lg:gap-8">
-      <a href="{{route('customer.list')}}">
+      <a href="{{route('category.list')}}">
         <div class="shadow-md bg-white rounded-lg h-36">
           <div class="flex items-center justify-between  p-8">
 
@@ -14,7 +14,7 @@ Mexon
               <p class="text-gray-500 text-xl font-semibold">Total Categories</p>
               <div class="flex items-baseline space-x-4">
                 <h2 class="text-2xl font-semibold">
-                 0
+                 {{$data['total_category']}}
                 </h2>
               </div>
             </div>

@@ -8,36 +8,25 @@
             <ul>
                 <li> <a href="{{ url('/#service') }}"> Services</a></li>
 
-
-
-
                 <li class="dropdown">
-                    <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">Products <b
-                            class="caret"></b></a>
-                    <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle"
-                        data-toggle="dropdown">Products <b class="caret"></b></a>
+                    <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                    <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li class="dropdown @if ($category->childs->count() > 0) dropdown-submenu @endif">
-                                <a href="#" class=" d-block d-md-none dropdown-toggle"
-                                    data-toggle="dropdown">{{ $category->name }}</a>
+                        <li class="dropdown @if ($category->childs->count() > 0) dropdown-submenu @endif">
+                            <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">{{ $category->name }}</a>
 
-                                <a href="{{ url('/category-wise-product/' . $category->slug) }}"
-                                    class=" d-none d-md-block @if ($category->childs->count() > 0) dropdown-toggle @endif"
-                                    data-toggle="dropdown"> {{ $category->name }}</a>
-                                @if ($category->childs->count() > 0)
-                                    <ul class="dropdown-menu">
-                                        @foreach ($category->childs as $childCategory)
-                                            <li><a
-                                                    href="{{ url('/category-wise-product/' . $childCategory->slug) }}">{{ $childCategory->name }}</a>
-                                            </li>
-                                        @endforeach
-
-
-                                    </ul>
-                                @endif
-                            </li>
+                            <a href="{{ url('/category-wise-product/' . $category->slug) }}" class=" d-none d-md-block @if ($category->childs->count() > 0) dropdown-toggle @endif" data-toggle="dropdown"> {{ $category->name }}</a>
+                            @if ($category->childs->count() > 0)
+                            <ul class="dropdown-menu">
+                                @foreach ($category->childs as $childCategory)
+                                <li><a href="{{ url('/category-wise-product/' . $childCategory->slug) }}">{{ $childCategory->name }}</a>
+                                </li>
+                                @endforeach
+                            </ul>
+                            @endif
+                        </li>
                         @endforeach
                     </ul>
                 </li>
