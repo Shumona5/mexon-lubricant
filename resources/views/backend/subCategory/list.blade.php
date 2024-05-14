@@ -16,7 +16,7 @@ Sub Category Details List
             </span>
         </div>
         <div>
-            <form action="{{route('motorbike.list')}}" method="get" class="w-full">
+            <form action="{{route('subCategory.list')}}" method="get" class="w-full">
                 <div class="flex items-center justify-center mb-10">
                     <div class="space-x-6 w-1/8">
                         <label for="email" class="ml-5 text-sm font-medium leading-5 text-gray-700 "></label>
