@@ -41,7 +41,7 @@
           <div class="inner right">
             <h2 style="color: #ffffff;">{{$product->subtitle_name}}</h2>
             <p style="color: #ffffff;"> {!!$product->description!!} </p>
-            <a href="{{route('products.industrial')}}" class="btn1 btn1-mini btn-color">Read more</a>
+            <a href="{{$product->button_url}}" class="btn1 btn1-mini btn-color">Read more</a>
           </div>
         </div>
       </div>
