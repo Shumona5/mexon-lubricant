@@ -27,7 +27,7 @@ class SubCategoryDetailsController extends Controller
         $validate = Validator::make($request->all(), [
 
             'title1' => 'required',
-            'title2' => 'required',
+            
             'status' => 'required',
         ]);
         if ($validate->fails()) {
@@ -100,7 +100,7 @@ class SubCategoryDetailsController extends Controller
         $validate = Validator::make($request->all(), [
 
             'title1' => 'required',
-            'title2' => 'required',
+          
             'status' => 'required',
         ]);
         if ($validate->fails()) {
