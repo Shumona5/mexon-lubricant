@@ -64,9 +64,9 @@ Route::get('/subDetails',[SubCateoryDetailsController::class,'subCategory'])->na
 
 Route::get('/auto',[AutoController::class,'auto'])->name('products.auto');
 
-Route::get('/auto/motorbike',[AutoController::class,'motorbike'])->name('products.motorbike');
-Route::get('/auto/gasoline',[AutoController::class,'gasoline'])->name('products.gasoline');
-Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.diesel');
+// Route::get('/auto/motorbike',[AutoController::class,'motorbike'])->name('products.motorbike');
+// Route::get('/auto/gasoline',[AutoController::class,'gasoline'])->name('products.gasoline');
+// Route::get('/auto/diesel',[AutoController::class,'diesel'])->name('products.diesel');
 
 // Route::get('/industrial/products',[IndustrialController::class,'industrial'])->name('products.industrial');
 // Route::get('/industrial/diesel',[IndustrialController::class,'diesel'])->name('product.diesel');

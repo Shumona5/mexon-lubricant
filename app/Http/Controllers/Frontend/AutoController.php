@@ -22,19 +22,19 @@ class AutoController extends Controller
         return view('frontend.pages.products.auto',compact('details','subdetails'));
     }
 
-    public function motorbike()
-    {
-        $motorbikes=Motorbike::all();
-        return view('frontend.pages.products.motorbike',compact('motorbikes'));
-    }
+    // public function motorbike()
+    // {
+    //     $motorbikes=Motorbike::all();
+    //     return view('frontend.pages.products.motorbike',compact('motorbikes'));
+    // }
 
-    public function gasoline(){
-        $gasolines=Gasoline::all();
-        return view('frontend.pages.products.gasoline',compact('gasolines'));
-    }
+    // public function gasoline(){
+    //     $gasolines=Gasoline::all();
+    //     return view('frontend.pages.products.gasoline',compact('gasolines'));
+    // }
 
-    public function diesel(){
-        $diesel=Diesel::all();
-        return view('frontend.pages.products.diesel',compact('diesel'));
-    }
+    // public function diesel(){
+    //     $diesel=Diesel::all();
+    //     return view('frontend.pages.products.diesel',compact('diesel'));
+    // }
 }

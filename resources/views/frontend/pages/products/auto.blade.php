@@ -26,7 +26,7 @@
             <img src="{{$data->subtitle_image}}" alt="" style="width: 100px;" class="zoom">
           </span>
           <h3>
-            <a href="{{ route('products.motorbike') }}" class=" ">
+            <a href="{{$data->button_url}}" class=" ">
               <span class="text">{{$data->subtitle_name}}</span>
               <!-- <span class="ioc"><i class="theme_icon rightArrow2"></i></span> -->
             </a>
@@ -42,7 +42,7 @@
                         
                   </span>
                   <h3>
-                    <a href="{{ route('products.gasoline') }}" class=" ">
+                    <a href="" class=" ">
                       <span class="text">Gasoline Engine Oil</span>
                       
                     </a>
