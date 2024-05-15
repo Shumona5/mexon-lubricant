@@ -1,6 +1,6 @@
 @extends('backend.layout.app')
 @section('title')
-Motorbike Edit
+SubCategory Details Edit
 @endsection
 @section('main')
 <form action="{{route('subCategory.update',$subcategory->id)}}" method="post" class=" px-6 py-6 rounded-md space-y-7" enctype="multipart/form-data">
@@ -47,7 +47,7 @@ Motorbike Edit
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="image" value="{{$motorbikes->first_image}}" name="first_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+                <input id="image" value="{{$subcategory->first_image}}" name="first_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
             @error('first_image')
             <p class="text-red-600 mt-5">{{ $message }}</p>
@@ -92,7 +92,7 @@ Motorbike Edit
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="image" value="{{$motorbikes->second_image}}" name="second_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+                <input id="image" value="{{$subcategory->second_image}}" name="second_image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
             @error('second_image')
             <p class="text-red-600 mt-5">{{ $message }}</p>
@@ -104,7 +104,7 @@ Motorbike Edit
                 <span class="text-black"> The size of height and width should be the same for 1:1 ratio </span>
             </label>
             <div class="mt-1 relative rounded-md shadow-sm">
-                <input id="image" value="{{$motorbikes->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
+                <input id="image" value="{{$subcategory->image}}" name="image" type="file" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:ring-2 focus:border-blue-200 focus:outline-none" />
             </div>
             @error('image')
             <p class="text-red-600 mt-5">{{ $message }}</p>
@@ -132,7 +132,7 @@ Motorbike Edit
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
                     <option selected>Select Category </option>
                     @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" @if ($category->id == $typeDetails->category_id) selected @endif>
+                    <option value="{{ $category->id }}" @if ($category->id == $subcategory->category_id) selected @endif>
                         {{ $category->name }}
                     </option>
                     @endforeach
@@ -202,7 +202,7 @@ Motorbike Edit
         <div class="mt-8 pt-5">
             <div class="flex justify-end">
                 <span class="inline-flex rounded-md shadow-sm">
-                    <a href="{{route('product.list')}}" class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
+                    <a href="{{route('subCategory.list')}}" class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
                         Cancel
                     </a>
                 </span>

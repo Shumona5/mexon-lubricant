@@ -89,14 +89,14 @@ class SubCategoryDetailsController extends Controller
 
     public function edit($id)
     {
-        $subcategory=SubCategoryDetails::all();
+        $subcategory=SubCategoryDetails::find($id);
         $categories=Category::all();
         return view('backend.subCategory.edit',compact('subcategory','categories'));
     }
 
     public function update(Request $request ,$id){
     
-        $subcategory=SubCategoryDetails::all();
+        $subcategory=SubCategoryDetails::find($id);
         $validate = Validator::make($request->all(), [
 
             'title1' => 'required',
@@ -130,6 +130,20 @@ class SubCategoryDetailsController extends Controller
             $image = date('Ymdhsis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/subCategory', $image);
         }
+        $pdf_image = $subcategory->getRawOriginal('pdf_image');
+        if ($request->hasFile('pdf_image')) {
+            $remove = public_path().'/uploads/subCategory/'.$pdf_image;
+            File::delete($remove);
+            $pdf_image = date('Ymdhsis') . '.' . $request->file('pdf_image')->getClientOriginalExtension();
+            $request->file('pdf_image')->storeAs('/subCategory', $pdf_image);
+        }
+        $pdf = $subcategory->getRawOriginal('pdf');
+        if ($request->hasFile('pdf')) {
+            $remove = public_path().'/uploads/subCategory/'.$pdf;
+            File::delete($remove);
+            $pdf = date('Ymdhsis') . '.' . $request->file('pdf')->getClientOriginalExtension();
+            $request->file('pdf')->storeAs('/subCategory', $pdf);
+        }
     
         $subcategory->update([
             'title1' => $request->title1,
@@ -141,7 +155,12 @@ class SubCategoryDetailsController extends Controller
             'second_long_description' => $request->second_long_description,
             'second_image' => $second_image,
             'image' => $image,
+            'pdf_image' => $pdf_image,
+            'pdf' => $pdf,
+            'category_id'=>$request->category_id,
             'status' => $request->status,
+
+        
 
         ]);
         notify()->success('Sub Category Details Updated Successfully');
