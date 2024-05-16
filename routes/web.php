@@ -204,12 +204,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/productsSubtitle/update/{id}',[SubProductTypesDetailsController::class,'update'])->name('subProducts.details.update');
     Route::get('/productsSubtitle/delete/{id}',[SubProductTypesDetailsController::class,'delete'])->name('subProducts.details.delete');
    
-    Route::get('/subMexon',[SubMexonController::class,'list'])->name('subMexon.list');
-    Route::get('/subMexon/create',[SubMexonController::class,'create'])->name('subMexon.create');
-    Route::post('/subMexon/store',[SubMexonController::class,'store'])->name('subMexon.store');
-    Route::get('/subMexon/edit/{id}',[SubMexonController::class,'edit'])->name('subMexon.edit');
-    Route::put('/subMexon/update/{id}',[SubMexonController::class,'update'])->name('subMexon.update');
-    Route::get('/subMexon/delete/{id}',[SubMexonController::class,'delete'])->name('subMexon.delete');
+    // Route::get('/subMexon',[SubMexonController::class,'list'])->name('subMexon.list');
+    // Route::get('/subMexon/create',[SubMexonController::class,'create'])->name('subMexon.create');
+    // Route::post('/subMexon/store',[SubMexonController::class,'store'])->name('subMexon.store');
+    // Route::get('/subMexon/edit/{id}',[SubMexonController::class,'edit'])->name('subMexon.edit');
+    // Route::put('/subMexon/update/{id}',[SubMexonController::class,'update'])->name('subMexon.update');
+    // Route::get('/subMexon/delete/{id}',[SubMexonController::class,'delete'])->name('subMexon.delete');
 
     Route::get('/promotional',[PromotionalItemController::class,'list'])->name('promotional.list');
     Route::get('/promotional/create',[PromotionalItemController::class,'create'])->name('promotional.create');

@@ -122,14 +122,14 @@ nav .fa{
 
 }
 
-.row {
+/* .row {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
 
-}
+} */
 
-.mexon-col {
+/* .mexon-col {
   flex-basis: 31%;
   background: #ebd0d0;
   border-radius: 15px;
@@ -137,9 +137,9 @@ nav .fa{
   padding: 5px 10px;
   box-sizing: border-box;
   transition: 0.5s;
-}
+} */
 
-.mexon h6 {
+/* .mexon h6 {
   text-align: center;
   font-weight: 600;
   margin: 10px 0;
@@ -156,7 +156,7 @@ nav .fa{
 .mexon-col:hover {
   box-shadow: 0 0 20px 0px rgba(140, 157, 216, 0.918);
 
-}
+} */
 @media(max-width: 700px) {
   .row {
       flex-direction: column;

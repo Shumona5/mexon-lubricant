@@ -39,14 +39,14 @@
 
       </div> -->
 
-  <div class="row">
+  <!-- <div class="row">
     @foreach($subMexons as $submexon)
     <div class="mexon-col">
       <h6> <b> {{$submexon->title}}</b> </h6>
       <p> {!!$submexon->description!!}</p>
 
     </div>
-    @endforeach
+    @endforeach -->
     <!-- <div class="mexon-col">
       <h6> Diverse Product Portfolio </h6>
       <p> We provide an extensive inventory of engine oils that are appropriate for a variety of applications,
@@ -62,7 +62,7 @@
       </p>
     </div> -->
 
-  </div>
+  <!-- </div> -->
 
 </section>
 
