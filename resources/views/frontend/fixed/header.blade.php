@@ -18,7 +18,7 @@
                     <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b>
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="width:auto">
                         @foreach ($categories as $category)
                         <li class="dropdown @if ($category->childs->count() > 0) dropdown-submenu @endif">
                             <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">{{ $category->name }}</a>
