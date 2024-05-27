@@ -1,6 +1,6 @@
 <section class="header">
     <nav style=" height: 100px;">
-        <a href="{{ route('web.home') }}">
+        <a href="{{ route('web.home') }}" class="logo">
             <img src="{{ $settings->logo }}" alt="" style="background: none; width:110px">
         </a>
         <div class="nav-links" id="navLinks">
@@ -37,6 +37,13 @@
 
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
+    </nav> 
     <!-- header-area end -->
-</section>
+ </section>
+
+
+
+ 
+
+
+        
