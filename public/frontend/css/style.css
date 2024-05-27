@@ -307,7 +307,7 @@ width: 50%;
 
 @media(max-width:700px){
   .nav-links ul li {
-    display: block;
+    /* display: block; */
   }
   .nav-links{
       position: fixed;
@@ -336,7 +336,7 @@ width: 50%;
       cursor: pointer;
   }
   .nav-links ul {
-      padding: 30px;
+      /* padding: 30px; */
       width: 100px;
   }
 
