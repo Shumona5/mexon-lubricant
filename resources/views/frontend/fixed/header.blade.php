@@ -18,11 +18,15 @@
                     <a href="{{ route('products.list') }}" class="  d-none d-md-block dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b>
                     </a>
 
-                    <ul class="dropdown-menu" style="width:auto">
+                    <ul class="dropdown-menu" style="width:auto">   
                         @foreach ($categories as $category)
                         <li class="dropdown @if ($category->childs->count() > 0) dropdown-submenu @endif">
                             <a href="#" class=" d-block d-md-none dropdown-toggle" data-toggle="dropdown">{{ $category->name }}</a>
-
+                            
+                            <!-- <a href="{{ url('/category-wise-product/' . $category->slug) }}" class="d-block d-md-none "> </a> -->
+                       
+                   
+                   
                             <a href="{{ url('/category-wise-product/' . $category->slug) }}" class=" d-none d-md-block category-link @if ($category->childs->count() > 0) dropdown-toggle @endif" data-toggle="dropdown"> {{ $category->name }}</a>
                             @if ($category->childs->count() > 0)
                             <ul class="dropdown-menu">

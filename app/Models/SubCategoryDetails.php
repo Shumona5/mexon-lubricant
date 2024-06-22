@@ -38,14 +38,16 @@ class SubCategoryDetails extends Model
         if($value){
             return Storage::url('/subCategory/'. $value);
         }
-        return url('/images/user.jpg');
+        // return url('/images/user.jpg');
+        return null;
     }
     public function getPdfAttribute($value)
     {
         if($value){
             return Storage::url('/subCategory/'. $value);
         }
-        return url('/images/user.jpg');
+        // return url('/images/user.jpg');
+        return null;
     }
 
 }

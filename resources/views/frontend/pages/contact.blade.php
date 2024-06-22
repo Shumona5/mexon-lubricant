@@ -39,6 +39,14 @@
                                         <p></p>
                                     </div>
                                 </div>
+                                <div class="single-contact-info d-flex align-items-baseline">
+                                    <div class="contact-icon pr-10">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="contact-info-dec">
+                                        <p class="text-color">+66823451757</p>
+                                    </div>
+                                </div>
 
                                 <div class="single-contact-info d-flex align-items-baseline">
                                     <div class="contact-icon pr-10">
